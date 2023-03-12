@@ -10,7 +10,7 @@
     <nav>
         <ul>
             <li><a href="../Index.html" class="logo"><img src="../../logos/Logo.jpg" width="90px" height="90px" alt=""></a></li>
-            <li><a href="" class="HTML">HTML</a></li>
+            <li><a href="../indice.html" class="HTML">HTML</a></li>
             <li><a href="" class="CSS">CSS</a></li>
             <li><a href="" class="JS">JS</a></li>
         </ul>
@@ -19,25 +19,26 @@
 <body>
     <main>
         <article>
+            <h1>Etiquetas de estructura</h1>
             <section id="descripcion">
-                <h1>Etiquetas de estructura</h1>
                 <h4>Estas etiquetas cumplen con la función de devidir la paguina web en diversas secciones, segun la función o el contenido de cada una de estas. A su vez actuan como etiquetas contenedoras para otros elementos HTML por lo tanto son una pieza clave en la estructura de una paguina web.</h4>
+                <h4>Las etiquetas contenedoras se agrupan en dos grupos los cuales son:</h4>
             </section>
             <section id="semnaticas">
                 <h2>Etiquetas con Valor Semantico</h2>
                 <dl>
-                    <dt><h4>Header</h4></dt>
+                    <dt><h3>Header</h3></dt>
                     <dd>
                         <p>Esta etiquetacumple la función de actuar como un contenedor de la cabecera de la pagina, comunmente se define como una franja horizontal ubicada en la parte superior de la pagina, suel uncluir el titulo o nombre la paguina, así como in logoy puede que un eslogan.</p>
                         <p>Tambienpuede incorporarse como encabezado de seciones como "section" o "article", en cuyo caso unacmante será el ancabezado particular de cada sección.</p>
                     </dd>
-                    <dt><h4>Nav</h4></dt>
+                    <dt><h3>Nav</h3></dt>
                     <dd>
                         <p>El rol de esta etiquetaes contener los elementos de navegación principal de la paguina por lo que suele contener enlaces, pestañas y botones, es decir contiene el menú se navegación principal, es común que se llegue a incorporar al encabezado, sin envargo tambien puede ser positivo el manejarlo como un elemto a parte, ya que hace más facil la interacción con los motores de lactura.</p>
                         <p><b>Nota: Una buena practica es agrupar los elemtos del "nav" en una lista desrodenada de la siguiente forma:</b></p>
                         <img src="./img/ejmNav.PNG" alt="">
                     </dd>
-                    <dt><h4>Main</h4></dt>
+                    <dt><h3>Main</h3></dt>
                     <dd>
                         <p>En este elemto se ubica el cuerpo prinipal de la paguina, suele ubicarse directamente dentro de "body", se utiliza una vez por pagina, este se divide en otros conetenedores que conforman el contenido de la paguina, estos contenedores son:</p>
                         <ul>
@@ -47,20 +48,26 @@
                             <li><b>Aside:</b> Por ultimo pero no menos importante el elemento "aside" hace referencia a la barra lateral de la paguina, suele incorporarse dentro de "main" pese a que hace referencia a otra area de la paguina</li>
                         </ul>
                     </dd>
-                    <dt><h4>Aside</h4></dt>
+                    <dt><h3>Aside</h3></dt>
                     <dd>
                         <p>Este elemto hace referencia a la barra lateral de la paguina, suele incorporarse a la izquierda o derecha e incluso en ambos costados dependiendo del diseño del sitio, suele contener algun tipo de información complemetaria al contenido principal, por ejemplo enlaces, citas, resumenes, bibliografias, algun menú de navegación secundario o simplemete publicidad.</p>
                     </dd>
-                    <dt><h4>Footer</h4></dt>
+                    <dt><h3>Footer</h3></dt>
                     <dd>
                         <p>Esta es la ultma sección de la paguina, en ella se ingrasa la llamada "letra pequeña"e información de contacto, tambien pudiese contener algun otro tipo de elcaces de navegación, esta sección al gual que el encabezado suele ser común para toda la paguina.</p>
+                    </dd>
+                    <dt><h3>Address</h3></dt>
+                    <dd>
+                        <p>Como tal la etiqueta "address" no se trata de una etiqueta contenedora en sí, sin embargo es justo nombrarla en este apartado debido a su gran relación con otras etiquetas contenedoras, especialmente con la etiqueta "article", ya que su función es aportar la información de contacto de un "article" cercano o de un elemento padre como "body", su forma de empleo similar a una etiqueta contenedora envolviendo su cotenido, sin embargo se trata de una etiqueta semantica creada unicamente con el proposito de brindar la información de contacto. </p>
+                        <img src="./img/ejmAddress1.PNG" alt="">
+                        <img src="./img/ejmAddress2.PNG" alt="">
                     </dd>
                 </dl>
             </section>
             <section id="noSemanticas">
                 <h2>Etiquetas No Semanticas</h2>
                 <dl>
-                    <dt><h4>Div</h4></dt>
+                    <dt><h3>Div</h3></dt>
                     <dd>
                         <p>Se trata de una etiqueta de bloque no semantica, en otras palabras se trata de un contenedor que por si mismo no posee ningun valor semantico por lo tanto se usa cundo no se alla un elemto que calce con las necesidades del codigo o cuando no se desea que algun elemto no tenga alguna valor semantico en particular. Cuenta con atrubutos genericos como:</p>
                         <ul>
@@ -80,7 +87,7 @@
                             <p><b>Nota: la desventaja del "div" radica en que es tan facil usarlos que puede mal acostumbrar al programmador, usarlos en exseso conlleva que el mantenimiento y actualización del contenido seran mis complejos de realizar, a la vez que pueden ocacionar un codigo poco legible.</b></p>
                         </ul>
                     </dd>
-                    <dt><h4>Span</h4></dt>
+                    <dt><h3>Span</h3></dt>
                     <dd>
                         <p>Esta es una etiqueta no semantica de texto, por lo tanto su función es incorporarlo en el interior de un texto para hacer posible distinguir algun area del texto sin añadirle algun valor semantico. Esto se puede lograr usando el atributo "class" para poder incorporar css.</p>
                         <p><b>Nota: por si mismo el navegador no muestra algun estilo en particular al texto que se encuentre en este elemto.</b></p>
@@ -89,7 +96,7 @@
             </section>
         </article>
         <aside class="aside">
-            <h3>Capitulos</h3>
+            <h2>Capitulos</h2>
             <ul>
                 <li><a href="./etiquetas texto/texto.html"><h3>Etiquetas de texto</h3></a>  </li>
             </ul>

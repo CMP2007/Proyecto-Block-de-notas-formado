@@ -10,7 +10,7 @@
     <nav>
         <ul>
             <li><a href="../Index.html" class="logo"><img src="../../logos/Logo.jpg" width="90px" height="90px" alt=""></a></li>
-            <li><a href="" class="HTML">HTML</a></li>
+            <li><a href="../indice.html" class="HTML">HTML</a></li>
             <li><a href="" class="CSS">CSS</a></li>
             <li><a href="" class="JS">JS</a></li>
         </ul>
@@ -19,15 +19,56 @@
 <body>
     <main>
         <article>
+            <h1>Etiquetas de texto</h1>
             <section id="Descripcion">
-                <h1>Etiquetas de texto</h1>
+                <p>Este apartado se trata de todas aquellas atiquetas cuya función consiste en modificar o ajustar la forma en la que se visualizara el texto de un elemento.</p>
             </section>
             <section>
                 <dl>
-                    <dt><h4>Span</h4></dt>
+                    <dt id="abbr"><h3>Abbr</h3></dt>
+                    <dd>
+                        <p>Se trata de una etiqueta para definir las abreviaturas, su efecto es que la abreviatura o el acronimo se mostrara con un subrayado puntuado, y al posicionar el raton sobre este se mostrara un texto emergente con la expresión completa del termino, para definir la expresión completa se utiliza el atributo "title", seguido de la expresión.</p>
+                        <img src="./img/ejmAbrebiatura.PNG" alt="">
+                    </dd>
+                    <dt id="b"><h3>B</h3></dt>
+                    <dd>
+                        <p>Su función unicamnte es la de mostrar el texro que se encuentre dentro de esta etiqueta en negritas, no añade ningun valor semantico a este.</p>
+                    </dd>
+                    <dt id="em"><h3>Em</h3></dt>
+                    <dd>
+                        <p>Se usa para dar un poco de énfasis o relevancia a algun texto, el texto dentro de esta biñeta se muestra en cursiva.</p>
+                    </dd>
+                    <dt id="i"><h3>I</h3></dt>
+                    <dd>
+                        <p>Consiste en una etiqueta para mostrar el texto en cursiva o italica, no brinda ningun valor semantico.</p>
+                    </dd>
+                    <dt id="span"><h3>Span</h3></dt>
                     <dd>
                         <p>Tal y com se menciono en el apartado de <a href="../etiquetas estructura/estructura.html">etiquetas de estructura</a> se trata de una etiqueta no semantica de texto, por lo tanto su función es incorporarlo en el interior de un texto para hacer posible distinguir algun area del texto sin añadirle algun valor semantico. Esto se puede lograr usando el atributo "class" para poder incorporar css.</p>
                         <p><b>Nota: por si mismo el navegador no muestra algun estilo en particular al texto que se encuentre en este elemto.</b></p>
+                    </dd>
+                    <dt id="sup_sub"><h3>Superíndice y Subíndice</h3></dt>
+                    <dd>
+                        <p>En ocaciones puede ser necesario incorporar estos elemtos en algun texto, para ello existen estas dos etiquetas:</p>
+                        <ul>
+                            <li><p><strong>sup: </strong> Esta etiqueta se usa para el definir el <strong>superíndice</strong>, lo hace encacillando a esté en su interior</p></li>
+                            <li><strong>sub: </strong> Esta etiqueta se usa para definir el <strong>subíndice</strong>, lo hace encacillando a este en su nterior</li>
+                        </ul>
+                        <p>Un ejemplo de ambos casos es el siguiente</p>
+
+                        <h4>Codigo</h4>
+                        <img src="./img/ejmSupSub1.PNG" alt="">
+
+                        <h4>visualización</h4>
+                        <img src="./img/ejmSupSub2.PNG" alt="">
+                    </dd>
+                    <dt id="strong"><h3>Strong</h3></dt>
+                    <dd>
+                        <p>Se usa para darle gran importancia al texto dentro de esta biñeta, se muestra como texto en negritas.</p>
+                    </dd>
+                    <dt id="u"><h3>U</h3></dt>
+                    <dd>
+                        <p>Su función unicamnte es la de mostrar el texro que se encuentre dentro de este subrayado, no añade ningun valor semantico a este.</p>
                     </dd>
                 </dl>
             </section>
