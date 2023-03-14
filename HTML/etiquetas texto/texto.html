@@ -23,7 +23,7 @@
             <section id="Descripcion">
                 <p>Este apartado se trata de todas aquellas atiquetas cuya función consiste en modificar o ajustar la forma en la que se visualizara el texto de un elemento.</p>
             </section>
-            <section>
+            <section id="etiquetas">
                 <dl>
                     <dt id="abbr"><h3>Abbr</h3></dt>
                     <dd>
@@ -51,8 +51,8 @@
                     <dd>
                         <p>En ocaciones puede ser necesario incorporar estos elemtos en algun texto, para ello existen estas dos etiquetas:</p>
                         <ul>
-                            <li><p><strong>sup: </strong> Esta etiqueta se usa para el definir el <strong>superíndice</strong>, lo hace encacillando a esté en su interior</p></li>
-                            <li><strong>sub: </strong> Esta etiqueta se usa para definir el <strong>subíndice</strong>, lo hace encacillando a este en su nterior</li>
+                            <li><p><b>sup: </b> Esta etiqueta se usa para el definir el <b>superíndice</b>, lo hace encacillando a esté en su interior</p></li>
+                            <li><b>sub: </b> Esta etiqueta se usa para definir el <b>subíndice</b>, lo hace encacillando a este en su nterior</li>
                         </ul>
                         <p>Un ejemplo de ambos casos es el siguiente</p>
 
@@ -69,6 +69,29 @@
                     <dt id="u"><h3>U</h3></dt>
                     <dd>
                         <p>Su función unicamnte es la de mostrar el texro que se encuentre dentro de este subrayado, no añade ningun valor semantico a este.</p>
+                    </dd>
+                </dl>
+            </section>
+            <section id="CitarContenido">
+                <h2>Etiquetas para Citar Contenido</h2>
+                <p>Una peculiaridad de HTML es que entre tantos elementos tambien existen algunos con la función en espesifico de estructurar las citas de texto de forma adecuada, en base al tipo de cita se emple un elemento diferente segun el caso.</p>
+                <dl>
+                    <dt id="CitasIndependiente"><h3>Citas en bloque independiente</h3></dt>
+                    <dd>
+                        <p>Para estos casos de utiliza el elemento <b>&lt;blockquote&gt;</b>, el cual debe encasillar una etiqueta "p" con la cita, esta se mostrara como un parrafo con sangria a la izquierda y derecha, tambien es importante utilizar el atributo "cite=' ' """,  en este se puede ingresar una URL que apunte a la fuente de la cita.</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/ejmCitas1.PNG" alt="">
+                        <p><b>Nota: Este tipo de cita indica que es una cita ampleada.</b></p>
+                    </dd>
+                    <dt id="CitasLinea"><h3>Citas en Linea</h3></dt>
+                    <dd>
+                        <p>Estas funcionana igual que las citas en bloque, con la diferencia de que se utiliza la biñeta <b>"q"</b>, la cual se incorporan dentro del elemento "p", encasillando unicamnte las palabras deceadas, el resultado será que la cita se mostrara entre comillas. </p>
+                        <img src="./img/ejmCitas2.PNG" alt="">
+                        <p><b>Nota: Estas indican que se trata de nua cita brebe que no necesita de un salto de linea.</b><p>
+                    </dd>
+                    <dt id="fuente"><h3>Incorporar la Fuente de la Paguina</h3></dt>
+                    <dd>
+                        <p>El atributo "cite" parece util pero los buscadores o motores de lectura no hacen nada con el, por lo tanto la mejor forma de incorporar a la fuente en la paguina es utilizando un enlace(a), para esto simlemente incorporamos este elemto en la redacción de forma que el enunciado o el tipo de cita lo permita, con el URL que diriga a la fuente deseada. </p>
                     </dd>
                 </dl>
             </section>
