@@ -1,0 +1,12 @@
+h2{
+    background-color: violet;
+    border: solid 10px ;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+
+    
+}
+h1{
+    border-style:unset;
+}

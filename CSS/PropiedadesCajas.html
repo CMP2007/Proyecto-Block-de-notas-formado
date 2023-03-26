@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades de Cajas</title>
+</head>
+<body>
+    <main>
+        <h1>Propiedades de Cajas CSS</h1>
+        <article>
+            <section>
+                <p>A continuación se espesifican las diversas propiedades que alteran el comporatamiento o aparencia de las cajas HTML</p>
+            </section>
+            <section id="propiedades">
+                <dl>
+                    <dt id="background-color"><h3>Background-color</h3></dt>
+                    <dd>
+                        <p>Define el color de fondo de un elemento, Esta propiedad acepta multiples formatos de color colo lo son:</p>
+                        <ul>
+                            <li>Palabras clave</li>
+                            <li>Colores del sistema</li>
+                            <li>RGB hexadecimal</li>
+                            <li>RGB numérico</li>
+                            <li>RGB porcentual</li>
+                        </ul>
+                        <h4>Ejmeplo</h4>
+                        <img src="./img/background-color.PNG" alt="">
+                    </dd>
+                    <dt id="padding"><h3>Padding</h3></dt>
+                    <dd>
+                        <p>El <b>padding</b> consiste en la distancia entre la caja y el conteido de esta, se divide en las cuatro caras del elemento: </p>
+                        <ul>
+                            <li><p><b>Padding left: </b> distancia borde <b>izquierdo</b> con el contenido</p></li>
+                            <li><p><b>Padding top: </b> distancia borde <b>superior</b> con el contenido</p></li>
+                            <li><p><b>Padding right: </b> distancia borde <b>derecho</b> con el contenido</p></li>
+                            <li><p><b>Padding botton: </b> distancia borde <b>Inferior</b> con el contenido</p></li>
+                        </ul>
+                        <img src="./img/padding1.PNG" alt="">
+                        <h4> <p><b>Padding</b> se trata de una propiedad con multiples formas de definirla en CSS</h4>
+                        <ul>
+                            <li>
+                                <p>Se puede asignar un valor a cada cara del elemento por separado:</p>
+                                <img src="./img/padding2.PNG" alt="">
+                            </li>
+                            <li>
+                                <p>Tambien es posible generalizar y aplicar un unico valor para todas las caras del elemento:</p>
+                                <img src="./img/padding3.PNG" alt="">
+                            </li>
+                            <li>
+                                <p>Otra opción es la de definir un valor para el eje <b>Y</b> y otro para el eje <b>X</b> de la sigute forma:</p>
+                                <img src="./img/padding4.PNG" alt="">
+                                <p><b>Nota: en el caso de padding el primer valor define el eje Y y el segundo corresponde al eje X</b></p>
+                            </li>
+                            <li>
+                                <p>La ultima alternativa al declarar el <b>padding</b> consiste en declarar un valor diferente para cada cara del elemento en el mismo uso de la propiedad, de la siguite forma:</p>
+                                <img src="./img/padding5.PNG" alt="">
+                                <p>El orden al signar el valor de las caras consiste en que el primer valor se asigna al <b>top</b> y posterior mente se coninua con las siguites cara en el sentido de las agujas del relog.</p>
+                            </li>
+                        </ul>
+                        <p><b>Nota: si se da el caso de que no se asigna alguna de las caras com en esta imagen:</b></p>
+                        <img src="./img/padding6.PNG" alt="">
+                        <p><b>Si no es definido el valor de alguna de las dos caras del eje en cuestión el navegador lo resuleve aplicando el valor de la cara que si se decreto a todo el eje. </b></p>
+                    </dd>
+                    <dt id="height-width"><h3>Height y Width</h3></dt>
+                    <dd>
+                        <p>Estas propiedades definen las dimenciones en alto <b>(height)</b> y ancho <b>(width)</b> del elemento en cuestión. </p>
+                        <img src="./img/heightWidth.PNG" alt="">
+                        <h4>Tener en Cuenta</h4>
+                        <p>Un aspecto que es util recordar es que cierta propiedad puede modificar el conportamiento de height y de width, esta se trata de <b>box-sizing</b> la cual define el que se tiene en cuenta para </p>
+                    </dd>
+                    <dt id="box-sizing"><h3>Box-sozing</h3></dt>
+                    <dd>
+                        <p>Esta propiedad defiene el que aspectos del elemento se tomaran en cuenta para definir las dimenciones del elemento, es decir define el comportamiento de algunas propiedades para que estas puedan o no modificar las dimenciones definidas por <b>height</b> y <b>width</b>. Para esto cuenta con dos valores con esta función:</p>
+                        <ul>
+                            <li>
+                                <h4>Content-box</h4>
+                                <p>Este valor define que a las dimenciones establecidas del elemento se ajusten acorde al contenido de este, es decir el espacio que ocupa el contenido se sumara al valor definido en <b>height</b> y <b>width</b></p>
+                                <img src="./img/box-sizingContent-box.PNG" alt="">
+                                <p>Por lo tanto en este ejemplo las dimenciones de este elemento seran las definidas por <b>height</b> y  <b>width</b> más las dimenciones de contenido y el padding resultando en un elemento que realmente excede los 100 X 100 definidos por <b>height</b> y <b>width</b>.</p>
+                                <img src="./img/ejmContent-Box1.PNG" alt="">
+                            </li>
+                            <li>
+                                <h4>Border-box</h4>
+                                <p>Este valor define que el contenido no se tomra en cuanta para definir las dimenciones de la caja por lo tanto sin importar el que las dimenciones totales del elemento seran las que establescan <b>height</b> y <b>width</b>.</p>
+                                <img src="./img/box-sizingBorder-box.PNG" alt="">
+                                <p><b>De esta forma</b></p>
+                                <img src="./img/ejmBorder-box.PNG" alt="">
+                            </li>
+                        </ul>
+                    </dd>
+                    <dt id="margin"><h3>Margin</h3></dt>
+                    <dd>
+                        <p>Se trata de la distancia de separación entre la caja y los demas elementos, su funcionamiento es identico al de <b>padding</b> por lo tanto ambien cuenta con las mismas formas de definir los valores de esta propiedad: </p>
+                        <ol>
+                            <li>
+                                <p>Se puede asignar un valor a cada cara del elemento por separado:</p>
+                                <img src="./img/margin1.PNG" alt="">
+                            </li>
+                            <li>
+                                <p>Tambien es posible generalizar y aplicar un unico valor para todas las caras del elemento:</p>
+                                <img src="./img/margin2.PNG" alt="">
+                            </li>
+                            <li>
+                                <p>Otra opción es la de definir un valor para el eje <b>Y</b> y otro para el eje <b>X</b> de la sigute forma:</p>
+                                <img src="./img/margin3.PNG" alt="">
+                            </li>
+                            <li>
+                                <p>La ultima alternativa al declarar el <b>margin</b> consiste en declarar un valor diferente para cada cara del elemento en el mismo uso de la propiedad, de la siguite forma:</p>
+                                <img src="./img/margin4.PNG" alt="">
+                            </li>
+                        </ol>
+                        <p><b>Nota: si se da el caso de que no se asigna alguna de las caras como en esta imagen:</b></p>
+                        <img src="./img/margin5.PNG" alt="">
+                        <p><b>Si no es definido el valor de alguna de las dos caras del eje en cuestión el navegador lo resuleve aplicando el valor de la cara que si se decreto a todo el eje.</b></p>
+                    </dd>
+                    <dt id="border-radius"><h3>Border-radius</h3></dt>
+                    <dd>
+                        <p>Se trata de otra propiedad con una función simple, permite redondear las esquinas de los elementos, despues de todo todos los elementos HTML estan compuestos por cajas, acepta caualquier tipo de medida CSS, incluyendo porcentajes (%). </p>
+                        <img src="./img/border-radius2.PNG" alt="">
+                        <p><b>Es util tener en cuenta que para redondear un elemento al maximo esto se logra con un valor de 50% </b></p>
+                        <h4>Ejmeplo</h4>
+                        <img src="./img/border-radius.PNG" alt="">
+                        <h4>resultando</h4>
+                        <img src="./img/ejmBorder-radius.PNG" alt="">
+                    </dd>
+                    <dt id="border"><h3>Border</h3></dt>
+                    <dd>
+                        <p>Esta propiedad como su nombre lo indica define las caracteriticas del borde del elemento, se trata de una propiedad "cortada", lo que significa que existen diferentes formas de aplicar la propiedad.</p>
+                        <P>De hecho existen multiples tipos de opciones al emplear este atributo, no opstante las caracteriticas que debe poseer un <b>border</b> más relevantes son: </P>
+                        <ul>
+                            <li>
+                                <p><b>Grosor: </b> Se refiere al grosor del borde en si, para esta función border acepta los diferentes tipos de medidas CSS</p>
+                            </li>
+                            <li>
+                                <p><b>Style: </b> Este atributo define el tipo de borde que se aplicara al alemento, sexisten multiples tipos:</p>
+                                <ul>
+                                    <li>
+                                        <p><b>Solid: </b> Se trata del valor más usado, genera un borde completo en el elemento:</p>
+                                        <img src="./img/border-styleSolid.PNG" alt="">
+                                    </li>
+                                    <li>
+                                        <p><b>Dashed: </b> Este valor genera un borde puntuado, cuadrado.</p>
+                                        <img src="./img/border-styleDashed.PNG" alt="">
+                                    </li>
+                                    <li>
+                                        <p><b>Dotted: </b> Genera un margen puntuado, redondeado.</p>
+                                        <img src="./img/border-styleDotted.PNG" alt="">
+                                    </li>
+                                    <li>
+                                        <p><b>Double: </b> Genera un borde doble.</p>
+                                        <img src="./img/border-styleDouble.PNG" alt="">
+                                    </li>
+                                    <li>
+                                        <p><b>Groove: </b> Genera un borde con el siguiente patron:</p>
+                                        <img src="./img/border-styleGroove.PNG" alt="">
+                                    </li>
+                                    <li>
+                                        <p><b>Hidden: </b>Hidden significa oculto, este valor oculta el borde, se emple en los casos que sea necesario el ocultar el borde de algun elemento.</p>
+                                    </li>
+                                    <li>
+                                        <p><b>Inset: </b> Denera un borde con el siguiente patron:</p>
+                                        <img src="./img/border-styleInsert.PNG" alt="">
+                                    </li>
+                                    <li>
+                                        <p><b>None: </b> Literamente define que el elemento no posea ningun border, se diferencia de <b>hidden</b> ya que este ultimo oculta el borde, sin embargo <b>none</b> directamente lo elimina del elemento.</p>
+                                    </li>
+                                    <li>
+                                        <p><b>Outset: </b> Genera un borde como el de <b>inser</b> pero invertido</p>
+                                        <img src="./img/border-styleoutset.PNG" alt="">
+                                    </li>
+                                    <li>
+                                        <p><b>Ridge: </b> Genera un borde como el de <b>groove</b> pero invertido.</p>
+                                        <img src="./img/border-styleRidge.PNG" alt="">
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><b>Color: </b> El ultimo de los valores relevantes de un border es el color que poseera dicho vorde </p>
+                            </li>
+                        </ul>
+                        <h4>Simplificación</h4>
+                        <p>Como tal <b>border</b> posee una propiedad individual para cada uno de estos valores sin embargo existe una forma de emplear todas las porpiedades anteriormente nombradas facilmente, optimizando el codigo CSS. </p>
+                        <p>Esta practica con siste en definir el ancho, border (ancho), el style (estilo) y el color del borde en una sola propiedad, de la siguiente manera:</p>
+                        <img src="./img/SimplificarBorder.PNG" alt="">
+                        <p>Como se puede ver es posible definir más de una caracteritica con el uso de la propiedad <b>border</b>, ahorranddo espacio y tiempo al no usar las propiedades espesificas de cada atributo.</p>
+                        <p><b>Nota: Al hacer esto realmente no es importante el orden en el que se daclaran las caracteriticas del borde, puede ir el color de primero o el estilo o incluso el grosor, todos los casos son igual de correctos.</b></p>
+                    </dd>
+                    <dt id="box-shadow"><h3>Box-shadow</h3></dt>
+                    <dd>
+                        <p>Esta propiedad genera una sombra para el elementos en cuestión, y para funcionar esta propiedad necesita diferentes tipos de datos:</p>
+                        <ol>
+                            <li>
+                                <p>El primer valor a ingresar se trata de la ubicación de la sombra en el eje <b>X</b></p>
+                            </li>
+                            <li>
+                                <p>El segundo valor a ingresar se trata de la ubicación de la sombra en el eje <b>Y</b></p>
+                            </li>
+                            <li>
+                                <p>El tercer valor se trara del desenfoque, es decir el tamaño de la sombra</p>
+                            </li>
+                            <li>
+                                <p>Como cuarto valor se ingresa el ancho del vorde de la sombra (por lo general a esta caracteritica se le asigna un valor de 0)</p>
+                            </li>
+                            <li>
+                                <p>El quinto y ultimo valor consiste en el color de la sombra, aligual que otras propiedades esta acepta los diferentes formatos de color CSS</p>
+                            </li>
+                            <img src="./img/box-shadow.PNG" alt="">
+                        </ol>
+                        <p><b>Nota: Si se decea un efecto más intenso es posible repetir efecto las veces que hagan falta añadiendo nuevamente los valores siempre y caundo se respeten dos cosas, la primera es añadir una coma (,) entre cada repetición de los valores y la segunda es culminar la declaración de la propiedad con el punto y coma (;)</b></p>
+                        <img src="./img/notaBox-shadow.PNG" alt="">
+                    </dd>
+                    <dt id="text-shadow"><h3>Text-shadow</h3></dt>
+                    <dd>
+                        <p>Esta propiedad funciona exactamente igual que <b>box-shadow</b> salvo por dos diferencias, la primera es que esta propiedd se aplica al texto, y la segunda radica en que no es necesario introducir el valor del ancho del borde de la sombra, ya que los texto no tiene bordes, esta propiedd carece de ese dato.</p>
+                        <p>Aun así esta propiedad necesita de los otros valores para si correcto funcionamiento, esos valores son:</p>
+                        <ol>
+                            <li>
+                                <p>El primer valor a ingresar se trata de la ubicación de la sombra en el eje <b>X</b></p>
+                            </li>
+                            <li>
+                                <p>El segundo valor a ingresar se trata de la ubicación de la sombra en el eje <b>Y</b></p>
+                            </li>
+                            <li>
+                                <p>El tercer valor se trara del desenfoque, es decir el tamaño de la sombra</p>
+                            </li>
+                            <li>
+                                <p>El cuarto y ultimo valor consiste en el color de la sombra, aligual que otras propiedades esta acepta los diferentes formatos de color CSS</p>
+                            </li>
+                            <img src="./img/text-shadow.PNG" alt="">
+                        </ol>
+                        <p><b>Nota: Si se decea un efecto más intenso es posible repetir efecto las veces que hagan falta añadiendo nuevamente los valores siempre y caundo se respeten dos cosas, la primera es añadir una coma (,) entre cada repetición de los valores y la segunda es culminar la declaración de la propiedad con el punto y coma (;)</b></p>
+                        <img src="./img/notaText-shadow.PNG" alt="">
+                    </dd>
+                    <dt id="text-aling"><h3>Text-aling</h3></dt>
+                    <dd>
+                        <p>La función de esta propiedad es bastate simple, define el donde se ubicara el texto en función a su contenedor, los posibles valores de esta porpiedad son:</p>
+                        <ul>
+                            <li><p><b>Cente: </b> Establece que el texto se ubique en el centro del contenedor</p></li>
+                            <li><p><b>Justify: </b> Establece que el texto se justufique dentro de su contenedor</p></li>
+                            <li><p><b>Left: </b> Establece que el texto se ubicara a la izquierda del contenedor</p></li>
+                            <li><p><b>Right: </b> Establece que el texto se ubicara a la derecha del contendor</p></li>
+                            <li><p><b>Start: </b> define que el texto se ubicara en la parte superior del contenedor/p></li>
+                            <li><p><b>End: </b>Define que el texto de ubicara en la parte inferior del contenedor</p></li>
+                        </ul>
+                    </dd>
+                    <dt id="transform"><h3>Transform</h3></dt>
+                    <dd>
+                        <p>Una de las funciones de esta porpiedad es rotar los cotnedndores, para esto definimos un valor en <b>deg</b>, esta es la medida que representa a los grados en CSS por lo tanto un valor de "45 deg" es igual a declarar: "rotar el contenedor 45º."</p>
+                        <b><p>Por lo tanto un codigo como este:</p></b>
+                        <img src="./img/transformRotate.PNG" alt="">
+                        <b><p>Resulta en esto:</p></b>
+                        <img src="./img/transformRotate2.PNG" alt="">
+                    </dd>
+                </dl>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
