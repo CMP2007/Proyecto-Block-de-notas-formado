@@ -1,12 +1,67 @@
-h2{
-    background-color: violet;
-    border: solid 10px ;
-    width: 100px;
-    height: 30px;
-    text-align: center;
-
-    
+*{
+    padding: 0;
+    margin: 0;
 }
-h1{
-    border-style:unset;
+div{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+section{
+    background-color: aqua;
+    margin: 100px 100px 100px 100px;
+    position: relative;
+    width: 5000px;
+    height: 450px;
+}
+
+.caja1{
+    background-color: rgb(255, 81, 0);
+    color: aliceblue;
+    position: absolute;
+   bottom: 0px;
+
+}
+
+.caja2{
+    background-color: blue;
+    color: aliceblue;
+    position: absolute;
+    left: 500px;
+    top: 200px;
+}
+
+.caja3{
+    background-color: blueviolet;
+    color: aliceblue; 
+    position: absolute;
+    right: 300px;
+    bottom: 50px;
+}
+.caja4{
+    background-color: crimson;
+    color: aliceblue;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-top: -100px;
+}
+
+nav{
+    height: 100px;
+    background-color: brown;
+    position: sticky;
+    bottom: 0;
+    top: 50px;
+}
+
+.float img{
+    float: right;
+    width: 200px;
+    margin: 20px;
+}
+.float{
+    width: 700px;
+    padding: 20px;
 }

@@ -114,6 +114,9 @@
                         <p><b>Nota: si se da el caso de que no se asigna alguna de las caras como en esta imagen:</b></p>
                         <img src="./img/margin5.PNG" alt="">
                         <p><b>Si no es definido el valor de alguna de las dos caras del eje en cuestión el navegador lo resuleve aplicando el valor de la cara que si se decreto a todo el eje.</b></p>
+                        <h4>Margin : auto</h4>
+                        <p>Se trata de un valor especial que puede adquirrir esta propiedad, al aplicarla le indica al navegador que de forma automatica realise los calculos necesarios para <b>centrar el elemento de forma orizontal</b>, ese es el efecto de <b>margin: auto</b> sentrar los elementos de tipo bloque que no se encuentren posicionados con <b>position</b>, segun el contenedor en que se encuentren, siempre y cuando este valor se aplique este valor de forma orizontal, ya que verticalmente no funciona.</p>
+                        <img src="./img/margin6.PNG" alt="">
                     </dd>
                     <dt id="border-radius"><h3>Border-radius</h3></dt>
                     <dd>
@@ -124,6 +127,21 @@
                         <img src="./img/border-radius.PNG" alt="">
                         <h4>resultando</h4>
                         <img src="./img/ejmBorder-radius.PNG" alt="">
+                        <p><b>Border-radius</b> al igual que otras propiedades cuenta con multiples formas de declararse en CSS.</p>
+                        <ul>
+                            <li>
+                                <p>Cueta con multiples propiedades las cuales permiten asignar un valor a cada esquina del elemento </p>
+                            </li>
+                            <li>
+                                <p>Tambien se puede generalizar un solo valor para todas las caras del elemento, tal y como se hozo en la imagen anterior</p>
+                            </li>
+                            <li>
+                                <p>Por ultimo es posble el definir un valor para cada cara del elemento desde un mismo uso de la propiedad</p>
+                                <img src="./img/border-radius3.PNG" alt="">
+                                <b><p>Nota: Al definir los valores de esta forma el primero corresponde a la esquina superior izquierda y de allí se continua en el sentido de las agujas del relog, finalizando con el ultimo valor correspondiendo a la esquina inferior izquierda.</p></b>
+                            </li>
+                        </ul>
+
                     </dd>
                     <dt id="border"><h3>Border</h3></dt>
                     <dd>
@@ -187,6 +205,21 @@
                         <p>Como se puede ver es posible definir más de una caracteritica con el uso de la propiedad <b>border</b>, ahorranddo espacio y tiempo al no usar las propiedades espesificas de cada atributo.</p>
                         <p><b>Nota: Al hacer esto realmente no es importante el orden en el que se daclaran las caracteriticas del borde, puede ir el color de primero o el estilo o incluso el grosor, todos los casos son igual de correctos.</b></p>
                     </dd>
+                    <dt id="outline"><h3>Outline</h3></dt>
+                    <dd>
+                        <p>Un aspecto a tenr en cuenta al plantear los estilos de una web es el espacio en pantalla que cada propiedad o elemento requiere para poder mostrarse al usuario, por ejmplo:</p>
+                        <p>La porpiedad border, los pixeles que este puede llegar a ocupar tiene que tomarse de algun lugar ya sea del exterior de la caja aumentando el tamaño de esta (como con el valor por defecto de los navagadores "box-sizing: content-box;) o tomarse del interiro de esta reducuendo así el espacio del contenido (como con el valor aplicado en el archivo "normalize" "box-sizing: border-box;), de cualquier forma es necesario el sustrar ese espacio de algun lugar.</p>
+                        <p>El <b>outline</b> es una porpiedad obcional al border, su funcionamiento y forma de implementarse es exactamente igual, a la propiedad border con una notoria diferencia en su concepto, <b>outline</b> se diferencia de border en que este no "ocupa un espcio" en el modelo de cajas, es decir <b>outline</b> realmente no altera las dimenciones ni la ubicación de ningun elemento, ni siquiera en el que se estaplicando, por lo tanto esta propiedad puede apreciarse, pero el espacio en pantalla que esta ocupa para poder mostrarse pudiese decirse que es ficticio ya que no es tomado en cuenta por ningun elemento o propiedad, por lo tanto esta propiedad se puede visualizar sin tomar espacio de ningun elemento.</p>
+                        <img src="./img/outline1.PNG" alt="">
+                        <h4>A contincuación se muestra una comptaración de outline y otra de border</h4>
+                        <p><b>Border:</b></p>
+                        <img src="./img/outline3.PNG" alt="">
+                        <p><b>Outline:</b></p>
+                        <img src="./img/outline2.PNG" alt="">
+                        <p>Como se puede observar en esta comptaración <b>border</b> desplaza el elemento hacia abajo para poder mostrar todas las caras de este al usuario, esto no pasa con <b>outline</b>, ya que el espacio que este ocupa "no exite" la caja en cuestión se mantiene en su posición inicial, este efecto se mantiene sin importar se el <b>outline</b> es cubierto por algun elemento</p>
+                        <h4>Un ejmplo practico de esta propiedad es el resaltado que se aplica el seleccionar un <b>input</b>, el cual por defecto se genera utilizando <b>outline</b>:</h4>
+                        <input type="text" name="" id="">
+                    </dd>
                     <dt id="box-shadow"><h3>Box-shadow</h3></dt>
                     <dd>
                         <p>Esta propiedad genera una sombra para el elementos en cuestión, y para funcionar esta propiedad necesita diferentes tipos de datos:</p>
@@ -233,18 +266,6 @@
                         <p><b>Nota: Si se decea un efecto más intenso es posible repetir efecto las veces que hagan falta añadiendo nuevamente los valores siempre y caundo se respeten dos cosas, la primera es añadir una coma (,) entre cada repetición de los valores y la segunda es culminar la declaración de la propiedad con el punto y coma (;)</b></p>
                         <img src="./img/notaText-shadow.PNG" alt="">
                     </dd>
-                    <dt id="text-aling"><h3>Text-aling</h3></dt>
-                    <dd>
-                        <p>La función de esta propiedad es bastate simple, define el donde se ubicara el texto en función a su contenedor, los posibles valores de esta porpiedad son:</p>
-                        <ul>
-                            <li><p><b>Cente: </b> Establece que el texto se ubique en el centro del contenedor</p></li>
-                            <li><p><b>Justify: </b> Establece que el texto se justufique dentro de su contenedor</p></li>
-                            <li><p><b>Left: </b> Establece que el texto se ubicara a la izquierda del contenedor</p></li>
-                            <li><p><b>Right: </b> Establece que el texto se ubicara a la derecha del contendor</p></li>
-                            <li><p><b>Start: </b> define que el texto se ubicara en la parte superior del contenedor/p></li>
-                            <li><p><b>End: </b>Define que el texto de ubicara en la parte inferior del contenedor</p></li>
-                        </ul>
-                    </dd>
                     <dt id="transform"><h3>Transform</h3></dt>
                     <dd>
                         <p>Una de las funciones de esta porpiedad es rotar los cotnedndores, para esto definimos un valor en <b>deg</b>, esta es la medida que representa a los grados en CSS por lo tanto un valor de "45 deg" es igual a declarar: "rotar el contenedor 45º."</p>
@@ -252,6 +273,57 @@
                         <img src="./img/transformRotate.PNG" alt="">
                         <b><p>Resulta en esto:</p></b>
                         <img src="./img/transformRotate2.PNG" alt="">
+                    </dd>
+                    <dt id="overflow"><h3>Overflow</h3></dt>
+                    <dd>
+                        <p>Esta propiedad se aplica en aquellos casos que el cotenido excede a su cotenedor, por lo que evita que este sobresalga, en su lugar incluye todo el conteido dentro de este, y genera una barra de desplazamiento vertical o orizontal para que le sea posible a usuario desplaserse a lo largo y ancho del contenido.</p>
+                        <p>En otras palabras el efecto de esta propiedad es el de forzar que todo el contenido de la paguina se elmacene dentro del elemento sin que este altere sus dimenciones o su posición, simplemente el contenido que no se pueda visualizar permanecera oculta, y genera las barras de desplazamoento vertical y orizontal para hacer posible navegar dentro de este.</p>
+                        <img src="./img/overflow2.PNG" alt="">
+                        <p>Como tal esta propiedad posee dos variantes <b>overflow-x</b> y <b>overflow-y</b> cada una genera una barra de desplazamiento en su respectivo eje, sin embargo su efecto puede ser logrado perfectamente con la propiedad acortada <b>overflow</b>, de cualquier forma todas estas propiedades cuentan con los mismos valores:</p>
+                        <ul>
+                            <li>
+                                <p><b>Visible: </b> Se trata del valor por defecto de la propiedad, permite que el contenido sobresalga del elemento</p>
+                            </li>
+                            <li>
+                                <p><b>Auto: </b> incluye a todo el contenido dentro del elemento y generara las barras de desplazamiento solo si es necesario, de lo contrario no lo hara</p>
+                            </li>
+                            <li>
+                                <p><b>Scroll: </b> Este valor al igual que auto incluye a todo el contenido dentro del elemento, pero con la diferencia de que fuerza la generación de las barras de desplazamiento <b>X</b> y <b>Y</b> aún si no son necesarias</p>
+                            </li>
+                            <li>
+                                <p><b>Hidden: </b> Este valor aculta la barra de desplazamiento, se utiliza solo cuando se desea que unicamente sea vicible una de estas barra, ya que al usar scroll ambas lo seran, entonces se puede asignar por ejemplo <b>overflow-x: hidden;</b> y por otro lado <b>overflow-y: hidden;</b> de ese modo solu una de las barras sera visible por defecto </p>
+                            </li>
+                        </ul>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/overflow.PNG" alt="">
+                    </dd>
+                    <dt id="float">Float</dt>
+                    <dd>
+                        <p>Se trata de un viejo recurso CSS, ya que en los inicios de la web las paguinas web se estructuraban basandose en tablas y <b>float</b>, en la actualmente existen formás mejores de cumplir con muchas de las funciones de esta porpiedad, no obstante existe una caracteritica que en ciertas circunstancias pudiese ser util</p>
+                        <p>La propiedad float gennera el siguiete  efecto sobre la interacción entre los textos y las imagnes:</p>
+                        <img src="./img/ejmFloat.PNG" alt="">
+                       <p> Este efcto es logrado unicamente con el siguiete codigo:</p>
+                        <img src="./img/float.PNG" alt="">
+                        <p>Es decir aplicando la propiedad <b>Float</b> en la imagen, definiedo la dirección en la que se desea que se ubique, esta propiedad posee los siguites valores:</p>
+                        <ul>
+                            <li><p><b>Left:</b> Ubica el elemento hacia la izquierda</p></li>
+                            <li><p><b>Right: </b> Ubica el elemento hacia la derecha</p></li>
+                            <p><b>Nota: Posee más valores pero no son relevantes actualmente.</b></p>
+                        </ul>
+                        <p>Sin embargo para lograr ese efecto se requieren cumplir ciertas condiciones:</p>
+                        <ol>
+                            <li>
+                                <p>Tanto el texto como la inagen deben estar dentro del mismo contenedor  </p>
+                            </li>
+                            <li>
+                                <p>En el codigo HTML el primer elemento debe ser la imagen </p>
+                                <img src="./img/float2.PNG" alt="">
+                            </li>
+                            <li>
+                                <p>El atributo <b>float</b> debe estar definido en la imagen, con un valor de <b>left</b> o <b>right</b></p>
+                            </li>
+                            <p>De ese modo se puede lograr dicho efecto en la intenracción del texto y la imagen, actualmente este es de los pocos si no es que unico uso que tiene la propiedad flot que sea digna de mencionar.</p>
+                        </ol>
                     </dd>
                 </dl>
             </section>
