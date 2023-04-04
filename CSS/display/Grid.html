@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+<body>
+    <main>
+        <h1>Grid</h1>
+        <article>
+            <section id="conceptos">
+                <h2>Conceptos</h2>
+                <dl>
+                    <dt id="gridContainer"><h3>Grid Container</h3></dt>
+                    <dd>
+                        <p>El nombre <b>Grid</b> proviene de la "grilla", la cuales es: un sistea organisador del espacio grafico que permite la estructuración, el orden y la disposición de distintos elementos que componen una pieza. Al basrse en este formato los elementos <b>grid</b> poreen una gran bariedad de caracteriticas unicas. </p>
+                        <img src="../img/grid.PNG" alt="">
+                        <p>La estructura de un <b>grid container</b> esta compuesta por dibersas columnas y filas de celdas, similar a una tabla </p>
+                        <h4>Ejemplo</h4>
+                        <img src="../img/gridBox.PNG" alt="">
+                        <p><b>Nota: Al igual que flexbox los contenedores grid se comportan como elementos de bloque para los elementos externos.</b></p>
+                    </dd>
+                    <dt id="gridCell"><h3>Grid Cell</h3></dt>
+                    <dd>
+                        <p>Las Grid celdas se tratan de todos los recuadros que seccionan en contenedor, en un elemento <b>Grid</b> pueden ser definido el número de filas y de columnas segun sea necesario, por defecto la propiedad <b>display: grid;</b> genera una unica columna y no genera ninguna fila, como es obvio esto puede ser modificado a conbeniencia del diseño.  </p>
+                        <img src="../img/GridConcepto3.PNG" alt="">
+                    </dd>
+                    <dt id="gridItem"><h3>Grid Item</h3></dt>
+                    <dd>
+                        <p>Al igual que el <b>FlexBox</b>todos los elementos hijos que se encuentran dentro del contenedor son llamados items, es decir un <b>grid item</b> es todo elemento que se asigne en el interior del contenedor <b>grid</b>, por lo tanto la cantidad maxima o minima de <b>grid item</b> es definida por el desarrollador.</p>
+                        <img src="../img/GridConcepto2.PNG" alt="">
+                        <p><b>Nota: Al igual que en flexBox en grid los "items" son limitados unicamete a los elementos hijos directos, por lo tanto un elemento que se encuentre dentro de un item ya no es considerado como uno.</b></p>
+                    </dd>
+                    <dt id="gridtracks"><h3>Grid Tracks</h3></dt>
+                    <dd>
+                        <p>Se tratan de conjuntos de <b>grid cell</b>, y se dibiden en dos grupos:
+                            <ul>
+                                <li>
+                                    <p><b>Filas</b></p>
+                                    <img src="../img/GridConcepto4.PNG" alt="">
+                                </li>
+                                <li>
+                                    <p><b>Columnas</b></p>
+                                    <img src="../img/GridConcepto5.PNG" alt="">
+                                </li>
+                            </ul>
+                             y , por su parte, para saber el número de <b>grid tracks</b> que posee un contenendor simplmemete es necesario sumar las filas y las columnas del elementos en cuestión, por lo tanto cada columna y cada fila se define como un <b>grid track</b>.</p>
+                    </dd>
+                    <dt id="gridArea"><h3>Grid Area</h3></dt>
+                    <dd>
+                        <p>las <b>grid area</b> son conjuntos de celdas consecutivas que el desarrollador puede definir, ya que estas no estan estructuradas, por lo tanto cualquier conjunto de celdas consecutivas puede ser definido com un <b>grid area</b>, esto incluye a uno o más <b>grid tracks</b></p>
+                        <img src="../img/GridConcepto6.PNG" alt="">
+                        <p><b>Nota: tambien se podria definir una sola celda como un area, pero esto carece de sentido, lo ideal es que un grid area posea almenos dos celdas.</b></p>
+                        <p><b>Nota: Las grid areas tienen que ser celdas consecutivas vertical o horizontalmente, no pueden ser en diagonal ni en vartical y horizontal en la misma area.</b></p>
+                    </dd>
+                    <dt id="gridLine"><h3>Grid Line</h3></dt>
+                    <dd>
+                        <p>Se refiere a las lineas dibisoras de las columnas y las celdas, por lo tanto se dibiden en dos grupos</p>
+                        <ul>
+                            <li><p><b>Row line:</b> Lineas dibisoras de las filas</p></li>
+                            <li><p><b>Column line: </b>Lineas dibisoras de la columnas</p></li>
+                        </ul>
+                        <p>A su vez estas se empiezan a enumerar desde la linea borde izquierda para las columnas y desde la linea borde superior para las filas, de la siguite manera:</p>
+                        <img src="../img/GridConcepto7.PNG" alt="">
+                    </dd>
+                </dl>
+            </section>
+            <section>
+                <h2>Propiedades</h2>
+                <h3>Propiedades a aplicar en el Contenedor:</h3>
+                <dl>
+                    <dt id="girdTemplate"><h3>Gird Template</h3></dt>
+                    <dd>
+                        <p>Esta primera porpiedad cuenta con dos variaciones <b>gird-template-rows</b> y <b>grid-template-columns</b>, en ambos casos la función es la misma, definir el número de filas y de columnas respectivamente,de la siguente forma: s</p>
+                        <p><b>Codigo</b></p>
+                        <img src="../img/grid-Templates.PNG" alt="">
+                        <p><b>Resultado</b></p>
+                        <img src="../img/ejmGrid-Templates.PNG" alt="">
+                        <p>De este modo es como se asigna numero de filas y columnas que poseera el contenedor a la vez que se define las dimenciones de estas, de hecho para definir las dimenciones de las columnas y filas se puede aplicar cualquiera de las dibersas unidades de medida CSS.</p>
+                        <p>Sin embargo los elementos <b>grid</b> cuentan con un valor especial abrebiado como <b>"fr"</b>, y su efecto es similar al de la propiedad <b>flex-grow</b>, en la cual se define que todo el espacio sobrante se asigne al elemento en el que esta se aplique, del mismo modo al utilizar este valor para definir las dimenciones de alguna columna o fila esta dispondra del espacio disponible o se reducira segun sea necesario.</p>
+                        <img src="../img/ejmGrid-Templates2.PNG" alt="">
+                        <p><b>Nota: la medida "fr" se puede aplicar a todas las columnas y filas si es necesario</b></p>
+                    </dd>
+                    <dt id="gridGap"><h3>Grid-gap</h3></dt>
+                    <dd>
+                        <p>Esta segunda propiedad tambien posee dos bariantes <b>grid-row-gap</b> y <b>grid-column-gap</b>, tal como su nombre lo indica la diferencia entre ambas es que una aplica su efecto a las columnas y otra a las filas, fura de esto el efecto es el mismo, el efecto de esta propiedad es aplicar un tipo de margen entre las celdas del contenedor de la siguite forma:</p>
+                        <p><b>Codigo</b></p>
+                        <img src="../img/grid-gap.PNG" alt="">
+                        <p><b>Resultado</b></p>
+                        <img src="../img/ejmGrid-gap.PNG" alt="">
+                        <p>Tal como se puede ver en el ejemplo en este codigo se utilizo la propiedad de abrebiatura <b>grid-gap</b>, la cual simplemete generaliza el efeco tanto para las columnas como para las filas, sin embargo se puede utilizar las propiedades <b>grid-row-gap</b> y <b>grid-column-gap</b> de la misma forma, claro que cada una se limita a plicar los margenes a las filas y a las columnas respectibamente.</p>
+                        <p><b>Nota: Tal como se puede apreciar en el ejmplo esta propiedad no distancia las celdas de los bordes del contenedor, su efecto unicamte se aplica entre celdas. </b></p>
+                    </dd>
+                </dl>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
