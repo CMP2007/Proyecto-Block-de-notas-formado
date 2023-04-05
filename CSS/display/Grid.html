@@ -79,9 +79,16 @@
                         <p><b>Resultado</b></p>
                         <img src="../img/ejmGrid-Templates.PNG" alt="">
                         <p>De este modo es como se asigna numero de filas y columnas que poseera el contenedor a la vez que se define las dimenciones de estas, de hecho para definir las dimenciones de las columnas y filas se puede aplicar cualquiera de las dibersas unidades de medida CSS.</p>
-                        <p>Sin embargo los elementos <b>grid</b> cuentan con un valor especial abrebiado como <b>"fr"</b>, y su efecto es similar al de la propiedad <b>flex-grow</b>, en la cual se define que todo el espacio sobrante se asigne al elemento en el que esta se aplique, del mismo modo al utilizar este valor para definir las dimenciones de alguna columna o fila esta dispondra del espacio disponible o se reducira segun sea necesario.</p>
+                        <H4>Medida "fr"</H4>
+                        <p>Los elementos <b>grid</b> cuentan con un valor especial abrebiado como <b>"fr"</b>, y su efecto es similar al de la propiedad <b>flex-grow</b>, en la cual se define que todo el espacio sobrante se asigne al elemento en el que esta se aplique, del mismo modo al utilizar este valor para definir las dimenciones de alguna columna o fila esta dispondra del espacio disponible o se reducira segun sea necesario.</p>
                         <img src="../img/ejmGrid-Templates2.PNG" alt="">
                         <p><b>Nota: la medida "fr" se puede aplicar a todas las columnas y filas si es necesario</b></p>
+                        <h4>Valor Repeat</h4>
+                        <p>Se trata de una función que se puede emplear a la hora de definir el valor de estas porpiedades, su funión es la de simplificar la declaración de las columnas y filas al definirlas una unica vez en lugar de repetir las pautas numerosas veces.</p>
+                        <p>Su sintaxis constan de la palabra clave <b>repeat</b> y dentro de parentesis el numero de repeticiones a realizar seguido de las pautas de las filas o de las columnas, como se puede ver en el siguite ejemplo:</p>
+                        <img src="../img/repeat.PNG" alt="">
+                        <p>De esta forma se logra que la función ejecute las pautas el numero de beces designado, en este caso: que se cree una  columna de de 100px seguida de una de 1<b>fr</b> tres veces.</p>
+                        <p><b>Nota: Esta función es muy util en aquellos casos en los que es necesario crear numerosas filas o columnas.</b></p>
                     </dd>
                     <dt id="gridGap"><h3>Grid-gap</h3></dt>
                     <dd>
@@ -92,6 +99,52 @@
                         <img src="../img/ejmGrid-gap.PNG" alt="">
                         <p>Tal como se puede ver en el ejemplo en este codigo se utilizo la propiedad de abrebiatura <b>grid-gap</b>, la cual simplemete generaliza el efeco tanto para las columnas como para las filas, sin embargo se puede utilizar las propiedades <b>grid-row-gap</b> y <b>grid-column-gap</b> de la misma forma, claro que cada una se limita a plicar los margenes a las filas y a las columnas respectibamente.</p>
                         <p><b>Nota: Tal como se puede apreciar en el ejmplo esta propiedad no distancia las celdas de los bordes del contenedor, su efecto unicamte se aplica entre celdas. </b></p>
+                    </dd>
+                    <dt id="gridColumnRow"><h3>Grid-column y Grid-row</h3></dt>
+                    <dd>
+                        <p>Se tratan de dos propiedades con efectos muy similares entre si llamadas <b>grid-column</b> y <b>grid-row</b>, la función de ambas es definir el espacio que ocupara una celda en en la grilla, para lo cual esta propiedades se basan en las <b>grid line</b>, es decir se basan en las diferentes lineas que se conforman la grilla, tal como se puede ver <a href="./Grid.html#gridLine"><b>en este ejemplo</b></a>, por lo tanto el efecto de cada propiedad es:  </p>
+                        <ul>
+                            <li>
+                                <p><b>Grid-column:</b> Define en cuales lineas de columna (lineas verticales) empieza y termina la celda en cuestión, por lo tanto esta propiedad modifica las dimeciones horizontales de la celda. </p>
+                            </li>
+                            <li>
+                                <p><b>Grid-row: </b> Define en cuales lineas de fila (lineas horizontales) empieza y termina la celda en cuestión, por lo tanto esta propiedad modifica las dimeciones verticales de la celda.</p>
+                            </li>
+                        </ul>
+                        <p>Por lo tanto se podria decir que estas propiedades modifican la cantidad de casillas que ocupara la celda selecionada, como en el siguite ejemplo:</p>
+                        <p><b>Codigo</b></p>
+                        <img src="../img/GridColumRow.PNG" alt="">
+                        <p><b>Resultado</b></p>
+                        <img src="../img/ejmGridColumRow.PNG" alt="">
+                        <p>Una caractertica de las grillas es que pese a que el espacio ocupado por las celdas se modifique, esto solo afecta a las dimenciones de estas, no significa que la celda absorba a algun item <b>grid</b>, estos elementos simplemete proceden a correrse dando espacio a la celda para ocupar el espacio designado, ya sea desplazandose a otra columna o desendiendo a otra fila. </p>
+                        <p>A su vez tal y com se pude ver en el ejemplo esta propiedad acepta dos valores numericos en los cuales el <b>primero representa la numeración de la linea donde comienza la celda</b> seguida de un "slash (/)"l y continuando con el <b>segundo</b> digito, el cual <b>representa la numeración de la linea donde termina la celda</b>, esto es igual para ambas propiedades.</p>
+                        <p>Es importante no  confundir, <b>estos valores numericos no representan el numero de casillas que ocupara la celda, si no en cuales lineas empieza y termina la celda en cuestión</b>, sin embargo axiste una forma de utilizar el número de casillas que se desea utilizar como valor para esta propiedad, esto se logra añadiendo el valor <b>span</b> delante del segundo número, de ese modo este deja de represetnar la numeración de la linea, si no que pasa a representar el numero de seldas a cubrir de la siguente forma:</p>
+                        <p><b>Codigo</b></p>
+                        <img src="../img/GridColumRow3.PNG" alt="">
+                        <p><b>Resultado</b></p>
+                        <img src="../img/ejmGridColumRow3.PNG" alt="">
+                        <p>De este modo la declaración de este ejmplo deja de ser: "empieza en la lina 1 y termina en la 3" y pasa a ser: "empieza en la lina 1 y cubre 3 casillas". <b>Este metodo que puede simplificar bastante más la implementación de esta propiedad</b>.</p>
+                        <h4>Bariantes</h4>
+                        <p>Realmente ambas propiedades se tratan de propiedades de abrebiatura, ya que cada una tiene la función de recibir los datos pertienetes a otras dos propiedades de la siguite forma: </p>
+                        <ul>
+                            <li>
+                                <p><b>Grid-column</b> abrebia los datos de:</p>
+                                <ul>
+                                    <li><p><b>Grid-column-start:</b> Define la linea de columna (vertical) en la que empieza la celda</p></li>
+                                    <li><p><b>Grid-column-end:</b> Define la linea de columna (vertical) en la que termina la celda</p></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><b>Grid-row:</b> Abrebia los daots de:</p>
+                                <ul>
+                                    <li><p><b>Grid-row-start: </b> Define la linea de fila (horizontal) en la que empieza la celda </p></li>
+                                    <li><p><b>Grid-row-end</b> Define la linea de fila (horizontal) en la que temina la celda</p></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h4>Ejemplo</h4>
+                        <img src="../img/GridColumRow2.PNG" alt="">
+                        <p><b>Por lo tanto utilizar estas propiedades es más optimo que sus verciones espesificas lo que nos permite definir más datos con menos lineas de codigo.</b> </p>
                     </dd>
                 </dl>
             </section>
