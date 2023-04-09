@@ -75,6 +75,19 @@
                             </li>
                         </ul>
                         <p><b>Nota: Esta propieda no modifica el tiempo de duración de la animación, eso es un rol exclusivo de la propiedad animation-duration </b></p>
+
+                        <h4>Cubic-bezier</h4>
+                        <p>Se trata de una valor especial que puede adoptar esta propiedad, su función consiste en utilizar las cordenadas de un <b>cubic-bezier</b> para definir el movimiento y la velocidad que se aplicara en la animación, ya que el <b>cubic-bezier</b> se basa en cordenadas como las den un mapa carteciano, para cada cordenada se nesecita dos datos, un valor del eje <b>X</b> y uno del eje <b>Y</b>, para cada cordenada. </p>
+                        <p><b>Grafica de un Cubic-bezier</b></p>
+                        <img src="https://valhead.com/wp-content/uploads/2017/02/cubic-bezier-graph.png" alt="">
+                        <p><b>Codigo</b></p>
+                        <img src="./img/Cubic-bezier.PNG" alt="">
+                        <p>La linea que conecta las dos cordenadas representa el desarrollo de la animación mientras que los valores del eje <b>X</b> y el eje <b>Y</b> representan el la cantidad de movimiento que se realiara en ese respectivo eje en ese momento.</p>
+                        <p>Es perfectamte posible el aplicar los valoresde las cordenadas manualmete, sin embargo no es algo recomendable, ya que a la hora de definir adecuadamete el movimiento de la animación, es de gran ayuda apoyarse en una grafica <b>cubic-bezier</b>, para lo cual es mejor recurrir a un generador <b>cubic-bezier</b>, ya que estos se encuentra a plena dispocición en internet, y permiten interactuar con la grafica a medida que se modifican los valores, en este enlase se encuentra un buen generador <a href="https://cubic-bezier.com/#.17,.67,.83,.67"><b>cubic-bezier</b></a>. </p>  
+                        <p>En las herramientas de desarrollador de google tambien se enceuntra un generador <b>cubic-bezier</b>, para acceder a este es necesario dar "clic derecho", seguido se ingresa en "Inpeccionar elemento", y se procede a buscar los estilos CSS de la paguina, en el recuadro que permite añadir estilos ingresamos <b>"animation-timing-function: cubic-bezier(.17,.67,.83,.67)"</b> para aplicar la propiedad con un valor de ejemplo, junto al valor <b>"cubic-bezier"</b> aparecera un recuadro al clickearlo se extiende el generrador <b>cubic-bezier</b> que nos permite modificar los valores de las cordenadas al amplearlo.  </p>
+                        <img src="img/ejmCubic-bezier.PNG" alt="">
+                        <p><b>Aplicando este recurso a las animaciones se pueden lograr movimientos mas realias o de revote facilmente, incluso existe librerias completas enfocadas a este recurso.</b></p>
+
                     </dd>
                     <dt id="animation-interation-count"><h3>Animation-interation-count</h3></dt>
                     <dd>
