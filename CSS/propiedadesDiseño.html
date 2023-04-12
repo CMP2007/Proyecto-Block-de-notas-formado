@@ -18,7 +18,7 @@
                 <dl>
                     <dt id="background"><h3>Background</h3></dt>
                     <dd>
-                        <p>Esta propiedad esta especializada en definir las caracteristicas del fondo de la paguina, para ajustarse a cualquier situaciín cunesta con una serie de bariantes las cuales son:</p>
+                        <p>Esta propiedad esta especializada en definir las caracteristicas del fondo de la paguina, para ajustarse a cualquier situación cunesta con una serie de bariantes las cuales son:</p>
                         <dl>
                             <dt><h3>background-color</h3></dt>
                             <dd>
@@ -46,7 +46,7 @@
                             </dd>
                             <dt id="background-zise"><h3>Background-zise</h3></dt>
                             <dd>
-                                <p>Esta propiedad se centra en definri las dimaciones que se le daran a la imagen traido por <b>background-image</b>, para lo cual cuanta con multiples valores:</p>
+                                <p>Esta propiedad se centra en definir las dimenciones que se le daran a la imagen traido por <b>background-image</b>, para lo cual cuanta con multiples valores:</p>
                                 <ul>
                                     <li>
                                         <p><b>Porcentajes: </b> De esta forma se define que la imagen ocupe un porcentaje del contenedor en el que se encuantra, puede ser declarado un unico valor que se aplicara para toda la imagen o tambien se pueden declarar dos valores diferentes, uno referente al eje <b>X</b> y otro para el eje <b>Y</b>, de la siguite manera</p>
@@ -57,7 +57,7 @@
                                         <img src="img/background-cover.PNG" alt="">
                                     </li>
                                     <li>
-                                        <p><b>Contain: </b> ESte valor define que la imagen se ajuste a las dimenciones del contendor pero manteniendo las resoluciones originales, con la peculiaridad de que en el caso de que exista espcio basio en el contenedor la imagen se repetira para llenar ese spacio.</p>
+                                        <p><b>Contain: </b> Este valor define que la imagen se ajuste a las dimenciones del contendor pero manteniendo las resoluciones originales, con la peculiaridad de que en el caso de que exista espcio basio en el contenedor la imagen se repetira para llenar ese spacio.</p>
                                         <img src="img/background-zise.2PNG.PNG" alt="">
                                     </li>
                                 </ul>
@@ -70,10 +70,11 @@
                                     <li><p><b>No-rpeat</b> Define que la imagen <b>no</b> se repetira para rrellenar el contendor en caso de que sobren espacios libres</p></li>
                                 </ul>
                                 <img src="img/background-repeat.PNG" alt="">
+                                <p><b>Nota: Esta propiedad se puede usar para que la imagen no se repita al emplear la propiedad "background-zise" con un valor "contain", de ese modo el espacio sobrante en el contenedor sera rellanado por el "background-color" que puede que se utilise en el fondo de este.</b></p>
                             </dd>
                             <dt id="background-clip"><h3>Background-clip</h3></dt>
                             <dd>
-                                <p>Esta propiedad define desde cual sección de la imagen sera mostrada, posee varios valores:</p>
+                                <p>Esta propiedad permite cortar la imagen, para definir cual sección de la imagen sera cortada, posee varios valores:</p>
                                 <ul>
                                     <li>
                                         <p><b>border-box: </b> Se trata del valor por defecto, recorta el area de la imagen que se encuentra en los bordes del elemento</p>
@@ -98,9 +99,9 @@
                                 </ul>
                                 <p><b>Nota: La diferencia entre background-clip y background-origin es que background-clip recorta la imagen, mientras que background-origin la genera desde el punto establecido.</b></p>
                             </dd>
-                            <dt id="background-position">Background-position</dt>
+                            <dt id="background-position"><h3>Background-position</h3></dt>
                             <dd>
-                                <p>Esta propiedad permite ubicar la imagen en alguna de las cuatro esquienas del contendor o en el cantro de este, para hacerlo esta propiedad necesita de dos valores, el primero referente al eje <b>X</b> y el segundo referente al eje <b>Y</b>, por lo tanto posee los valores:</p>
+                                <p>Esta propiedad permite ubicar la imagen en alguna de las cuatro esquienas del contendor o en el centro de este, para hacerlo esta propiedad necesita de dos valores, el primero referente al eje <b>X</b> y el segundo referente al eje <b>Y</b>, por lo tanto posee los valores:</p>
                                 <ul>
                                     <li><p><b>Left top: </b> La imagen se posiciona a la izquierda y arriba</p></li>
                                     <li><p><b>left bottom:</b> La imagen se posiciona a la izquierda y abajo</p></li>
@@ -112,6 +113,8 @@
                                     <li><p><b>Center bottom:</b> La imagen se posiciona en el centro y abajo </p></li>
                                     <li><p><b>Center center: </b>La imagen se posiciona en el centro del contenedor</p></li>
                                 </ul>
+                                <h4>Ejemplo</h4>
+                                <img src="img/background-position.PNG" alt="">
                             </dd>
                             <dt id="background-attachment"><h3>background-attachment</h3></dt>
                             <p>Esta propiedad define a que elemento tomara la imagen como referencia para ubicarse, puede ser el contendor en el que se encuenta (visualizar de forma normal) o el viewport de la paguina, en cuyo caso la imagen se ubica en el fono del viewport pero el contendor de la imagen actua como una ventana a esta.</p>
@@ -161,6 +164,12 @@
                             <li><p><b>Horizontal: </b> Unicamente permite que se modifiquen las dimenciones horizotales del elemento</p></li>
                             <li><p><b>None: </b> Este valor desactiva por completo esta propiedad inpidiendo que se puedan modificar las dimanciones del elemento, se utiliza espesificamete en los elementos que incluyen esta propiedad por defecto</p></li>
                         </ul>
+                    </dd>
+                    <dt id="scrollBehavior"><h3>Scroll Behavior</h3></dt>
+                    <dd>
+                        <p>Esta propiedad tiene en uso muy espesifico, para aquellos casos en los que se utilise un elemento <b>a</b> para re-diriguir al usuario hasta un elemento ubicado dentro del mismo documento (usando el simbolo "#" seguido del id del elemento), al estar declarada esta propiedad en vez de simplemte cambiar repenrtinamente la sección de la paguina que se visualiza, se realiza un desplazamiento (scroll) desde donde este ubicado el usuario hasta el elemento pautado. </p>
+                        <img src="img/scrollBehavior.PNG" alt="">
+                        <p><b>Nota: Esta propiedad debe declararse en el "body" del documento, ya que alli es donde se encuentra el scroll (el scroll es la barra de desplazamiento vertical que poseen los navegadres en el lado dercho.)</b></p>
                     </dd>
                 </dl>
             </section>
