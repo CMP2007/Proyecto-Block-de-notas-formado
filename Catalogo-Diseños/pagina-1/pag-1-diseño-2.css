@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+
+.contenedor_diseño-2{
+    display: flex;
+    overflow-x: scroll;
+    padding: 24px;
+    width: 300px;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 24px;
+    border-radius: 8px;
+    gap: 12px;
+    margin-left: 37%;/*posicionar elementos en la paguina*/
+}
+.contenedor_diseño-2 .item_diseño2{
+    flex: 0 0 100%;
+    padding: 24px;
+    border-radius: 8px;
+    scroll-snap-align: start;
+    background: rgb(69,1,240);
+background: linear-gradient(0deg, rgba(69,1,240,1) 0%, rgba(35,128,236,1) 26%, rgba(185,21,234,1) 50%, rgba(0,255,231,1) 100%);
+}

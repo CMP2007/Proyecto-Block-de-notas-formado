@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Operadores</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../Index.html" class="logo"><img src="../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../JavaScrip/Indice__JS.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <h2>JavaScrip</h2>
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Operadores </h1>
+                    <section class="pagination">
+                        <a href="#" class="desplazar off">
+                            <div>
+                                <span>
+                                    <span class=" off"> &larr; </span>PREVIO
+                                </span>
+                            </div>
+                        </a>
+                        <div class="numbers">
+                            <a href="#" class="off">
+                                <div>
+                                    1
+                                </div>
+                            </a>
+                            <a href="./operadores-2.html" class="pagina paginaJS">
+                                <div>
+                                    2
+                                </div>
+                            </a>
+                        </div>
+                         <a href="./operadores-2.html" class="desplazar">
+                           <div>
+                                <span class="pagina paginaJS">Next <span class="pagArrowRight"> &rarr;</span></span>
+                            </div>
+                        </a>
+                    </section>
+                    <section>
+                        <p>Los operadores permiten manipular el valor de las variables, realizar operaciones matemáticas con sus valores y comparar diferentes variables. De esta forma, los operadores permiten a los programas realizar cálculos complejos y tomar decisiones lógicas en función de comparaciones y otros tipos de condiciones.</p>
+                    </section>
+                    <h2>Operadores de Asignación</h2>
+                    <section>
+                        <p>Los operadores de Asignación asignan un valor al operando de la izquierda basado en el valor del operando de la derecha, es decir son como una abreviatura de una operación comun, se trata de operadores que con su primer simbolo expresan la operación a realizar a la variable en la que se utilise, seguido de un igual que concatena el segundo operador, a continuación se pueden obcervar dos operaciones con exactamte el mismo significado:</p>
+                        <img src="./img/operadoresAsignación-2.PNG" class="img" alt="">
+                        <p>De esta forma el uso de operadores de asignación simplifican el codigo asignando la opercaión a la varible a la que se le realizara, de es modo evitando tener que llamar a la varible y indicando que a esta se le debe realizar la opración como se hace en una declaración de operación común. </p>
+                        <h4>Los operadores de asignación disponibles en JavaScrip son:</h4>
+                        <img src="./img/operadoresAsignación.PNG" class="img" alt="">
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Definición operaciones particulares</h3></dt>
+                            <dd>
+                                <p>En esta secmento se definen todos aquelllos operadores de asignación con valores diferentes al de las operaciones matematicas basicas (suma, resta, multiplicación y divición).</p>
+                                <ul>
+                                    <li>
+                                        <h4 id="resto">Asignación de Resto</h4>
+                                        <p>En aritmética, el resto o residuo de una división de dos números enteros es el número que se le ha de restar al dividendo para que sea igual a un determinado número de veces el divisor. En otras palabras el resto es la diferencia entre X numero de veces el dividendo y el divisor. </p>
+                                        <h4>Por Ejemplo</h4>
+                                        <img src="./img/operadoresAsignación-3.PNG" class="img" alt="">
+                                        <p>El resultado de esta operación es 2, ya que el multiplo de 6 más cercano a 50 sin sobrepasarlo es 48, el resto de esta operacón es 2, ya que es la difernrecia entre el dividendo (50) y X numero de veces el divisor (6).</p>
+                                    </li>
+                                    <li>
+                                        <h4>Asignación de Exponenciación</h4>
+                                        <p>Se trata del resultado de la asignación de una potencia al valor que se encuantre en la varible.</p>
+                                        <h4>Ejemplo</h4>
+                                        <img src="./img/operadoresAsignación-4.PNG" class="img" alt="">
+                                        <p>El resulado de esta operación es 100, ya que el valor en la varible es la base de la operación (10) y el numero asignado se convierte en su exponente (2) resultado en: 10<sup>2</sup>, lo que es igual a 10 * 10 = 100.</p>
+                                    </li>
+                                    <li>
+                                        <p>Nota: El resto de operadores de asignación son realmete de uso muy puntual, y para llegar a usarlo es necesario profundizar mucho en JavaScrip por lo que no es necesario desenglosarlos en esta sección.</p>
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </section>
+                    <h2>Operadores Aritmeticos</h2>
+                    <section>
+                        <p>Los operadores Aritmeticos toman valores  númericos ( ya sean literales o Variables) como sus operandos y retornan un valor númerico unico, es decir estos operadores toman valores numericos y los convierten para retirnar un valor.</p>
+                        <h4>Los Operadores Aritmeticos son los Siguientes:</h4>
+                        <img src="./img/operadoresAritmetticos-1.PNG" class="img" alt="">
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Definición de los Operadores Aritmeticos</h3></dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        <h4>Suma</h4>
+                                        <p>Se trata de del operador comun de suma, y su uso es común.</p>
+                                        <img src="./img/operadoresAritmetticos-2.PNG" class="img" alt="">
+                                    </li>
+                                    <li>
+                                        <h4>Decremento</h4>
+                                        <p>Este operador tiene la función de restar uno(-1) del valor al que se le aplique</p>
+                                        <h4>Ejemplo</h4>
+                                        <img src="./img/operadoresAritmetticos-3.PNG" class="img" alt="">
+                                        <p>El valor almacenado dentro de la variable "resultado" es 9, ya que "numero1" tiene un valor de 10 y le reducimos uno (-1) de su valor.</p>
+                                        <p>Este operador tiene una particularidad, y es que el decremento del valor ocurre luego de que este ya ha sido procesado, es decir:</p>
+                                        <img src="./img/operadoresAritmetticos-4.PNG" class="img" alt="">
+                                        <p>En un aso como este el valor que se guarda dentro de la varible "resultado" es 10, ya que JavaScrip primero procesa el valor numerico (10) y luego procede a reducirlo en uno (-1), por ello lo que ocurre en este ejemplo es que primero se esta guardando el valor "10" dentro de la variable y luego se esta reduciendo su valor, resultando en que el valor dentro de la varibles sea "10" ya que no esta siendo alterado.  </p>
+                                        <p>Para evitar estos errores enel uso del operador es necesario primero realizar la decrecón del valor y posteriormente manipular el valor, tal como se hace en el primer ejemplo del operador de decremento.</p>
+                                    </li>
+                                    <li>
+                                        <h4>Divición</h4>
+                                        <p>Este operador  representa una operación de divición común por lo que su uso es el cotidiano</p>
+                                        <img src="./img/operadoresAritmetticos-5.PNG" class="img" alt="">
+                                    </li>
+                                    <li>
+                                        <h4>Exponenciación</h4>
+                                        <p>Este operador requiere de dos valores ya que convierte el segundo valor en el exponente del primero de la siguiente forma:</p>
+                                        <img src="./img/operadoresAritmetticos-6.PNG" class="img" 
+                                        alt="">
+                                        <p>Este ejemplo resulta en "100.000" ya que esta operación es igual a 10<sup>5</sup></p>
+                                    </li>
+                                    <li>
+                                        <h4>Incremento</h4>
+                                        <p>Este operador aumenta en uno (+1) el valor al que se le asigne, su funcionamiento es igual que el operador de decremento, incluyendo la particularidad de que primero se procesa el dato y luego se modifica su valor, con la unica diferencia de que este suma en uno(+1) al valor en vez de restarlo.</p>
+                                        <img src="./img/operadoresAritmetticos-7.PNG" class="img" 
+                                        alt="">
+                                        <p>Por lo tanto en este ejemplo el valor guardado en la varible es 11, ya que se le esta sumando uno (+1) al valor de esta (10).</p>
+                                    </li>
+                                    <li>
+                                        <h4>Resto</h4>
+                                        <p>Este operador realiza la operación de resto entre dos numeros, (la cual ya se encuentra explicada en el <a href="#resto" class="a__JS">operador de asiganción resto</a> )
+                                        </p>
+                                        <img src="./img/operadoresAritmetticos-8.PNG" class="img " alt="">
+                                        <p>Por lo tanto el resultado de este ejemplo es 4. </p>
+                                    </li>
+                                    <li>
+                                        <h4>Sustracción</h4>
+                                        <p>Este operador indica una operación de resta común. por lo que no hay nada destaclable en su uso.</p>
+                                        <img src="./img/operadoresAritmetticos-9.PNG" class="img" alt="">
+                                    </li>
+                                    <li>
+                                        <h4>Negación Unaria</h4>
+                                        <p>este operador invierte el signo del dato numerico en cuanestión, es decir lo convierte en su opuesto exacto.</p>
+                                        <img src="./img/operadoresAritmetticos-10.PNG" alt="" class="img">
+                                        <p>Por lo tanto en este ejemplo el resultado es "-10" ya que se modifico el signo del valor convirtiendo en su opuesto,</p>
+                                        <p>Nota: este operador no es como el incremento o el decremento, ya que este se ejecuta antes de procesar el valor por lo que si es correcto emplearlo al guardar el dato en una varible.</p>
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section class="pagination">
+                        <a href="#" class="desplazar off">
+                            <div>
+                                <span>
+                                    <span class=" off"> &larr; </span>PREVIO
+                                </span>
+                            </div>
+                        </a>
+                        <div class="numbers">
+                            <a href="#" class="off">
+                                <div>
+                                    1
+                                </div>
+                            </a>
+                            <a href="./operadores-2.html" class="pagina paginaJS">
+                                <div>
+                                    2
+                                </div>
+                            </a>
+                        </div>
+                         <a href="./operadores-2.html" class="desplazar">
+                           <div>
+                                <span class="pagina paginaJS">Next <span class="pagArrowRight"> &rarr;</span></span>
+                            </div>
+                        </a>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>

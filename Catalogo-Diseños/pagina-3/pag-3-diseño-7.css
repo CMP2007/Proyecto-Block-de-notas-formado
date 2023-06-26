@@ -1,0 +1,82 @@
+.contenedor_diseño-27 {
+    padding: 2vw 3vw;
+    margin: 0 auto;
+    width: 50%;
+
+/*De aquí en adelate codigo del diseño */
+    background: #1a2a3c;
+  text-align: center;
+  font-family: 'Montserrat';
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+.figure-27 {
+  position: relative;
+  color: #fff;
+  margin: auto;
+  margin-top: 2em;
+  text-transform: uppercase;
+  transition: all 200ms ease-in;
+  width: 25vw;
+  line-height: 3em;
+  cursor: pointer;
+}
+
+.figure-27:nth-child(1) {
+  background: rgba(255,255,255,.2);
+  border: 1px solid #fff;
+}
+
+.figure-27:nth-child(1):hover {
+  background: #fff;
+  color: #000;
+}
+
+.figure-27:nth-child(2) {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff; 
+}
+
+.figure-27:nth-child(2):hover {
+  box-shadow: inset 25vw 0 0 #fff;
+  color: #000;
+}
+
+.figure-27:nth-child(3) span {
+  position: absolute;
+  bottom: 0;
+  left: 50%;  
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: all 300ms ease-in;
+}
+
+.figure-27:nth-child(3):hover span {
+  width: inherit;
+  left: 0;
+}
+
+.figure-27:nth-child(4) {
+  background: rgba(0,0,0,.4);
+  box-shadow: 0 5px 0 rgba(0,0,0,.7);
+}
+
+.figure-27:nth-child(4):hover {
+  transform: translateY(5px);
+  box-shadow: none!important;
+}
+
+.figure-27:nth-child(5) {
+  border: 1px solid #fff;
+  background: #fff;
+  color: #000;
+}
+
+.figure-27:nth-child(5):hover {
+  background: transparent;
+  color: #fff; 
+}

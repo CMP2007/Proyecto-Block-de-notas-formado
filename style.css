@@ -1,0 +1,917 @@
+:root {
+  --fondo-gris: rgba(242, 242, 242, 01);  
+  --color-bordes: #cecec9;
+  --color-HTML-oscuro: rgba(241, 102, 45, 1);
+  --color-HTML-Claro: rgba(243, 119, 71, 1);
+  --color-CSS-oscuro: #0172be;
+  --color-CSS-claro: rgb(1,175,236);
+  --color-JS-oscuro: #efbc00;
+  --color-JS-claro: #ffd800;
+}
+
+
+
+/*-------------------------------------------- Header -------------------------------------------------*/
+ body{font-family: 'Lexend Deca' , sans-srif;
+	font-size: 1.5vw;
+	font-weight: bold;	
+}
+.main_dimención {
+	padding: 6vw 4vw;
+}
+
+  .nav {/*Estructura barra nav*/
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
+    gap: 3.3vw;
+    position: fixed;
+    z-index: 30;
+    top: -1.5vw;
+    left: 0;
+    width: 100%;
+    height: 7vw;
+    padding: 0vw 10vw 1vw 7vw;
+    align-items:  center;
+    list-style: none;
+    background: var(--fondo-gris);
+    overflow: hidden;
+    z-index: 20;
+} 
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"]:checked   p {
+  display: none;
+}
+ .tema {/*Items nav*/
+  z-index: 40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ color: #949494;  
+ text-decoration: none;
+ font-weight: bold;
+ padding: 10px 40px;
+ border: solid #949494 0.2vw;
+ transition: 1s;
+ border-radius: 1vw;
+ }
+
+ /*Estilos de las opciones vav seleccionada*/
+.seleccion__HTML {
+  cursor: default;
+  background: var(--color-HTML-Claro);
+  color: #fff;
+  border: 0.3vw solid var(--color-HTML-oscuro);
+  transform: scale(1.2);
+}
+.seleccion__CSS {
+  border: 0.3vw solid var(--color-CSS-oscuro);
+  background: var(--color-CSS-claro);
+  transform: scale(1.2);
+  color:#fff;
+  cursor: default;
+}
+.seleccion__JS {
+  background: var(--color-JS-oscuro);
+  border: solid 0.3vw var(--color-JS-claro);
+  transform: scale(1.2);
+  color: #fff;
+  cursor: default;
+}
+
+/*Estilos de las opciones nav sin seleccionar*/
+.HTML {
+  background: rgba(243, 119, 71, 0.2);
+  border: 0.3vw solid rgba(241, 102, 45, 0.2);
+ }
+.CSS {
+  border: 0.3vw solid rgba(1, 114, 190, 0.2);
+  background: rgba(1, 175, 236, 0.2);
+}
+.JS {
+  background: rgba(239, 188, 0,0.3);
+  border: solid 0.3vw rgba(255, 216, 0, 0.2);
+}
+ /*Estilos de opciones sin seleccionar Hover*/
+ .HTML:hover {
+  background: var(--color-HTML-Claro);
+  border: 0.3vw solid var(--color-HTML-oscuro);
+  transform: scale(1.2);
+  color:#fff;
+ }
+.CSS:hover {
+  border: 0.3vw solid var(--color-CSS-oscuro);
+  background: var(--color-CSS-claro);
+  transform: scale(1.2);
+  color:#fff;
+}
+.JS:hover {
+  background: var(--color-JS-oscuro);
+  border: solid 0.3vw var(--color-JS-claro);
+  transform: scale(1.2);
+  color: #fff;
+}
+/*-------------------------------------------------------- End Header ---------------------------------------------------*/
+body{
+  background: var(--fondo-gris);
+}
+
+
+/*-------------------------------------------------------------- Aside------------------------------------------------------*/
+/*Los primeros estilos del aside corresponde a los elementos comunes en todos los temas */
+* {
+	box-sizing: border-box;
+}
+.outer {/*se declaran variables para el contenedor del aside*/
+	--primary: #454D5B;
+	--solid: var(--primary);
+	--transition: all .6s linear;
+	position: relative;
+	margin-top: 6VW;
+	width: 100%;
+  background: #fff;
+	border: 0.075VW solid #efefef;
+	user-select: none;
+	overflow: hidden;
+}
+.input-18[type="checkbox"] {
+	display: none;
+}
+
+/* Blank Content Placeholder Container */
+.content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: var(--fondo-gris);
+	box-shadow: 20px 20px 100px -20px rgba(0,0,0,.5);
+	transition: var(--transition);
+	z-index: 12;
+  transform: translateY(-2vw);
+  padding: 2vw;
+}
+
+/*---Contenedor del article y el body*/
+.desplazamiento {
+  transition: margin-left 0.4s;
+}
+.input-18[type="checkbox"]:checked ~ .desplazamiento{
+  margin-left: 18%;
+} 
+
+
+
+/*--------------------- Aside HTML ---------------------------*/
+
+/*----- Menu Icon (simbolo) HTML---- */
+.menu-aside_HTML {
+	--d: 1.88VW;
+	--d-half: calc(var(--d)*.5);
+	--o: 0.9VW;
+	position: fixed ;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	top: 7.5vw;
+	left: var(--o);
+	width: var(--d);
+	height: var(--d);
+	border: 0.075vw solid var(--solid);
+	transition: var(--transition);
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 700;
+}
+.menu-aside_HTML:before,
+.menu-aside_HTML:after {
+	position: absolute;
+	content: '';
+	width: 50%;
+	height: 50%;
+	background: var(--solid);
+	transform: rotate(45deg);
+	transition: inherit;
+}
+.menu-aside_HTML:before {	
+	bottom: -30%;
+	left: -30%; 
+	width: 0;
+}
+.menu-aside_HTML:after {
+	top: -30%;
+	right: -30%;
+}
+
+/* Horizontal Lines in Menu */
+.hl_HTML {
+	margin-bottom: 0.075VW;
+	display: block;
+	width: var(--d-half);
+	height: 0.075VW;
+	background: var(--solid);
+	transition: var(--transition);
+}
+.hl_HTML:last-child {
+	margin-bottom: 0;
+}
+
+
+/*----- Navigation Container HTML -----*/
+.nav-aside_HTML {
+	position: fixed;
+	padding-top: 5%;
+	padding-right: 1.5vw;
+	bottom: 0;
+	right: 0;
+	width: calc(100% - 20px);
+	height: calc(100% - 20px  );
+  overflow: hidden scroll;/*aqui se genera la funcion de scrollde la barra latearal*/
+}
+.nav-aside_HTML::-webkit-scrollbar {/*Aqui se oculta la barra scroll del aside*/
+	display: none;
+   }
+
+.nav-aside_HTML:before,
+.nav-aside_HTML:after {
+	position: absolute;
+	content: '';
+	background: var(--color-HTML-Claro);
+}
+.nav-aside_HTML:before {	
+	top: 6.85vw;
+	right: 5vw;
+	width: calc(95% - 20px);
+	height: 0.075vw;
+}
+.nav-aside_HTML:after {
+	bottom: 0;
+  top: 8.3vw;
+	left: 0;
+	width: 0.075vw;
+	height: 110%;
+}
+.nav-aside_HTML ul {
+	margin-top: 3vw;
+	list-style-type: none;
+	font-size: 1vw;
+	text-align: left;
+}
+.nav-aside_HTML ul h2 {
+	font-size: 2vw;
+	color: var(--color-HTML-Claro);
+}
+.nav-aside_HTML ul h4 {
+	color: var(--color-HTML-Claro);
+	font-size: 1.5vw;
+}
+.nav-aside_HTML ul li {
+	margin-bottom: 30px;
+}
+.nav-aside_HTML UL a:hover{
+	color: var(--color-HTML-Claro);
+}
+.nav-aside_HTML a {
+	position: relative;
+	color: var(--solid);
+	text-decoration: none;
+	transition: var(--transition);
+  font-weight: bold;
+}
+.nav-aside_HTML a:after {
+	position: absolute;
+	content: '';
+	right: 0px;
+	bottom: 0;
+	width: 0;
+	height: 1px;
+	background: var(--color-HTML-Claro);
+	transition: inherit;
+	transition-duration: 0.1s;
+}
+.nav-aside_HTML a:hover:after {
+	width: calc(98.5% + 20px);
+}
+
+/* Change Styling After Checkbox is Checked */
+.input-18[type="checkbox"]:checked + .menu-aside_HTML {
+	border-color: var(--color-HTML-Claro);
+}
+.input-18[type="checkbox"]:checked + .menu-aside_HTML .hl_HTML,
+.input-18[type="checkbox"]:checked + .menu-aside_HTML:before,
+.input-18[type="checkbox"]:checked + .menu-aside_HTML:after {
+	background: var(--color-HTML-Claro);
+}
+input[type="checkbox"]:checked + .menu-aside_HTML:before {
+	width: 50%;
+}
+.input-18[type="checkbox"]:checked + .menu-aside_HTML:after {
+	width: 0;
+}
+
+
+
+
+
+
+/*------------------- Aside CSS -------------------------*/
+
+/*----- Menu Icon (simbolo) CSS---- */
+.menu-aside_CSS {
+	--d: 1.88VW;
+	--d-half: calc(var(--d)*.5);
+	--o: 0.9VW;
+	position: fixed ;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	top: 7.5vw;
+	left: var(--o);
+	width: var(--d);
+	height: var(--d);
+	border: 0.075vw solid var(--solid);
+	transition: var(--transition);
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 700;
+}
+.menu-aside_CSS:before,
+.menu-aside_CSS:after {
+	position: absolute;
+	content: '';
+	width: 50%;
+	height: 50%;
+	background: var(--solid);
+	transform: rotate(45deg);
+	transition: inherit;
+}
+.menu-aside_CSS:before {	
+	bottom: -30%;
+	left: -30%; 
+	width: 0;
+}
+.menu-aside_CSS:after {
+	top: -30%;
+	right: -30%;
+}
+
+/* Horizontal Lines in Menu */
+.hl_CSS {
+	margin-bottom: 0.075VW;
+	display: block;
+	width: var(--d-half);
+	height: 0.075VW;
+	background: var(--solid);
+	transition: var(--transition);
+}
+.hl_CSS:last-child {
+	margin-bottom: 0;
+}
+
+/*----- Navigation Container CSS -----*/
+.nav-aside_CSS {
+	position: fixed;
+	padding-top: 5%;
+	padding-right: 1.5vw;
+	bottom: 0;
+	right: 0;
+	width: calc(100% - 20px);
+	height: calc(100% - 20px  );
+  overflow: hidden scroll
+}
+.nav-aside_CSS::-webkit-scrollbar {/*Aqui se oculta la barra scroll del aside*/
+	display: none;
+   }
+.nav-aside_CSS:before,
+.nav-aside_CSS:after {
+	position: absolute;
+	content: '';
+	background: var(--color-CSS-oscuro);
+}
+.nav-aside_CSS:before {	
+	top: 6.85vw;
+	right: 5vw;
+	width: calc(95% - 20px);
+	height: 0.075vw;
+}
+.nav-aside_CSS:after {
+	bottom: 0;
+  top: 8.3vw;
+	left: 0;
+	width: 0.075vw;
+	height: calc(150% );
+}
+.aside-divisor{
+	width: 20vw;
+	height: 0.075vw;
+	background-color: var(--color-CSS-oscuro);
+	position: relative;
+	transform: translateX(-1.8vw);
+}
+.nav-aside_CSS ul {
+	margin-top: 3vw;
+	list-style-type: none;
+	font-size: 1vw;
+	text-align: left;
+}
+.nav-aside_CSS ul h2 {
+	font-size: 2vw;
+	color: var(--color-CSS-oscuro);
+}
+.nav-aside_CSS ul li {
+	margin-bottom: 30px;
+}
+.nav-aside_CSS a {
+	position: relative;
+	color: var(--solid);
+	text-decoration: none;
+	transition: var(--transition);
+  font-weight: bold;
+}
+.nav-aside_CSS UL a:hover{
+	color: var(--color-CSS-oscuro);
+}
+.nav-aside_CSS a:after {
+	position: absolute;
+	content: '';
+	right: 0px;
+	bottom: 0;
+	width: 0;
+	height: 1px;
+	background: var(--color-CSS-oscuro);
+	transition: inherit;
+	transition-duration: 0.1s;
+}
+.nav-aside_CSS a:hover:after {
+	width: calc(98.5% + 20px);
+}
+
+/* Change Styling After Checkbox is Checked */
+.input-18[type="checkbox"]:checked + .menu-aside_CSS {
+	border-color: var(--color-CSS-oscuro);
+}
+.input-18[type="checkbox"]:checked + .menu-aside_CSS .hl_CSS,
+.input-18[type="checkbox"]:checked + .menu-aside_CSS:before,
+.input-18[type="checkbox"]:checked + .menu-aside_CSS:after {
+	background: var(--color-CSS-oscuro);
+}
+input[type="checkbox"]:checked + .menu-aside_CSS:before {
+	width: 50%;
+}
+.input-18[type="checkbox"]:checked + .menu-aside_CSS:after {
+	width: 0;
+}
+
+
+
+
+
+/*------------------- Aside JS -------------------------*/
+
+/*----- Menu Icon (simbolo) JS---- */
+.menu-aside_JS {
+	--d: 1.88VW;
+	--d-half: calc(var(--d)*.5);
+	--o: 0.9VW;
+	position: fixed ;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	top: 6.7vw;
+	left: var(--o);
+	width: var(--d);
+	height: var(--d);
+	border: 0.075vw solid var(--solid);
+	transition: var(--transition);
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 700;
+}
+.menu-aside_JS:before,
+.menu-aside_JS:after {
+	position: absolute;
+	content: '';
+	width: 50%;
+	height: 50%;
+	background: var(--solid);
+	transform: rotate(45deg);
+	transition: inherit;
+}
+.menu-aside_JS:before {	
+	bottom: -30%;
+	left: -30%; 
+	width: 0;
+}
+.menu-aside_JS:after {
+	top: -30%;
+	right: -30%;
+}
+
+/* Horizontal Lines in Menu */
+.hl_JS {
+	margin-bottom: 0.075VW;
+	display: block;
+	width: var(--d-half);
+	height: 0.075VW;
+	background: var(--solid);
+	transition: var(--transition);
+}
+.hl_JS:last-child {
+	margin-bottom: 0;
+}
+
+/*----- Navigation Container JS -----*/
+.nav-aside_JS {
+	position: fixed;
+	padding-top: 5%;
+	padding-right: 1.5vw;
+	bottom: 0;
+	right: 0;
+	width: calc(100% - 20px);
+	height: calc(100% - 20px  );
+  overflow: hidden scroll;
+}
+.nav-aside_JS::-webkit-scrollbar {/*Aqui se oculta la barra scroll del aside*/
+	display: none;
+   }
+.nav-aside_JS:before,
+.nav-aside_JS:after {
+	position: absolute;
+	content: '';
+	background: var(--color-JS-oscuro);
+}
+.nav-aside_JS:before {	
+	top: 6vw;
+	right: 5vw;
+	width: calc(95% - 20px);
+	height: 0.075vw;
+}
+.nav-aside_JS:after {
+	bottom: 0;
+  top: 7.5vw;
+	left: 0;
+	width: 0.075vw;
+	height: calc(100% );
+}
+.nav-aside_JS ul {
+	margin-top: 3vw;
+	list-style-type: none;
+	font-size: 1vw;
+	text-align: left;
+}
+.nav-aside_JS ul h2 {
+	font-size: 2vw;
+	color: var(--color-JS-oscuro);
+}
+.nav-aside_JS ul li {
+	margin-bottom: 30px;
+}
+.nav-aside_JS a {
+	position: relative;
+	color: var(--solid);
+	text-decoration: none;
+	transition: var(--transition);
+  font-weight: bold;
+}
+.nav-aside_JS UL a:hover{
+	color: var(--color-JS-oscuro);
+}
+.nav-aside_JS a:after {
+	position: absolute;
+	content: '';
+	right: 0px;
+	bottom: 0;
+	width: 0;
+	height: 1px;
+	background: var(--color-JS-oscuro);
+	transition: inherit;
+	transition-duration: 0.1s;
+}
+.nav-aside_JS a:hover:after {
+	width: calc(98.5% + 20px);
+}
+
+/* Change Styling After Checkbox is Checked */
+.input-18[type="checkbox"]:checked + .menu-aside_JS {
+	border-color: var(--color-JS-oscuro);
+}
+.input-18[type="checkbox"]:checked + .menu-aside_JS .hl_JS,
+.input-18[type="checkbox"]:checked + .menu-aside_JS:before,
+.input-18[type="checkbox"]:checked + .menu-aside_JS:after {
+	background: var(--color-JS-oscuro);
+}
+input[type="checkbox"]:checked + .menu-aside_JS:before {
+	width: 50%;
+}
+.input-18[type="checkbox"]:checked + .menu-aside_JS:after {
+	width: 0;
+}
+
+
+
+
+
+
+/*---------------------------------- Body ----------------------------------------/**/  
+/*--Estructura--*/
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 4vw;
+  margin: 3vw auto;
+  border-radius: 1.5vw;
+  background: #fff;
+  box-shadow:
+    0px 0px 37.70vw rgba(0, 0, 0, 0.24);
+}
+h1 {
+  font-size:4vw ;
+ text-align: center;
+}
+h2 {
+  font-size: 2.5vw;
+}
+.img{
+	display: block;
+	margin: 4vw auto;
+	border-radius: 1vw;
+}
+dd{
+	padding-bottom: 0.3vw;
+}
+table th {background-color: var(--color-bordes); }
+
+table tr:nth-child(odd) {background-color: #aaa;}
+
+table tr:nth-child(even) {background-color:#eee;}
+
+/*------------------------Indices-----------------*/
+details {
+  border: var(--color-bordes) solid 0.1vw;
+  margin: 0.5vw 0;
+  border-radius: 1vw;
+  padding: 0 2vw;
+  border:  solid .1px #e4e1e1;
+}
+summary {list-style:none;}
+a {text-decoration: none;}
+
+.Indice_h3,.Indice_Arrow {
+  display: inline-block;
+  color: #949494;
+}
+.Indice_Arrow{
+  transform: rotate(90deg);
+  margin: 0 1vw;
+  transition: all 0.3s;
+  font-weight: 900;
+}
+summary:hover .Indice_Arrow{
+  transform: translateY(0.5vw) rotate(90deg);
+}
+details:hover .hover_HTML {
+ color: var(--color-HTML-Claro); 
+}
+details:hover .hover_CSS {
+  color: var(--color-CSS-oscuro);
+}
+details:hover .hover_JS {
+	color: var(--color-JS-oscuro);
+}
+details:hover {
+  box-shadow:
+  0px 0px 1.4px rgba(0, 0, 0, 0.028),
+  0px 0px 4.4px rgba(0, 0, 0, 0.042),
+  0px 0px 33px rgba(0, 0, 0, 0.07);
+}
+.Indice_h3:hover .Indice_Arrow{
+  transform: translate(0.25vw) ;
+}
+.a__HTML {
+  color: var(--color-HTML-oscuro);
+}
+.a__CSS {
+	color: var(--color-CSS-oscuro);
+}
+.a__JS {
+	color: var(--color-JS-oscuro);
+}
+
+
+
+/*------------------------- paginacion -------------------------------*/
+.pagination {
+	display: flex;
+	flex-direction: row;
+	justify-content:space-evenly;
+	align-items: center;
+	padding-left: 15vw;
+	padding-right: 15vw;
+}
+
+.desplazar {/*botones laterales*/
+	width: 10vw;
+	height: 2vw;
+	text-align: center;
+	color: #000;
+}
+
+.off {
+color: #888;
+}
+
+.numbers {/*Barra central*/
+	display: grid;
+	grid-template-columns: repeat(9, max-content);
+	justify-content: center;
+	padding: 0 3vw;
+	gap: 2vw;
+	border-top: solid var(--color-bordes) 0.1vw;
+	border-bottom: solid var(--color-bordes) 0.1vw;
+}
+
+.pagina {	
+	color: #000;
+}
+
+.off:hover {
+	color: #888;
+}
+
+.pagArrowRight {
+	transition: transform 1s;
+	position: relative;
+	position: absolute;
+	margin-left: 0.5vw;
+}
+.desplazar:hover .pagArrowRight {
+	transform: translateX(1vw);
+}
+
+.pagArrowLeft {
+	transition: transform 1s;
+	position: relative;
+	position: absolute;
+	margin-left: 0.5vw;
+	transform: translateX(-2.5vw);
+}
+
+.desplazar:hover .pagArrowLeft {
+	transform: translateX(-3.5vw);
+}
+
+
+
+/*------------------ Seleccion HTML-------------------*/
+.paginaHTML:hover {
+	color: var(--color-HTML-Claro);
+}
+
+/*------------------ Seleccion CSS-------------------*/
+.paginaCSS:hover {
+	color: var(--color-CSS-oscuro);
+}
+
+/*------------------ Seleccion JS-------------------*/
+.paginaJS:hover {
+	color: var(--color-JS-oscuro);
+}
+
+/*--------------------------------------Footer--------------------------------------------*/
+/*Estructura*/
+footer {
+  margin: 0 auto;
+  border-top:  0.15vw solid var(--color-bordes);
+  padding: 0 4vw 0 3vw;
+  background-color: var(--fondo-gris);
+}
+.footer__top {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 22vw 43vw 27.5fr;
+  grid-template-rows: 10vw 1;
+  justify-content: center;
+    gap: 1.5vw;
+    
+}
+.footer__perfil {
+  grid-column: 1/2;
+  grid-row: 1/5;
+  display: flex;
+  justify-content: center;
+  align-items:flex-start;
+}
+.Perfil_logo {
+  width: 17vw;
+  border-radius: 2vw;
+}
+.Presentacion {
+  border: 0.1vw solid var(--color-bordes);
+  grid-column: 2/5;
+  background-color: #ffffff;
+  padding: 0 1vw;
+  border-radius: 1vw;
+}
+.links {/*Estilos de los recuadro de los links*/
+  border: 0.1vw solid var(--color-bordes);
+  background-color: #fff;
+ border-radius: 1vw;
+ text-align: center;
+ padding-bottom: 1vw ;
+}
+/*Estilos de las redes de contacto*/
+.footer__Redes {
+ display: grid;
+ grid-template-columns: 33% 33% 33%;
+ grid-template-rows: 10 10;
+margin: 0 4vw;
+}
+.footer__Redes h3 {
+  grid-column: 1/4;
+  margin-bottom: 2vw;
+}
+/*Estilos del link GitHub*/
+.footer__Culliculum {
+  display: flex;
+  flex-direction: column;
+  min-width: 10vw;
+
+  }
+.footer__GitHub {
+  margin: 1vw;
+}
+
+
+.links:hover {
+  box-shadow:
+  0px 0px 1.4px rgba(0, 0, 0, 0.028),
+  0px 0px 4.4px rgba(0, 0, 0, 0.042),
+  0px 0px 33px rgba(0, 0, 0, 0.07);
+}
+.footer__Facebook::after {
+  content: 'Facebook';
+  font-size: 1.25vw ;
+  font-weight: bolder;
+  position: absolute;
+  transform: translate( -4vw, -3vw);
+  color: #000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+}
+.footer__instagram::after { 
+  content: 'Instagram';
+  font-size: 1.25vw ;
+  font-weight: bolder;
+  position: absolute;
+  transform: translate( -4.5vw, -3vw);
+  color: #000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+}
+.footer__gmail::after {
+  content: 'Correo de contacto';
+  font-size: 1.25vw ;
+  font-weight: bolder;
+  position: absolute;
+  transform: translate( -7vw, -3vw);
+  color: #000;
+  opacity:  0;
+  visibility: hidden;
+  transition: all 1s;
+}
+.footer__GitHub::after {
+  content: 'GitHub';
+  font-size: 1.25vw ;
+  font-weight: bolder;
+  position: absolute;
+  transform: translate( -3vw, -4vw);
+  color: #000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+}
+.links:hover .footer__Facebook::after {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-4vw, -1.75vw);
+}
+.links:hover .footer__instagram::after {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-4.5vw, -1.75vw);
+}
+.links:hover .footer__gmail::after {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-7vw, -1.75vw);
+}
+.footer__Culliculum:hover .footer__GitHub::after {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-3vw, -1.75vw);
+}

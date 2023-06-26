@@ -1,47 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propiedad Display</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+        <title>Propiedad Display</title>
+    </head>
+    <header>
+        <nav >
+            <ul class="nav"> 
+                <li><a href="../Index.html" class="logo"><img src="../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+                <li><a href="../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+                <li><a href="../CSS/indiceCSS.html" class="seleccion__CSS tema"><span class="text__tema">CSS</span></a></li>
+                <li><a href="../JavaScrip/Indice__JS.html" class="JS tema"><span class="text__tema">JS</span></a></li>
+            </ul>
+        </nav>
+    </header>
 <body>
-    <main>
-        <h1>Propiedad Display</h1>
-        <article>
-            <section id="descripcion">
-                <p>Esta propiedad altera el tipo de elemento en si, por lo tanto esto afecta directamente en su comportamiento, es decir esta propiedad se centra en alterar el comportamiennto de los elementos del sitio web, esta propiedad cuanta con numerosos valores disponibles, los cada uno de estos cueta con un comporamiento en espesifico,a su vez podemos agrupar algunos de estos como los <b>tipos de elementos basicos</b> los cuales son:</p>
-            </section>
-            <section id="basicos">
-                <h2>Tipos de elementos  Basicos </h2>
-                <dl>
-                    <dt id="Inline"><h3>Inline</h3></dt>
-                    <dd>
-                        <p>Este valor define que el comportamiento de la caja sea el de un elemtos de tipo linea, es decir estos elementos unicamente dispondran del espacio necesario para mostrar su contenido, los demas elemento pogran posicionarse alrededor sin nigun incoveniente, una de las caracteritica de este valor es que no se puede modificar las dimenciones del elemento</p>
-                    </dd>
-                    <dt id="block"><h3>Block</h3></dt>
-                    <dd>
-                        <p>Este valor define que el comportamiento de la caja sea el de un elemento tipo bloque, es decir estos elementos dsipondran del espacio vertical necesario para mostrar su contenido sin embargo orizontalmente dispondran de todo el espacio disponible, por lo que otros elementos unicamente podran ubicarse debajo o arriba de estos, otra caracteritica de este valor es que no se pueden ubucar elementos en el eje <b>X</b> de los elemtos de bloque, por lo que son muy limitadas al posicionar elemetos a su alrededor</p>
-                    </dd>
-                    <dt id="inline-block"><h3>Inline-block</h3></dt>
-                    <dd>
-                        <p>El efecto de este valor se podria decir que es una mezcla de <b>inline</b> y de <b>block</b>, esto ya que permite el modificar las dimenciones de la caja a plase, y posicionar elemtos a su alrededor sin nigun incoveniente</p>
-                    </dd>
-                </dl>
-            </section>
-            <section id="descripcion2">
-                <p>Estos tipos de elementos vasicos sientan la base de las paguinas web modernas, sin embargo hace mucho tiempo dejaron de ser lo unico en lo que se basan las paguinas web, con el paso del tiempo y la evolición de los lengajes web se crearon nuevas formas de maquetar las paguinas web, no obstante estas nuevos metodos son bastante complejos y extensos por lo que se desaenglosan en sus propios apartados a continuación: </p>
-            </section>
-            <section id="maquetado">
-                <div>
-                    <a href="./display/flexBox.html"><h3>FlexBox</h3></a>
-                </div>
-                <div>
-                    <a href="./display/Grid.html"><h3>Grid</h3></a>
-                </div>
-            </section>
-        </article>
-    </main>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_CSS">
+                <span class="hl_CSS"></span>
+                <span class="hl_CSS"></span>
+                <span class="hl_CSS"></span>
+                <span class="hl_CSS"></span>
+            </label>
+            <div class="nav-aside_CSS">
+                <ul>
+                    <h2>Teorias CSS</h2>
+                    <li><a href="./espesificidad.html"><h3>Espesificidad</h3></a></li>
+                    <li><a href="./metodologia-BEN.html"><h3>Metodologuía BEM</h3></a></li>
+                    <li><a href="./teoriaMedidas.html"><h3>Teoria Medidas de Texto</h3></a></li>
+                    <li><a href="./normmalize.html"><h3>Archivo NormaliZe.CSS</h3></a></li>
+                    <li><a href="./TeoriaCajas.html"><h3>Teoria de las Cajas</h3></a></li>
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>
+                    <li><a href="./selectoresCSS.html "><h3>Selectores CSS</h3></a></li>
+                    <li><a href="./pseudoElementos.html"><h3>Pseudo-Elementos</h3></a></li>
+                    <li><a href="./pseudoClases.html"><h3>Pseudo-Clases</h3></a></li>
+                    <li><a href="./propiedadesTexto.html"><h3>Propiedades de texto</h3></a></li>
+                    <li><a href="./PropiedadesCajas.html"><h3>Propiedades de Cajas</h3></a></li>
+                    <li><a href="./position.html"><h3>Propiedad Position</h3></a></li>
+                    <li><a href="./propiedadesDiseño.html"><h3> Diseños CSS</h3></a></li>
+                    <li><a href="./object-fit-position.html"><h3> Object-fit-Object-positon</h3></a></li>
+                    <li><a href="./coloresCSS.html"><h3>Colores CSS</h3></a></li>
+                    <li><a href="./display/flexBox.html"><h3>Flex-Box</h3></a></li>
+                    <li><a href="./display/Grid.html"><h3>Grid-Box</h3></a></li>
+                    <li><a href="./responsive-desing.html"><h3>Responsive Desing</h3></a></li>
+                    <li><a href="./transiciones.html"><h3>Transition</h3></a></li>
+                    <li><a href="./animaciones.html"><h3>Animaciones</h3></a></li>
+                    <li><a href="./transform.html"><h3>Propiedad Transform</h3></a></li>
+                    <li><a href="./variables.html"><h3>Variables CSS</h3></a></li>
+                    <li><a href="./filtros.html"><h3>Filtros CSS</h3></a></li>
+                    <div class="aside-divisor"></div>
+                    <h2>Otros</h2>
+                    <li><a href="./ErroresComunes.html"><h3>Erroes Comunes</h3></a></li>
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Propiedad Display</h1>
+                    <section id="descripcion">
+                        <p>Esta propiedad altera el tipo de elemento en si, por lo tanto esto afecta directamente en su comportamiento, es decir esta propiedad se centra en alterar el comportamiennto de los elementos del sitio web, esta propiedad cuanta con numerosos valores disponibles, los cada uno de estos cueta con un comporamiento en espesifico,a su vez podemos agrupar algunos de estos como los <b>tipos de elementos basicos</b> los cuales son:</p>
+                    </section>
+                    <section id="basicos">
+                        <h2>Tipos de elementos  Basicos </h2>
+                        <dl>
+                            <dt id="Inline"><h3>Inline</h3></dt>
+                            <dd>
+                                <p>Este valor define que el comportamiento de la caja sea el de un elemtos de tipo linea, es decir estos elementos unicamente dispondran del espacio necesario para mostrar su contenido, los demas elemento pogran posicionarse alrededor sin nigun incoveniente, una de las caracteritica de este valor es que no se puede modificar las dimenciones del elemento</p>
+                            </dd>
+                            <dt id="block"><h3>Block</h3></dt>
+                            <dd>
+                                <p>Este valor define que el comportamiento de la caja sea el de un elemento tipo bloque, es decir estos elementos dsipondran del espacio vertical necesario para mostrar su contenido sin embargo orizontalmente dispondran de todo el espacio disponible, por lo que otros elementos unicamente podran ubicarse debajo o arriba de estos, otra caracteritica de este valor es que no se pueden ubucar elementos en el eje <b>X</b> de los elemtos de bloque, por lo que son muy limitadas al posicionar elemetos a su alrededor</p>
+                            </dd>
+                            <dt id="inline-block"><h3>Inline-block</h3></dt>
+                            <dd>
+                                <p>El efecto de este valor se podria decir que es una mezcla de <b>inline</b> y de <b>block</b>, esto ya que permite el modificar las dimenciones de la caja a plase, y posicionar elemtos a su alrededor sin nigun incoveniente</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section id="descripcion2">
+                        <p>Estos tipos de elementos vasicos sientan la base de las paguinas web modernas, sin embargo hace mucho tiempo dejaron de ser lo unico en lo que se basan las paguinas web, con el paso del tiempo y la evolición de los lengajes web se crearon nuevas formas de maquetar las paguinas web, no obstante estas nuevos metodos son bastante complejos y extensos por lo que se desaenglosan en sus propios apartados a continuación: </p>
+                    </section>
+                    <section id="maquetado">
+                        <div>
+                            <a href="./display/flexBox.html"><h3>FlexBox</h3></a>
+                        </div>
+                        <div>
+                            <a href="./display/Grid.html"><h3>Grid</h3></a>
+                        </div>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
 </body>
 </html>

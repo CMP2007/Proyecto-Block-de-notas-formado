@@ -1,0 +1,127 @@
+:root {
+    --color-cuerpo: #BAD7E9;
+    --color-contendor: #FFF1DC;
+    --color-bordes: #EB455F;
+    --color-body: #2B3467;
+}
+
+
+*{
+    font-family: 'Kanit', sans-serif;
+}
+body{
+    /*background-image: url(https://img.freepik.com/foto-gratis/fondo-azul-degradado-lujo-abstracto-azul-oscuro-liso-banner-estudio-vineta-negra_1258-54050.jpg);*/
+    background-color: var(--color-body);
+}
+
+/*--------------------------------- Estilos contendor y bordes-----------------------------------*/
+/* Contendor*/
+.contenedor {
+    margin-top: 5%;
+    margin-left: 5%;
+    text-align: center;
+    width: 90%;
+    height: 40vw;
+    position: absolute;
+    border-radius: 4vw;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+/*Borde: consiste en un bloque detras del contendor con una animación de rotación*/
+.contenedor::before{
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 1500px;
+    background-image: linear-gradient(180deg, #f83636, #02b2f7);
+    animation: rotate 8s linear infinite;
+}
+/*Fodoz: Se trata de un fondo "atificial  utilizado para cubrir la rotación del elemento animado, se encuetra por encima de los "*/
+.contenedor::after{
+    content: '';
+    position: absolute;
+    inset: 0.9vw;/*Esta propiedad retra el contendor para que se pueda apreciar la animación como si fura un borde*/
+    background-color: var(--color-cuerpo);
+    border-radius: inherit;
+}
+
+@keyframes rotate {
+    100%{
+        rotate: 360deg;
+    }
+}
+
+/*--------------------------- Items ---------------------------------*/
+
+.h1 {
+    font-size: 6vw;
+    color:transparent;
+    background: radial-gradient(circle, rgb(241, 37, 125) 0%, rgb(63, 144, 236) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    z-index: 2;
+    position: relative;
+    margin-top: -2.5vw;
+}
+
+.contenedor__section {
+    z-index: 2;
+    width: 90%;
+    height: 20vw;
+    border-radius: 4vw;
+    background-color: var(--color-contendor);
+    position: relative;
+    margin-top: -12vw;
+    border: var(--color-bordes) solid 0.2vw;
+}
+
+.contenedor__section-h3 {
+    font-size: 2vw;
+}
+
+
+/*----------------------------------- Estilos del boton --------------------------------*/
+
+
+.contenedor__section-span {
+    position: relative;
+    display: inline-block;
+    padding: 0 40px;
+    cursor: pointer;
+    background-color: var(--color-body);
+    margin-top: 2.5vw;
+}
+
+.contenedor__section-span-div {
+   
+    font-size: 2vw;
+    font-weight: 900;
+    position: relative;
+    color: #cbbddb;
+}
+
+
+.contenedor__section-span-div::before{
+    content: attr(data-text);
+    position: absolute;
+    color: var(--color-contendor);
+    width: 0;
+    overflow: hidden;
+    transition: 0.6s;
+}
+
+.contenedor__section-span::before{
+    content: '';
+    width: 0;
+    height: 100%;
+    position: absolute;
+    background: var(--color-bordes);
+    right: 0;
+    top: 0; /*aparentemente sobra?*/
+    transition: 0.6s;
+}
+
+.contenedor__section-span:hover .contenedor__section-span-div::before, .contenedor__section-span:hover::before {
+    width: 100%;
+}

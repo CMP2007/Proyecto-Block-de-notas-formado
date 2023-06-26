@@ -1,0 +1,85 @@
+.card-20 {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 2px 0.8rem 1rem rgba(0, 0, 0, 0.025);
+}
+
+.card__publication {
+    position: relative;
+    height: 20rem;
+    overflow: hidden;
+}
+.card__publication img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+.card-20:hover
+ .card__publication img {
+    transform: scale(1.5s);
+}
+.card__publication > div {
+    background: linear-gradient(
+        to right bottom,
+    rgba(48, 110, 255, 0.8),
+    rgba(204, 0, 255, 0.8)
+    );
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    inset: 0;
+    padding: 1rem;
+}
+.card__icon {
+    margin-right: 1rem;
+}
+.card__publication span {
+    display: block;
+}
+.card__autor {
+    margin-bottom: 0.5rem;
+}
+.card__info {
+    position: relative;
+    padding: 2rem 3rem;
+}
+.card__title {
+    font-size: 3rem;
+}
+.card__subtitle {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #a2a2a2;
+    margin-bottom: 1rem;
+}
+.card__cta {/*enlace (read more y la flecha)*/
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #2e6dff;
+    margin-top: 2rem;
+}
+.card__cta span {/*Desplazamiento de la flecha*/
+    display: inherit;
+    transition: transform 0.5s;
+}
+.card__cta:hover span{/*Desplazamiento de la flecha*/
+    transform: translateX(0.5em);
+}
+@media screen and (min-width: 47.5em) {
+    .card-20 {
+        display: grid;
+        grid-auto-flow: column;
+        max-width: 75rem;
+    }
+    .card__publication {
+        width: 25rem;
+        height: initial;
+    }
+}

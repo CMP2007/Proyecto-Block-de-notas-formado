@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Clases y ClassList </title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../Index.html" class="logo"><img src="../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../JavaScrip/Indice__JS.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <h2>JavaScrip</h2>
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Clases, el ClassList y Metodos de ClassList</h1>
+                    <section>
+                        <p>En este apartado se profundiza en todas las opciones que ofrecen las clases CSS desde JavaScrip, para ejemplificarlo de forma correcta se trabajara en base al siguiente codigo HTML:</p>
+                        <img src="./img/ejemplo-base.PNG" class="img" alt="">
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Add()</h3></dt>
+                            <dd>
+                                <p>Este metodo permite asignar una clase a un elemento HTML, en otras palabras permite añadir un valor al atributo "class" de un elemento.</p>
+                                <h4>Ejmeplo</h4>
+                                <img src="./img/add-2.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/add-1.PNG" class="img" alt="">
+                                <p>En este ejemplo se utilizan las herramientas de desarrollador del navegador para inspeccionar el elemento que posee la clase HTML y de ese modo corroborar el como el metodo "add()" añadio una segunda clase llamada "grande".</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Remove()</h3></dt>
+                            <dd>
+                                <p>Este metodo tiene exactamete el efecto opuesto al metodo anterior, así comoel metodo "add()" añade una clase en el atributo "class" de un elemento HTML la propiedad "remove()" elimina una clase de este traibuto, en si la forma de emplear este metodo es igual al de "add()".</p>
+                                <h4>Ejmeplo</h4>
+                                <img src="./img/remove-1.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Item()</h3></dt>
+                            <dd>
+                                <p>Este metodo retorna los valores de la propiedad "class" de un elemento, es decir del mimso modo en el que se selecciona un dato de un array este metodo retorna el nombre de la clase que se enceuntre en esa posición, por lo tanto la primera clase esta en la posción "0", una segunda clase estaria en la posición "1" y así sucesibamente. </p>
+                                <p>Este metodo no afecta a las propiedades, su objetivo es unicamete el seleccionar una de las clases que posea un elemento HTML. </p>
+                                <h4>Ejmeplo</h4>
+                                <img src="./img/item-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/item-2.PNG" class="img" alt="">
+                                <p>En este ejemplo se selecciona un elemento que posee la clase "titulo", luego se le aplica el objeto classList con el metodo "item", lo que resuta en que el metodo retorne el nombre de la clase en la posición "0", luego este dato se imprime en pantalla. </p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>contains()</h3></dt>
+                            <dd>
+                                <p>Este metodo es similar al anterior, con la diferencia de que este no retorna el nombre de de la clase, en su lugar retorna un dato booleano, ya que a función de este metodo es unicamente comprobar el si una clase determinada axiste en un elemento o no, por lotanto este metodo retorna un dato booleando que podria ser aprobechado de diversas maneras, como por ejemplo en una estructura de condición. </p>
+                                <h4>Ejmeplo</h4>
+                                <img src="./img/contains-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/contains-2.PNG" class="img" alt="">
+                                <p>En este ejemplo se utiliza la propiedad "contains" para determinar el si el elemento HTML seleccionado posee la clase "grande" y en base a esto imprimir una respuesta en pantalla.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Toggle()</h3></dt>
+                            <dd>
+                                <p>Este metodo se puede considerar como la mescla de "add()" y de "remove", ya que este puede tanto añadir como eliminar una clase de un elemento, mas espesificamente por defecto, este metodo determina el si el elemento posee la clase defnida, de poseerla este la elimina, y si se da el caso que no la posea la añade.  </p>
+                                <h4>Ejmeplo</h4>
+                                <img src="./img/toggle-1.PNG" class="img" alt="">
+                                <p>Est  a propiedad tambien cuenta con un segundo valor opcional, el cual se usa para forzar la clase, se trata de un valor booleano, el cual en el caso de ser "true" el metodo siempre añadira la clase, si el elemento no la posee, y no la eleminara si esta ya es poseida por el elemento, por otro lado en el caso de definirse como "false" el metodo simpre que la encuentre eliminara la clase, y esta no sera añadida por este. </p>
+                                <img src="./img/toggle-2.PNG" class="img" alt="">
+                                <p>En este ejmeplo se aplico la propiedad "toggle" al elemento seleccionado, con los valores de "grande y "false", por lo que si el elemento posee la clase "grande" esta sera elimiada.</p>
+                                <p>Nota: Este metodo no solo modifica los valores del atributo "class", si no que a su vez tambien retorna valores booleanos, al igual que lo hace el metodo "contains", por lo tanto cuando el metodo añade la clase retorna "true" y cuando la elimina retorna "false".</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Replace()</h3></dt>
+                            <dd>
+                                <p>Este metodo aligual que los anteriores retorna un valor booleano que indica el si el elemento HTML posee o no la clase, con la diferencia de que este metodo permite remplazar una clase por otra, pero esto solo lo hace en el caso de que la clase si exista, por lo tanto si la clase existe el metodo replazara la clase y devolvera el valor "true", de lo contrrio el metodo no hara nada y retornara el valor "false". </p>
+                                <p>Para esto este metodo recibe dos valores, el primero corresponde al nombre de la clase que sera remplazada y el segundo corresponde al nombre de la clase que sera añadida en el elemento.</p>
+                                <h4>Ejmeplo</h4>
+                                <img src="./img/replace-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/replace-2.PNG" class="img" alt="">
+                                <p>En este ejemplo se remplaza la clase "grande" del elemento seleccionado, ya que esta clase si era poseida por este se retorna un "true", de aberse dado el caso de que el elemento no tubiese la clase definida nada ubiara pasado, y el metodo retornaria false</p>
+                            </dd>
+                        </dl>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>

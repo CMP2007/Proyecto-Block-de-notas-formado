@@ -1,0 +1,21 @@
+.Cappadocia {
+    display: inline-flex;
+    font-family: Impact, sans-serif;
+    background: url(https://cdn.pixabay.com/photo/2015/02/24/15/41/wolf-647528_640.jpg);
+    font-size: 8rem;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #5d72ba54;
+    animation: move 15s linear infinite;
+    letter-spacing: .3rem;
+}
+@keyframes move {
+   
+    from { background-position: 80% 0%;}
+    to { background-position: 80% 100%;}
+}
+
+.contenedor_diseño-22 {
+    display: flex;
+    justify-content: center;
+}

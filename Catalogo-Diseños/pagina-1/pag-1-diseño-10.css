@@ -1,0 +1,33 @@
+.contenedor_diseño-10{
+    animation: changeBg 5s infinite alternate linear;
+    width: 90%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   margin:  5%;
+}
+
+@keyframes changeBg {
+    0%{
+        background: #ee6055;
+    }
+    25%{
+        background: #60d394;
+    }
+    50%{
+        background: #aaf683;
+    }
+    75%{
+        background: #ffd97d;
+    }
+    100%{
+        background: #ff9b85;
+    }
+}
+
+
+.contenedor_diseño-10 h3{
+    font-size: 5vw;
+}
+

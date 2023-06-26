@@ -1,0 +1,61 @@
+#diseño-7{/*Formato del proyeco*/
+    height: 310px;
+}
+
+
+.contenedor_diseño-7{/*En este caso sustituye a las propiedades aplicadas al cuarpo del documento (*{ })*/
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat', monospace;
+    font-weight: bold;
+}
+
+.contenedor_diseño-7{/*En este caso sustituye la propiedad aplicada al body del documento */
+    background-color: #131315;
+}
+
+.contenedor_diseño-7{/*En este caso final mente se aplican los estilos del contendor*/
+    position: absolute;
+    top: 232vw;/*Original mente poseia una valor de 50%, pero se modifico para ubicar el elemeto en su lugar correspondiente*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container{
+    position: relative;
+    display: inline-block;
+    padding: 0 40px;
+    cursor: pointer;
+}
+
+.text{
+    font-size: 100px;
+    text-transform: uppercase;
+    font-weight: 900;
+    position: relative;
+    color: #cbbddb;
+}
+
+.text::before{
+    content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    width: 0;
+    overflow: hidden;
+    transition: 0.6s;
+}
+
+.container::before{
+    content: '';
+    width: 0;
+    height: 100%;
+    position: absolute;
+    background: #9985fb;
+    right: 0;
+    top: 0; /*aparentemente sobra?*/
+    transition: 0.6s;
+}
+
+.container:hover .text::before, .container:hover::before {
+    width: 100%;
+}

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+        <title>Formularios HTML</title>
+    </head>
+    <header>
+        <nav >
+            <ul class="nav"> 
+                <li><a href="../Index.html" class="logo"><img src="../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+                <li><a href="../indice.html" class="seleccion__HTML tema">HTML</a></li>
+                <li><a href="../../CSS/indiceCSS.html" class="CSS tema">CSS</a></li>
+                <li><a href="../../JavaScrip/Indice__JS.html" class="JS tema">JS</a></li>
+                <div class="indicador"></div>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <aside class="aside">
+            <div class="outer ">	
+                <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+                <label for="menu" class="menu-aside_HTML">
+                    <span class="hl_HTML"></span>
+                    <span class="hl_HTML"></span>
+                    <span class="hl_HTML"></span>
+                    <span class="hl_HTML"></span>
+                </label>
+                <div class="nav-aside_HTML">
+                    <ul>
+                            <h2>Temas HTML</h2>
+                            <li><a href="../etiquetas estructura/estructura.html"><h3>Estructura</h3></a></li>
+                            <li><a href="../etiquetas texto/texto.html"><h3>Texto</h3></a></li>
+                            <li><a href="../Etiquetas uso espesifico/usoEspesifico.html"><h3>Etiquetas Generales</h3></a></li>
+                            <li><a href="../etiquetas listas/listas.html"><h3>Listas</h3></a></li>
+                            <li><a href="../etiquetas de metadatos/metadatos.html"><h3>Metadatos</h3></a></li>
+                            <li><a href="../Visualizar codigo/VerCodigo.html"><h3>Representar codigo</h3></a></li>
+                            <li> <a href="../Multimedia/multimedia.html"><h3>Multimedia</h3></a></li>
+                            <li><a href="../Tablas HTML/tablas.html"><h3>Tablas</h3></a></li>
+                            <li><a href="../Eventos HTML/eventos.html"><h3>Eventos</h3></a></li>
+                            <li><a href="../Validaciones/validaciones.html"><h3>Validaciones</h3></a></li>
+                            <li><a href="../Enviar Datos Form/EnviarDatos.html"><h3>Envio de Datos</h3></a></li>
+                           <li><a href="../PersonalizarControladores/ControladoresJS.html"><h3>Controladores JS</h3></a></li>
+                            <li> <a href="../Pre-cargar Contenido/Precargar.html"><h3>Pre-Carga</h3></a></li>
+                            <li><a href="../Notas/notas.html"><h4>Recordatorios</h4></a></li>
+                    </ul>
+                </div>
+                <div class="desplazamiento">
+                    <article class="content">
+                        <h1>Formularios HTML</h1>
+                        <section class="pagination">
+                            <a href="./formularios.html" class="desplazar">
+                                <div>
+                                    <span class="pagina paginaHTML">
+                                        <span class="pagArrowLeft"> &larr; </span>PREVIO
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="numbers">
+                                <a href="./formularios.html" class="pagina paginaHTML">
+                                    <div>
+                                        1
+                                    </div>
+                                </a>
+                                <a href="#" class="off">
+                                    <div>
+                                        2
+                                    </div>
+                                </a>
+                            </div>
+                             <a href="#" class="desplazar off">
+                               <div>
+                                    <span class="off">Next <span> &rarr;</span></span>
+                                </div>
+                            </a>
+                        </section>
+                        <section>
+                            <dl>
+                                <dt id="textarea"><h3>Textarea</h3></dt>
+                                <dd>
+                                    <p>El elemento "textarea" se caracteriza por ser un cuadro de texto de multiples lineas con una extenciaón virtualmente infinita, (sus dimenciones nunca cambian pero se puede navegar por el texto), es importante resaltar que pese a que su función es similar a un elemento "input" posee dos diferencia bastantes significativas con este ultimo, la primera consisten en que este elemento conserva cualquier salto de linea que se ingrese en el texto, la segunda diferencia radica en la estructura del codigo de la etiqueta "textarea" en sí, ya que no se trata de un elemto cerrado como "input", si no que requiere de una etiqueta de cierre adecuada, esta diferencia entre ambas etiquetas cambia la foma en que se incorpora un texto predeterminado en cada una, la forma en que esto se define en estas etiquetas es la siguiete:</p>
+                                    <img src="./img/ejmTextarea.PNG" alt="" class="img">
+                                    <img src="./img/ejmInput1.PNG" alt="" class="img">
+                                    <p><b>Nota: Por las caracteriticas del elemento "textarea" pese a que se puede anidar contenido HTML, CSS y JS en su interior todo se representa como si fuese contenido de texto din formato.</b></p>
+                                    <h4>Atributos</h4>
+                                    <p>Textarea cuenta con tres atributos exclusivos para poder definir su representación del texto:</p>
+                                    <ul>
+                                        <li><p><b>cols: </b> Define el ancho del control de texto en base a las columnas mostradas, este puede ser considerado un ancho incial ya que las dimenciones del elemento pueden ser cambiadas utilizando CSS, en caso de que este atributo no sea especificado su valor por defecto es 30</p></li>
+                                        <li><p><b>rows: </b> Define el alto del control de texto  en base a las filas mostradas, en este caso tambien se puede considerar que se trata de un alto inicial ya que las dimenciones nuevamente pueden ser cambiadas aplicando estilos CSS, en caso de que este atributo no sea definido su valor por defecto es de 10</p></li>
+                                        <li>
+                                            <p><b>wrap: </b> Define la envoltura del texto del elemento, cuenta con dos valores posibles los cuales son:</p>
+                                            <ol>
+                                                <li><p><b>soft: </b> Indica que el texto enviado no sera envuelto pero a su vez el texto representado por del navegador si lo estara</p></li>
+                                                <li><p><b>hard: </b> Indica que tanto el texto enviado como el representado estan envueltos y desactvados por lo que deja de envolver</p></li>
+                                            </ol>
+                                        </li>
+                                    </ul>
+                                    <h4>Modificar su tamaño utilizando CSS</h4>
+                                    <p>Para cambiar las dimenciones del elemento "textarea" se utiliza la propiedad "resize" la cual puede adoptar cualquiera de los siguientes valores.</p>
+                                    <ul>
+                                        <li><p><b>both: </b> Se trata del valor predeterminado y permite cambiar el tamaño horizontal y verticalmente</p></li>
+                                        <li><p><b>horizontal: </b> Permite cambiar el tamaño del elemento horizontalmente</p></li>
+                                        <li><p><b>vertical: </b> Permite cambiar el valor del alemento verticalmente</p></li>
+                                        <li><p><b>none: </b>No permite cambiar el tamaño del alemento</p></li>
+                                        <li><p><b>block</b> y <b>inline: </b> Se tratan de valores experimentales wue permiten cambiar el tamaño en bloque o en linea en función del la dirección del texto</p></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </section>
+                        <section>
+                            <dl>
+                                <dt id="button"><h3>Button</h3></dt>
+                                <dd>
+                                    <p>Por ultimo pero no menos importante se encuentra el elemento "button", se trata del un boton el cual puede ser configurado para realizar varias acciones, un ejemplo de su estructura es el siguiete.</p>
+                                    <img src="./img/ejmButton.PNG" alt="" class="img">
+                                    <p>Al igual que el elemento "input", "button" acepta el atributo "type", el cual puede tomar cualquiera de tres valores:</p>
+                                    <ul>
+                                        <li><p><b>Submit: </b> Al hacer clic en el boton cuando tenga indicado un valor "submit" los datos de formulario seran enviados a la dirección(URL) definida por el atributo "action" del elemto "form"</p></li>
+                                        <li><p><b>Reset: </b> Al dar clic en el boton mientras posea este "type" todos los elementos del formulario (widgets) se restableceran a su valor por defecto, desde el punto de vista de UX esto es un mala practica, lo mejor es solo incluirlo en los casos en los que de verdad sea nesesario su implementación</p></li>
+                                        <li><p><b>Button: </b> El valor button  por si mismo literalmente no hace nada, ya que la función de esta opción permitir crear una funcionalidad personalizada con JavaScript</p> </li>
+                                    </ul>
+                                    <p><b>Nota: Tambien se puede crear un boton usando el elemento "input" con el atributo "type", el cual posee siertos valores los cuales mostraran a el "input" como un boton, sin embargo la diferencia radica en que la etiqueta "button" permite contenido HTML completo, lo que significa un contenido de boton más completo y creativo.</b></p>
+                                </dd>
+                            </dl>
+                        </section>
+                        <section>
+                            <dl>
+                                <dt id="select"><h3>Select</h3></dt>
+                                <dd>
+                                    <p>Este elemento consiste en un cuadro de selección con uno o más elemtos de opción como elementos secundarios, de los cuales cada uno espesifica una de las opciones del "select", este elemento secundario se trata de un elemento "option", en otras palabras el "select" es un cuadro de seleción, cada una de las opciones de este es definida por una etiqueta "optión" las cuales se encuentran alvergadas en el interiro de la etiqueta "select".</p>
+                                    <img src="./img/ejmSelect.PNG" alt="" class="img">
+                                    <p>Si es necesario mostrar alguna de las opciones como dato selecionado por defecto se puede defimir utilizando el atributo "selected" en el "option" que lo contenga.</p>
+                                    <p>Tambien es posible anidar los elementos "option" dentro de una etiqueta "optgroup" con el fin de agrupar las opciones que posean algun tipo de relación entre sí, por lo tanto si se incorpora un elemento "optgroup" dentro del "select" este mostrara a aquellos elementos "option" que se encuentren en su interior como un grupo de opcines, como se puede apreciar a continuación.</p>
+                                    <img src="./img/ejmSelect2.PNG" alt="" class="img">
+                                    <p><b>Nota: Para mostrar un encabezado en los grupos de opciones se utiliza el atributo "label" en el alemento "optgroup".</b></p>
+                                    <p><b>Nota: Los encabezados de los grupos de opciones unicamente son eso y no son seleccionables como opción.</b></p>
+                                    <p>Los elementos "select" cuantan con otros atributos particulares los cuales son:</p>
+                                    <ul>
+                                        <li>
+                                            <p><b>value: </b> Este en caso de que se utilise define el verdadero valor del dato que se enviara con el formulario, por lo tanto asigna el valor implicito de la opción, se utiliza en aquellas situaciones en las que sea necesario que el usuario visualise un valor pero sea más eficiente enviar otro como se puede ver en el ejemplo</p>
+                                            <img src="./img/ejmSelect3.PNG" alt="" class="img">
+                                            <p><b>Nota: </b> en caso de que no se aplique este atributo el contenido del elemento "option" se enviara como valor de esta opción.</p>
+                                        </li>
+                                        <li>
+                                            <p><b>size: </b> permite definir el numero de opciones visibles en el elemento "select" cuando este no se encuentre seleccionado</p>
+                                            <p><b>Nota: Por defecto su valor es 1.</b></p>
+                                        </li>
+                                        <li>
+                                            <p><b>multiple:</b> este atributo permite que sea posible el selecionar más de una opción a la vez, para hacerlo el usuario debe de mantener presionada la tecla <kbd>Ctrl/kbd></p>
+                                                <p><b>Nota: Todos los navegadores que son compatibles con la etiqueta "select" tambien lo son con el atributo "multiple".</b></p>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </section>
+                        <section>
+                            <dl>
+                                <dt id="datalist"><h3>Datalist</h3></dt>
+                                <dd>
+                                    <p>El elemento "datalist" o lista de datos se trata de un elemento el cual brinda al usuario diversas opciones que pueden ser ingresadas en un cuadro de texto, no se trata de un controlador en sí, se trata de un elemento complementario para cuadros de texto, a diferencia del elemento "select" el "datalist" tiene la función de autocompletar el texto del usuario, para alvergar las opciones del elemento se utiliza el elemento "option" al igual que en los "select", su estructura es la siguiente:</p>
+                                    <img src="./img/ejmDataList.PNG" alt="" class="img">
+                                    <p>Como se puede ver en el ejemplo el controlador utilizado es un "input" de tipo text, el cual se vincula con el elemento "datalist" para que este realise su función de auto completado y lista en el cuadro de texto, la forma de vincular ambos elementos es atrabes del uso del "id" del "datalist" y del atributo "list" del alemento "input", para que ambos elementos esten correctamente vinculdos ambos atributos deben de coincidir.</p>
+                                    <p><b>A continuación se muestra un ejemplo de inplementación de este elemento:</b> </p>
+                                    <div id="ejmDatalist">
+                                        <label for="myFruit">What's your favorite fruit?</label>
+                                        <input type="text" name="myFruit" id="myFruit" list="mySuggestion" />
+                                        <datalist id="mySuggestion">
+                                        <option>Apple</option>
+                                        <option>Banana</option>
+                                        <option>Blackberry</option>
+                                        <option>Blueberry</option>
+                                        <option>Lemon</option>
+                                        <option>Lychee</option>
+                                        <option>Peach</option>
+                                        <option>Pear</option>
+                                        </datalist>
+                                    </div>
+                                    <p><b>Nota: Este elemento esta soportado por la gran mayoria de los navegadores sin embargo en las verciones antiguas puede que este no sea el caso, pero para estos casos existe un truco para asegurar la inplementación de la lista, el truco consisten en anidar un "select" justo debajo del "datalist", en los navegadores compatibles todo elemento dentro de un "datalist" que no sea un "option" es igorado sin embargo cuando el navegador no soporta la etiqueta se visualizara el "select" que se encuantra anidado.</b></p>
+                                    <p><b>Nota: El elemento "datalist" puede ser utilizado en conjunto con cualquier otro elemento siempre y cuando este requiera una entrada de datos por parte del usuario sin embargo el efecto de la etiqueta en otos elementos no esta estandarizado por lo tanto se podria comportar deferete segun desde cual navegador se ejecute.</b></p>
+                                </dd>
+                            </dl>
+                        </section>
+                        <section>
+                            <dl>
+                                <dt id="progres"><h3>Progres</h3></dt>
+                                <dd>
+                                    <p>Se trata de una barra de progreso la cual representa un valor númerico, el cual cambia con el tiempo hasta alcanzar un valor maximo, el cual se define con el uso del atributo "max", este elemento se utiliza entodas aquellas situaciones en las que se requiera representar el progreso de una tarea, por ejemplo el porcentaje de descarga deun archivo.</p>
+                                    <img src="./img/ejmProgres.PNG" alt="" class="img">
+                                    <p><b>Nota: el contenido dentro de este elemento realmente solo es una alternativa para aquellos navegadores que no sean compatibles con esta etiqueta así como para que los motores de leectura los lean. </b></p>
+                                </dd>
+                            </dl>
+                        </section>
+                        <section>
+                            <dl>
+                                <dt id="meter"><h3>Meter</h3></dt>
+                                <dd>
+                                    <p>Se trata de una barra de medidor, representa un valor fijo delimitado entre valores minimos y maximos, este valor se representa visualmente como una barra, para saber como se ve esta barra comparamos el valor con otros valores establecidos.</p>
+                                    <ul>
+                                        <li>
+                                            <p><b>Los atributos "low" y "high"</b> dividen el rango en tres partes:</p>
+                                            <ul>
+                                                <li><p>La parte<b> inferior </b> se encuentra entre los valores min y low</p></li>
+                                                <li><p>La parte<b> media</b> del elemento se encuentra entre los valores low y high</p></li>
+                                                <li><p>La parte<b> superior </b> se encuentra entre los valores high y max</p></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <p><b>El atributo "optimun"</b> define el valor optimo para el elemento medidor, junto con los atributos "low" y "high" define que parte del rang se prefiere:</p>
+                                            <ul>
+                                                <li><p>Si el valor optimo se encuentra en la parte inferior esta se considera la parte preferida, la parte media se considera promedio y la parte alta una mala area</p></li>
+                                                <li><p>Si el valor se encuentra en la parte media esta se considera la parte preferida, mientras que las partes inferior y superior se consideran promedio </p></li>
+                                                <li><p>Si el valor optimo se encuentra en la parte superior esta se considera la parte preferida, la parte media se considera una parte promedio y la parte baja se considera una mala area</p></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <p>Segun el area en la que se encuentre el valor optimo el color de la barra cambiara: </p>
+                                    <ul>
+                                        <li><p>Si se encuentra en la parte preferida la barra será de color sera verde</p></li>
+                                        <li><p>Si se encuentra en la parte promedio la barra será de color amarilla</p> </li>
+                                        <li><p>Si se encuentra en la parte mala la barra será de color roja</p></li>
+                                    </ul>
+                                    <p><b>Nota: un ejemplo de uso seria la representación visual del espacio de memoria de un disco, al tener poco espacio ocupado se visualiza verde, al esta a la mitad de su capacidad amarillo y al estar casi lleno se visualiza rojo.</b></p>
+                                    <img src="./img/ejmMeter.PNG" alt="" class="img">
+                                    <p><b>Nota: el contenido dentro de este elemento realmente solo es una alternativa para aquellos navegadores que no sean compatibles con esta etiqueta así como para que los motores de leectura los lean.</b></p>
+                                    <p><b>Nota: el soporte para esta etiqueta es bueno, entre los navegadores grandes el unico que no lo soporta es internet explorer.</b></p>
+                                </dd>
+                            </dl>
+                        </section>
+                        <section id="estructura">
+                            <h2>Estructura de un formulario</h2>
+                            <p>Como ya se ha visto en ejemplos anteriores es muy comun e inclusi recomendable el no utilizar unicamnte elemtos especializados para estructrarlos, por ejmplo es muy común el uso de listas ("ul" "ol" "li") para estructurarlos así como elemtos "p" titulos y subtitulos (h1, h2, h3...) e incluso se recomienda el utilizar contenedores como "div" o "sección" para estructurar el formulario en secciones.</p>
+                            <p>Basicamnte estructrar un formulario consiste en hayar una estructrar que le permite al desarrollador crear formularios accesibles y utlizables por todo tipo de usuarios, una de las unicas recomendacione es estrucrarlo de forma que cada sección separada en funcionalidad debe estar contenida en un contenedor propio con elemtos de conjunto de campo para incluir los botones de opción. </p>
+                            <img src="./img/ejmForm1.PNG" alt="" class="img">
+                            <img src="./img/ejmForm2.PNG" alt="" class="img">
+                            <img src="./img/ejmForm3.PNG" alt="" class="img">
+                        </section>
+                        <section id="atributos">
+                            <h2>Atributos Basicos</h2>
+                            <p>Los elemtos de entrada de texto son los widget más basicos de un formularios, permiten que el usuario ingrese texto en ellos, pos defecto estos elemtos unicamente soportan texto sin formato (negra cursiva etc) por lo que todos los elemtos que soporten texto enriqusido son personalizados con la implemtación de CSS y de JavaScript.</p>
+                            <p>Algunos atributos comunes en los elementos de entrada de texto son:</p>
+                            <ul>
+                                <li><p><b>Readonly: </b> En elementos en los que se aplique este actributo, el valor de entrada no podra ser modificado por el usuario, a su vez el valor de este <b>sera envado</b> junto a los datos proveidos por el usuario</p></li>
+                                <li><p><b>Disabled: </b> Este atributo derectamente desactiva el widget, por lo que no se podra modificar el valor inicial de este elemento, a su vez el valor de este <b>no sera enviado</b> junto a los datos ingresados por el usuarios</p></li>
+                                <li><p><b>Placeholder:</b> El valor de este atributo es el valor de entrada del elemto en cuastión</p></li>
+                                <li><p><b>Size:</b> Define el tamaño fisico del cuadro de texto</p></li>
+                                <li><p><b>maxlength: </b> Define la cantidad maxima de caracteres que recibira el elemento de texto</p></li>
+                                <li><p><b>Spellcheck: </b> Activa la función de corección de ortografia del navegador (si es que este lo soporta)</p></li>
+                            </ul>
+                            <p>Algunos atributos comunes en los elementos de un formulario son:</p>
+                            <ul>
+                                <li><p><b>Autofocus: </b> Este atributo define que el elemento en el que se aplique tendra el foco de entrada cuando se carga la paguina, solo un elemento asociado a un formulario puede usar este atributo, su valor por defecto es "false"</p></li>
+                                <li><p><b>Disabled:</b> Desactiva un elemento para que el ususario no pueda interactuar con este, su valor por defecto es "false"</p></li>
+                                <li><p><b>Form: </b> Este atributo vincula un elemento externo con un formulario del mismo documento, para hacer correctamente el valor del atributo debe ser igual al "id" del formulario al que se dese vincular el elemento, esta relación funciona incluso si el elemento se encuentra anidado dentro de un formulario diferente</p> </li>
+                                <li><p><b>Name: </b> El nombre del alemto se envia junto con los datos del formulario</p></li>
+                                <li><p><b>Value:</b> Define el valor inicial del elemento</p></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h2>Envio de datos de un Formulario</h2>
+                            <p>Como ya se ha dicho anterior mente el envio de los datos se realiza segun el valor de los atributos "action" y "method", sin embargo el primer paso para enviar los datos del formulario es proveer a todos los elemtos (controladores) con nombres propios, estos son muy importantes tanto en el lado del cliemte com en el lado del servidor, ya que le indican al navegador que nombre darle a cada dato, por parte del servidor los datos se manejan en relaciones de nombre-valor. </p>
+                            <h4>Ejemplo</h4>
+                            <img src="./img/ejmNombreForm.PNG" alt="" class="img">
+                        </section>
+                        <section class="pagination">
+                            <a href="./formularios.html" class="desplazar">
+                                <div>
+                                    <span class="pagina paginaHTML">
+                                        <span class="pagArrowLeft"> &larr; </span>PREVIO
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="numbers">
+                                <a href="./formularios.html" class="pagina paginaHTML">
+                                    <div>
+                                        1
+                                    </div>
+                                </a>
+                                <a href="#" class="off">
+                                    <div>
+                                        2
+                                    </div>
+                                </a>
+                            </div>
+                             <a href="#" class="desplazar off">
+                               <div>
+                                    <span class="off">Next <span> &rarr;</span></span>
+                                </div>
+                            </a>
+                        </section>
+                    </article>
+                    <footer class="content">
+                        <h2>Contacto</h2>
+                        <div class="footer__top">
+                            <div class="footer__perfil">
+                                <img src="../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                            </div>
+                            <div class="Presentacion links">
+                                <h3>¿Quién soy?</h3>
+                                <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                            </div>
+                            <div class="footer__Redes links">
+                                <h3>Redes</h3>
+                                    <a href="" class="footer__Facebook">
+                                        <img  src="../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                    </a>
+                                <a href="" class="footer__instagram">
+                                    <img src="../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                                </a>
+                                <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                    <img src="../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                                </a>
+                            </div>
+                            <div class="footer__Culliculum links">
+                                <h3>Curriculum</h3>
+                                <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                    <img src="../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </footer>
+                </div>	
+            </div>  
+        </aside> 
+    </body>
+</html>

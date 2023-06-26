@@ -1,0 +1,24 @@
+#contenedor_diseño-3{
+    background-color: black;
+    display: flex;
+    width: 700px;
+    height: 200px;
+    text-align: center;
+    margin-left: 24%;
+    padding: 1vw;
+}
+.titulo_diseño-3{
+    font-size: 5vw;
+    color: transparent;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-color: black;
+}
+
+
+
+
+
+
+/*-------------------------------Diseño 3 -----------------------------------*/

@@ -1,0 +1,92 @@
+.contenedor_diseño-30 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-30 {
+    position: relative;
+    display: block;
+    background-color: #f6f9ff;
+    padding: 10px;
+    border-radius: 40px;
+    transform: scale(1.8);
+    overflow: hidden;
+    /*añadido*/
+    border: 1px solid #bbb;
+  }
+  
+  .nav-30 a {
+    position: relative;
+    text-decoration: none;
+    color: #53588b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+  
+  .nav-30 a b {
+    position: relative;
+    top: 40px;
+    transition: 0.3s ease top;
+  }
+  
+  .nav-30 a i {
+    position: absolute;
+    left: 40%;
+    transition: 0.3s ease left;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-30 span {
+    position: absolute;
+    width: 100px;
+    background-color: #b7cef8;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 50px;
+    z-index: 1;
+    transition: 0.3s ease left;
+  }
+  
+  .nav-30 a:hover b {
+    top: -0;
+  }
+  
+  .nav-30 a:hover i {
+    left: 0;
+  }
+  
+  .nav-30 a:nth-child(1):hover ~ span {
+    left: 10px;
+  }
+  
+  .nav-30 a:nth-child(2):hover ~ span {
+    left: 114px;
+  }
+  
+  .nav-30 a:nth-child(3):hover ~ span {
+    left: 218px;
+  }
+  
+
+
+
+
+
+  .material-symbols-outlined {
+    bottom: 5px;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }

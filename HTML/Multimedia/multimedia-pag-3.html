@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+        <title>Elementos de multimedia</title>
+    </head>
+    <header>
+        <nav >
+            <ul class="nav"> 
+                <li><a href="../Index.html" class="logo"><img src="../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+                <li><a href="../indice.html" class="seleccion__HTML tema">HTML</a></li>
+                <li><a href="../../CSS/indiceCSS.html" class="CSS tema">CSS</a></li>
+                <li><a href="../../JavaScrip/Indice__JS.html" class="JS tema">JS</a></li>
+                <div class="indicador"></div>
+            </ul>
+        </nav>
+    </header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_HTML">
+                <span class="hl_HTML"></span>
+                <span class="hl_HTML"></span>
+                <span class="hl_HTML"></span>
+                <span class="hl_HTML"></span>
+            </label>
+            <div class="nav-aside_HTML">
+                <ul>
+                        <h2>Temas HTML</h2>
+                        <li><a href="../etiquetas estructura/estructura.html"><h3>Estructura</h3></a></li>
+                        <li><a href="../etiquetas texto/texto.html"><h3>Texto</h3></a></li>
+                        <li><a href="../Etiquetas uso espesifico/usoEspesifico.html"><h3>Etiquetas Generales</h3></a></li>
+                        <li><a href="../etiquetas listas/listas.html"><h3>Listas</h3></a></li>
+                        <li><a href="../etiquetas de metadatos/metadatos.html"><h3>Metadatos</h3></a></li>
+                        <li><a href="../Visualizar codigo/VerCodigo.html"><h3>Representar codigo</h3></a></li>
+                        <li><a href="../Tablas HTML/tablas.html"><h3>Tablas</h3></a></li>
+                        <li><a href="../Eventos HTML/eventos.html"><h3>Eventos</h3></a></li>
+                        <li><a href="../Formularios HTML/formularios.html"><h3>Formularios</h3></a></li>
+                        <li><a href="../Validaciones/validaciones.html"><h3>Validaciones</h3></a></li>
+                        <li><a href="../Enviar Datos Form/EnviarDatos.html"><h3>Envio de Datos</h3></a></li>
+                       <li><a href="../PersonalizarControladores/ControladoresJS.html"><h3>Controladores JS</h3></a></li>
+                        <li> <a href="../Pre-cargar Contenido/Precargar.html"><h3>Pre-Carga</h3></a></li>
+                        <li><a href="../Notas/notas.html"><h4>Recordatorios</h4></a></li>
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Elementos de multimedia</h1>
+                    <section class="pagination">
+                        <a href="./multimedia-pag-2.html" class="desplazar">
+                            <div>
+                                <span class="pagina paginaHTML">
+                                    <span class="pagArrowLeft"> &larr; </span>PREVIO
+                                </span>
+                            </div>
+                        </a>
+                        <div class="numbers">
+                            <a href="./multimedia.html" class="pagina paginaHTML">
+                                <div>
+                                    1
+                                </div>
+                            </a>
+                            <a href="./multimedia-pag-2.html" class="pagina paginaHTML" >
+                                <div>
+                                    2
+                                </div>
+                            </a>
+                            <a href="#" class="off">
+                                <div>
+                                    3
+                                </div>
+                            </a>
+                        </div>
+                         <a href="#" class="desplazar off">
+                           <div>
+                                <span class="off">Next <span> &rarr;</span></span>
+                            </div>
+                        </a>
+                    </section>
+                    <section id="imgVectoriales">
+                        <dl>
+                            <dt id="descripcionSVG"><h2>Incrustar imagenes vectoriales</h2></dt>
+                            <dd>
+                                <p>Existen dos tipos de imagenes las rasterizadas es decir todos aquellos formatos comunes com png, jpg y bmp estas estas compuestas por codigo que le indica al computador el donde va cada pixel, este codigo permanecera sin cambio sin importar el tamaño de la imagen por ello al agrandarla se empezara a "pixelear" y ver se borroza, esto ya que el navegador debe de compensar el lugar de cada pixel de la imagen. </p>
+                                <p>El segundo tipo son las imagenes vertoreales, estas estan compuestas por algoritmos que definene la forma y ruta de esta, por lo tanto estos algoritmos pueden ser interpretados por el navegador para definir el como deberia de verse la imagen, podiendo de este modo adaptar la imagen a cambios de sus dimenciones sin que la nitidez de esta se vea afectada. otra caracteristicas es que las imagenes vectoriales son mucho más ligeras que sus contrapartes ya que en vez de contener la inforación de cada pixel solo necesitan contener los algoritmos de esta, El formato en el que se encuentran todas las imagnenes vectoreales es el SVG.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt id="SVG"><h3>SVG</h3></dt>
+                            <dd>
+                                <p>Se trata de un lenguaje marcado (al igual que HTML) el cual contiene numerosos elemtos para definir las formas que se desean que aparezcan en las imagenes, por lo tanto SVG unicamente esta pensado para marcar graficos, no contenido por ello todos sus elemtos y atributos van enfocados a esto.</p>
+                                <p>El siguente es un ejemplo de codigo y su respectivo resultado:</p>
+                                <img src="./img/ejmSVG.PNG" alt="" class="img">
+                                <img src="./img/resultadoSVG.PNG" alt="" class="img">
+                                <p>Puede parecer que el SVG es facil de codificar sin embargo al tratarse de imagenes complejas deja de ser viable el hacerlo a mano, por ello muchas veces se utilizan <b>editores de graficos vectoreales</b> como <b>Inkscape o Illustrator los cuales permiten utilizar heramientas graficas para por ejemplo crear aproximaciones a fotos.</b>.</p>
+                                <p>Otras de sus caracteristicas positivas son: </p>
+                                <ol>
+                                    <li><p>El texto de las imagenes seigue siendo accesible para los motores de busqueda lo que es positivo para el CEO de la paguina</p></li>
+                                    <li><p>Puedn integrarse muy bien con el estilo de la paguina ya que cada elemto de la imagen es un elemtoal que se le puede dar CSS o scripting atravez de JavaScript</p></li>
+                                </ol>
+                                <p>Sin embrago tambien cuanta con ciertas desventajas como:</p>
+                                <ul>
+                                    <li><p>El codigo puede complicarse rapidamente por que el tamaño y peso de los archivos se vuelve un factor a tener en cuenta, sin mencionar que tambien puede requerir un tiempo de procesamiento considerable</p></li>
+                                    <li><p>Pueden llegar a ser más dificiles de crear que las imagenes rasterizadas segun cual sea el tipo de imagen que se quiera crear</p></li>
+                                    <li><p>No es compatible con verciones antiguas de los navegadores</p></li>
+                                </ul>
+                                <p>Por estas razones los graficos rasterizados son mejores para imagenes de presición como las fotos, aún así se puede leer este articulo para <a href="http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html" class="a__HTML">preparar SVG para la web.</a></p>
+                                <h4>Agregar SVG a la paguina </h4>
+                                <p>Existen tres formas de hacer esto las cuales son:</p>
+                                <ol>
+                                    <li>
+                                        <p><b>Incluirlo en un elemto "img"</b></p>
+                                        <p>Esta es la forma más rapida de hacerlo, para esto solo se necesitaria los atributos de width Height para delimitar el tamaño en el caso de que no posea una relación de aspecto inherente</p>
+                                        <p><b>Ventajas</b></p>
+                                        <ul>
+                                            <li><p>Sintaxis simple con el texto aquivalente en el atributo "alt"</p></li>
+                                            <li><p>Se puede convertir la imagen facilmente al incluir el "img" dentro de un "a"</p></li>
+                                            <li><p>El navegador puede almacenar el SVG en la cache lo que resulta en tiempos de carga más rapidos para las paguinas que usen la imagen</p></li>
+                                        </ul>
+                                        <p><b>Contras</b></p>
+                                        <ul>
+                                            <li><p>No se puede manipular la imagen con JavaScript</p></li>
+                                            <li><p>Si se desea incorporar CSS a la imagen se debe de incluir en el codigo SVG de otra forma no tendra efecto</p></li>
+                                            <li><p>No puede cambiar el estilo de la imagen con pseudoclases CSS (como :focus).</p></li>
+                                        </ul>
+                                        <h4>Compatibilidad con verciones anteriores de los navegadores</h4>
+                                        <p>Ya que las imagenes vectoriales (SVG) solo son ejecutables en verciones recientes de los navegadores, por lo tanto en aquellos casos en los que el usuario acceda a la paguina desde uno desactualizado este no podra visualizar los archivos SVG por ello para exitar que la experiencia del usuario se vea afectada existe una forma de solucionar la compativilidad con estos casos,</p>
+                                        <p>Para los navegadores que no admiten SVG lo recomendable es hacer referencia a una imagen rasterizada como png o jpg y usar el atributo "srcet" para hacer referencia al archivo SVG, ya que solo los navegadores actualizados reconocen este atributo seran capases de visualizar adecuadamente la imagen SVG mientra que los que no visualizaran la imagen rasterizada, el codigo resultante seria el siguiente. </p>
+                                        <img src="./img/compatibleSVG.PNG" alt="" class="img">
+                                        <p>Tambien se puede incorporar una imagen SVG como imagen de fondo del sitio web usando la tactica de compatbilidad expuesta anteriormente sin embarogo al hacerlo esta sujeta al mismo tipo de restricciones, esdecir no podra ser manipulado por JavaScript y podra interactuar de forma limitada con el CSS, el resultado seria el siguiete.</p>
+                                        <img src="./img/ejmSVGFondo.PNG" alt="" class="img">
+                                        <p><b>Nota: Si las imagenes vectoriales no se visualizan el el sitio web pudiese deberse a que el servidor no esta configurado correctamente para ejecutarlas.</b></p>
+                                    </li>
+                                    <li>
+                                        <h4>Incluir el codigo SVG en el documento HTML</h4>
+                                        <p>Otra forma de incluir imagenes SVG en nuestra paguina es incluir el codigo SVG directamente en nuestro documemto HTML, para esto se utiliza la etiqueta "svg", dentro de esta se debe desarrollar todo el texto SVG, ya que seria una mala practica intentar incluirlo fuera de esta, al implemetarlo de esta forma se dice que se esta utilizando SVG en linea; a continuación se muestra un ejemplo de codigo. </p>
+                                        <img src="./img/ejmSVG2.PNG" alt="" class="img">
+                                        <p><b>Ventajas</b></p>
+                                        <ul>
+                                            <li><p>Incluir el codigo SVG directamente en el documento HTML ahorra un llamado HTTP por lo que el tiempo de carga se ve un poco reducido</p></li>
+                                            <li><p>Se puede implemetar el CSS en plenitud, se puede añadir clases e identificadores a los elemtos, De hecho, puede utilizar cualquier atributo de presentación SVG como propiedad CSS</p></li>
+                                            <li><p>Usar el SVG en linea es la unica forma en la que se pueden usar interacciones y animaciones CSS en la imagen SVG</p></li>
+                                            <li><p>Puede usar el elemto SVG como hipervínculo envolviendolo por un elemto "a"</p></li>
+                                        </ul>
+                                        <p><b>Desventajas</b></p>
+                                        <ul>
+                                            <li><p>Este metodo solo es oportuno si se utiliza el SVG en un solo lugar, ya que la duplicación hace que el mantenimineto requira muchos recursos</p></li>
+                                            <li><p>El codigo SVG aumneta el pamaño del codigo HTML</p></li>
+                                            <li><p>Con este metodo de inclusión el navegador no pogra almacenar la imagen SVG en la cache, por lo que no se se podra aguilizar las cargas futuras del elemto </p></li>
+                                            <li><p>Se puede incluir un respaldo en un objeto "foreignObject" para aquellos navegadores obsoletos que no puedan aceptar la imagen SVG, sin embargo los navegadores modernos tambien descargaran la imagen de respaldo por lo tanto es necesario analizar si es necesario probocar esa sobrecarga solo para incluir los navegadores desactualizados</p></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h4>Incrustrar el SVG en un elemto "iframe"</h4>
+                                        <p>Esta es la tercera forma de incluir el SVG en la paguina, aunque definitivamente no es la mejor forma de hacerlo, para plicar este metodo se utiliza un "iframe de forma comun, haciendo referencia al archivo SVG y incluyendo un elemto "img" con una imagen  rasterizada para mostrar en aquellos casos en los que el navegador no acepte la viñeta "iframe" de la siguiente forma.</p>
+                                        <img src="./img/ejmSVGIframe.PNG" alt="" class="img">
+                                        <p><b>Desventajas</b></p>
+                                        <ul>
+                                            <li><p>Los "iframes" incluyen un respaldo que se muestra en caso de que la biñeta no pueda ser ejecutada por el navegador</p></li>
+                                            <li><p>A menos que el elemto SVG y la paguina tenga el mismo origen(ruta) no se puede usar javaScript para manipular la imagen</p> </li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section class="pagination">
+                        <a href="./multimedia-pag-2.html" class="desplazar">
+                            <div>
+                                <span class="pagina paginaHTML ">
+                                    <span class="pagArrowLeft"> &larr; </span>PREVIO
+                                </span>
+                            </div>
+                        </a>
+                        <div class="numbers">
+                            <a href="./multimedia.html" class="pagina paginaHTML ">
+                                <div>
+                                    1
+                                </div>
+                            </a>
+                            <a href="./multimedia-pag-2.html" class="pagina paginaHTML ">
+                                <div>
+                                    2
+                                </div>
+                            </a>
+                            <a href="#" class="off">
+                                <div>
+                                    3
+                                </div>
+                            </a>
+                        </div>
+                         <a href="#" class="desplazar off">
+                           <div>
+                                <span class="off">Next <span> &rarr;</span></span>
+                            </div>
+                        </a>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                
+                            <a href="" class="footer__instagram">
+                                <img src="../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>

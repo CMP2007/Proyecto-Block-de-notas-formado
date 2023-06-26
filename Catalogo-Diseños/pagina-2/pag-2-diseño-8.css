@@ -1,0 +1,192 @@
+* {
+	box-sizing: border-box;
+}
+
+.contenedor_diseño-18 {
+    background: #f5f5f5;
+    font-family: 'Playfair Display', serif;
+}
+
+.outer {/*se declaran variables para el contenedor de estilo*/
+	--primary: #454D5B;
+	--solid: #fff;
+	--transition: all .6s cubic-bezier(0.86, 0, 0.07, 1);
+	position: relative;
+	margin: auto;
+	margin-top: 50px;
+	width: 375px;
+	height: 667px;
+	background-image: linear-gradient(135deg, #646F83 0%, #454D5B 100%);
+	border: 1px solid #efefef;
+	user-select: none;
+	overflow: hidden;
+}
+
+
+/* Menu Icon (simbolo) */
+
+.menu {
+	--d: 20px;
+	--d-half: calc(var(--d)*.5);
+	--o: 12px;
+	position: absolute;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	top: var(--o);
+	right: var(--o);
+	width: var(--d);
+	height: var(--d);
+	border: 1px solid var(--primary);
+	transition: var(--transition);
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 15;
+}
+
+.menu:before,
+.menu:after {
+	position: absolute;
+	content: '';
+	width: 50%;
+	height: 50%;
+	background: var(--primary);
+	transform: rotate(45deg);
+	transition: inherit;
+}
+
+.menu:before {	
+	bottom: -30%;
+	left: -30%; 
+	width: 0;
+}
+
+.menu:after {
+	top: -30%;
+	right: -30%;
+}
+
+.input-18[type="checkbox"] {
+	display: none;
+}
+
+/* Horizontal Lines in Menu */
+
+.hl {
+	margin-bottom: 1px;
+	display: block;
+	width: var(--d-half);
+	height: 1px;
+	background: var(--primary);
+	transition: var(--transition);
+}
+
+.hl:last-child {
+	margin-bottom: 0;
+}
+
+
+/* Blank Content Placeholder Container */
+
+.content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	box-shadow: 20px 20px 100px -20px rgba(0,0,0,.5);
+	transition: var(--transition);
+	z-index: 12;
+}
+
+
+/* Navigation Container */
+
+.nav-18 {
+	position: absolute;
+	padding-top: 20%;
+	padding-right: 20px;
+	bottom: 0;
+	left: 0;
+	width: calc(100% - 20px);
+	height: calc(100% - 20px);
+}
+
+.nav-18:before,
+.nav-18:after {
+	position: absolute;
+	content: '';
+	background: var(--solid);
+}
+
+.nav-18:before {	
+	top: 0;
+	left: 0;
+	width: calc(100% - 20px);
+	height: 1px;
+}
+
+.nav-18:after {
+	bottom: 0;
+	right: 0;
+	width: 1px;
+	height: calc(100% - 20px);
+}
+
+.nav-18 ul {
+	list-style-type: none;
+	font-size: 28px;
+	text-align: right;
+}
+
+.nav-18 ul li {
+	margin-bottom: 30px;
+}
+
+.nav-18 a {
+	position: relative;
+	color: var(--solid);
+	text-decoration: none;
+	transition: var(--transition);
+}
+
+.nav-18 a:after {
+	position: absolute;
+	content: '';
+	right: -20px;
+	bottom: 0;
+	width: 0;
+	height: 1px;
+	background: var(--solid);
+	transition: inherit;
+}
+
+.nav-18 a:hover:after {
+	width: calc(120% + 20px);
+}
+
+
+
+/* Change Styling After Checkbox is Checked */
+
+.input-18[type="checkbox"]:checked + .menu {
+	border-color: var(--solid);
+}
+
+.input-18[type="checkbox"]:checked + .menu .hl,
+.input-18[type="checkbox"]:checked + .menu:before,
+.input-18[type="checkbox"]:checked + .menu:after {
+	background: var(--solid);
+}
+
+input[type="checkbox"]:checked + .menu:before {
+	width: 50%;
+}
+
+.input-18[type="checkbox"]:checked + .menu:after {
+	width: 0;
+}
+
+.input-18[type="checkbox"]:checked ~ .content {
+	transform: translate(-65%, 15%);
+}

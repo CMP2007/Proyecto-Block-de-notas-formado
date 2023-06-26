@@ -1,0 +1,202 @@
+ :root {
+ --color-hover: #fbfffe;
+ --color-base: #969695;
+ }
+  
+  body {
+      margin: 4vw;
+      box-shadow:
+    0px 0px 500px rgba(0, 0, 0, 0.24);
+    width: 90%;
+  }
+
+
+  /*--------------------Header styles---------------*/
+  .header {
+      display: flex;
+      flex-direction: row;
+      
+  }
+  .logo {
+    margin: 1vw 7vw;
+    width:  9.049773755656108vw;
+    height:  9.049773755656108vw;
+  }
+
+  .title-proyecto {
+    margin: 4vw 2vw;
+    font-size: 4vw;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: #fff;
+    border-radius: 2vw;
+    padding: 0 2vw;
+  }
+  /*End HEader styles*/
+
+  /*---------------------------Body styles----------------------*/
+  main {/*Distribucion de los itemes en el main*/
+    width: 95%;
+    height: 28em;
+    margin-left: 5%;
+    display: grid;
+    grid-template-rows: 25%75%;
+    grid-template-columns: 40% 60%;
+    padding: 0 2vw;
+  }
+  hr {
+    width: 80%;
+  }
+
+  .descripcion {
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--color-base);
+    grid-column: 1 / 3;
+    width: 65vw;
+    margin: 0 auto;
+    border-radius: 2vw;
+    padding: 0 2vw;
+  }
+
+  /*Estructura de las Opciones*/
+  .temas   {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between; 
+    height: 15vw;
+  }
+a{
+  width: 25vw;
+    height: 3.5vw;
+    border-radius: 2vw;
+    text-decoration: none;
+}
+  .Option{
+    text-align: center;
+    width: 25vw;
+    height: 3.5vw;
+    border-radius: 2vw;
+    padding-top: 10px;
+  }
+  .line {
+    position: relative;
+    content: "";
+    width: 75%;
+    border-radius: 50%;
+    height: 0.16vw;
+    top: -15px;
+    margin: 0 auto;
+    margin-top: 12px;
+    background-color: var(--color-base);
+  }
+  .Option__text {
+    font-size: 2vw;
+    color: var(--color-base);
+    transition: all 0.7s;
+  }
+  .img {
+    position: absolute;
+    width: 45vw;
+    border-radius: 3vw;
+    transition: 0.7s all;
+    opacity: 0;
+    visibility: hidden;
+    height: 22.5vw;
+  background-color: #f1662d;
+  }
+  
+
+  /*--Opcion CSS---*/
+  .cssWidt{
+    width: 17vw;
+  }
+.line-css {
+  background: #0172be;
+}
+.img-css {
+  transform: translate(40vw, -11.5vw);
+  border: 0.377vw solid #0172be;
+  background: rgb(1,175,236);
+  background: linear-gradient(0deg, rgba(1,175,236,1) 3%, rgba(1,185,245,1) 44%, rgba(1,177,237,1) 69%);
+}
+
+/*--CSS Hover--*/
+.temas__css:hover{
+  background-color: rgba(4, 177, 237, 1);
+  border: 0.3vw solid #0172be;
+}
+.temas__css:hover .text__css{ color: var(--color-hover);}
+
+.temas__css:hover .line-css {background: var(--color-hover); transition: 0.7s;}
+
+.temas__css:hover .img {
+  transform: translateX(30.93665158371041vw) translateY(-11.5vw);
+  opacity: 1;
+  visibility: visible;
+}
+/*End Opcion CSS*/
+
+
+
+/*------- Opcion HTML-----  */
+
+.line_html {
+  background: #f1662d;
+}
+.img-html {
+  transform: translateX(40vw) translateY(-6vw);
+  background: rgb(241,102,45);
+  background: linear-gradient(0deg, rgba(241,102,45,1) 50%, rgba(243,119,71,1) 50%);
+  border: 0.377vw solid #f1662d;
+}
+
+/*--HTML Hover---*/
+.temas__html:hover {
+  background: #f37747;
+  border: 0.3vw solid #f1662d;
+}
+.temas__html:hover .text__html {
+  color: var(--color-hover);
+}
+.temas__html:hover .line_html {
+  background: var(--color-hover);
+  transition: 0.7s;
+}
+.temas__html:hover .img-html {
+  transform: translateX(31vw) translateY(-6vw);
+  opacity: 1;
+  visibility: visible;
+}
+/*---End HTML---*/
+
+
+/* --Opcion Java Script--*/
+.line_js {
+  background: #efbc00;
+}
+.img-js {
+  border: 0.377vw solid #0172be;
+  transform: translate(40vw, -17.2vw);
+  background: #ffd800;
+  border: solid 0.5vw #efbc00;
+}
+.img-js img {
+  width: 18vw;
+}
+
+/*--- JavaScript Hover ---*/
+.temas__js:hover {
+  background: #efbc00;
+  border: 0.3vw solid #ffd800;
+}
+.temas__js:hover .line_js {
+  background-color: var(--color-hover);
+  transition: 0.7s;
+}
+.temas__js:hover .text__js {
+color: var(--color-hover);
+}
+.temas__js:hover .img-js {
+  transform: translateX(31vw) translateY(-17.5vw);
+  opacity: 1;
+  visibility: visible;
+}

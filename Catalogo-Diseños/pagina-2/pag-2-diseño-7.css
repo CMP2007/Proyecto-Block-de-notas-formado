@@ -1,0 +1,159 @@
+/*contenedor 
+
+Nota: En este diseño converti todas las medidas de px a vw para hacerlo responsive */
+
+.contenedor_diseño-17 { 
+    background-color: #ffd8d8;
+    width: 80%;
+    margin: 2% 10%;
+}
+/*posion de lositems*/
+.tb {
+    display: table;
+    width: 100%;
+  }
+  
+  .td {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+.input-17,
+.button-17 {
+  color: #fff;
+  font-family: Nunito;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+#cover {
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 41.47812971342383vw;
+    padding: 2.6395173453996983vw;
+    margin: -0px auto 0 auto;
+    background-color: #ff7575;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px #ff7c7c, 0 0 0 20px #ffffffeb;
+    transform: scale(0.6);
+  }
+
+  /*Dimeciones*/
+  
+.form-17 {
+    height:  7.239819004524887vw;
+  }
+
+  .input-17[type="text"] {
+    width: 100%;
+    height:  7.239819004524887vw;
+    font-size: 4.524886877828054vw;
+    line-height: 1;
+    outline: none;
+  }
+
+  .input[type="text"]::placeholder {
+    color: #e16868;
+  }
+
+  #s-cover {
+    width:  0.07541478129713423vw;
+    padding-left: 2.6395173453996983vw;
+    box-sizing: content-box;/*Esta propiedad unicamete se aplica en esta seccion para anular cambios realizados por el diseño 18 en el documento*/
+  }
+  
+  .button-17 {
+    position: relative;
+    display: block;
+    width: 6.334841628959276vw;
+    height:  7.239819004524887vw;
+    cursor: pointer;
+  }
+  
+
+/*Circulo de la lupa*/
+#s-circle {
+    position: relative;
+    top: -0.6033182503770739vw;
+    left: 0;
+    width: 3.2428355957767723vw;
+    height: 3.2428355957767723vw    ;
+    margin-top: 0;
+    border-width: 1.1312217194570136vw;
+    border: 1.1312217194570136vw solid #fff;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: 0.5s ease all;
+    box-sizing: content-box;/*Esta propiedad unicamete se aplica en esta seccion para anular cambios realizados por el diseño 18 en el documento*/
+  }
+  
+  /*posion del mango de la lupa*/
+.button-17 span {
+    position: absolute;
+    top: 5.128205128205129vw;
+    left: 3.2428355957767723vw;
+    display: block;
+    width:  3.3936651583710407vw;
+    height: 1.1312217194570136vw;
+    background-color: transparent;
+    border-radius: 10px;
+    transform: rotateZ(52deg);
+    transition: 0.5s ease all;
+  }
+  
+  /*estilo del mango de la lupa*/
+  .button-17 span:before,
+  .button-17 span:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 3.3936651583710407vw;
+    height:  1.1312217194570136vw;
+    background-color: #fff;
+    border-radius:  0.7541478129713424vw;
+    transform: rotateZ(0);
+    transition: 0.5s ease all;
+  }
+
+  
+  /*transformación del sirculo de la lupa al posionarse el raton*/
+  #s-cover:hover #s-circle {
+    top: -1px;
+    width: 67px;
+    height: 15px;
+    border-width: 0;
+    background-color: #fff;
+    border-radius: 20px;
+  }
+
+/*posición del mango de la lupa al posionarse el raton*/
+#s-cover:hover span {
+    top: 50%;
+    left: 56px;
+    width: 25px;
+    margin-top: -9px;
+    transform: rotateZ(0);
+  }
+
+  /*linea superior de la punta de la flecha*/
+  #s-cover:hover button span:before {
+    bottom: 11px;
+    transform: rotateZ(52deg);
+  }
+  
+  /*Linea inferior de la punta de la flecha*/
+  #s-cover:hover button span:after {
+    bottom: -11px;
+    transform: rotateZ(-52deg);
+  }
+
+  #s-cover:hover .button-17 span:before,
+#s-cover:hover .button-17 span:after {
+  right: -6px;
+  width: 40px;
+  background-color: #fff;
+}

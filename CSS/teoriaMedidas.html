@@ -1,60 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toria de las Medidas de Texto</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+        <title>Teoria de las Medidas de Texto</title>
+    </head>
+    <header>
+        <nav >
+            <ul class="nav"> 
+                <li><a href="../Index.html" class="logo"><img src="../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+                <li><a href="../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+                <li><a href="../CSS/indiceCSS.html" class="seleccion__CSS tema"><span class="text__tema">CSS</span></a></li>
+                <li><a href="../JavaScrip/Indice__JS.html" class="JS tema"><span class="text__tema">JS</span></a></li>
+            </ul>
+        </nav>
+    </header>
 <body>
-    <main>
-        <article>
-            <h1>Teoria de las Medidas de Texto</h1>
-            <section>
-                <p>Primero que nada existen dos tipos de meidas para las fuentes en CSS:
-                    <ul>
-                        <li><p><b>Medidas Fijas</b>: Como los centimetros, milimetros, punto, pixeles etc</p></li>
-                        <li><p><b>Medidas Relativas</b>: Son aquellas medidas que dependen de un "algo" como por ejemplo el contenedor del elemento</p></li>
-                    </ul>
-            </section>
-            <section>
-                <h2>Medidas Fijas</h2>
-
-                <p>Las medidas fijas son aquellas expresadas valores fijas y estandarizados que no depende de ningun factor externo, sin importar la sircunstancia siempre se expresaran en la misma dimención, por su pate esta medida puede ser expresada en multiples formatos, los cuales son </p>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_CSS">
+                <span class="hl_CSS"></span>
+                <span class="hl_CSS"></span>
+                <span class="hl_CSS"></span>
+                <span class="hl_CSS"></span>
+            </label>
+            <div class="nav-aside_CSS">
                 <ul>
-                    <li><p><b>PX: </b> pixeles</p></li>
-                    <li><p><b>Cm:</b> Centimetros</p></li>
-                    <li><p><b>mm: </b> Milimetros</p></li>
-                    <li><p><b>Pt: </b> Puntos</p></li>
+                    <h2>Teorias CSS</h2>
+                    <li><a href="./espesificidad.html"><h3>Concepto de la Espesificidad</h3></a></li>
+                    <li><a href="./metodologia-BEN.html"><h3>Metodologuía BEM</h3></a></li>
+                    <li><a href="./normmalize.html"><h3>Archivo NormaliZe.CSS</h3></a></li>
+                    <li><a href="./TeoriaCajas.html"><h3>Teoria de las Cajas</h3></a></li>
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>
+                    <li><a href="./selectoresCSS.html "><h3>Selectores CSS</h3></a></li>
+                    <li><a href="./pseudoElementos.html"><h3>Pseudo-Elementos</h3></a></li>
+                    <li><a href="./pseudoClases.html"><h3>Pseudo-Clases</h3></a></li>
+                    <li><a href="./propiedadesTexto.html"><h3>Propiedades de texto</h3></a></li>
+                    <li><a href="./PropiedadesCajas.html"><h3>Propiedades de Cajas</h3></a></li>
+                    <li><a href="./position.html"><h3>Propiedad Position</h3></a></li>
+                    <li><a href="./display.html"><h3>Propiedad Display</h3></a></li>
+                    <li><a href="./propiedadesDiseño.html"><h3> Diseños CSS</h3></a></li>
+                    <li><a href="./object-fit-position.html"><h3> Object-fit-Object-positon</h3></a></li>
+                    <li><a href="./coloresCSS.html"><h3>Colores CSS</h3></a></li>
+                    <li><a href="./display/flexBox.html"><h3>Flex-Box</h3></a></li>
+                    <li><a href="./display/Grid.html"><h3>Grid-Box</h3></a></li>
+                    <li><a href="./responsive-desing.html"><h3>Responsive Desing</h3></a></li>
+                    <li><a href="./transiciones.html"><h3>Transition</h3></a></li>
+                    <li><a href="./animaciones.html"><h3>Animaciones</h3></a></li>
+                    <li><a href="./transform.html"><h3>Propiedad Transform</h3></a></li>
+                    <li><a href="./variables.html"><h3>Variables CSS</h3></a></li>
+                    <li><a href="./filtros.html"><h3>Filtros CSS</h3></a></li>
+                    <div class="aside-divisor"></div>
+                    <h2>Otros</h2>
+                    <li><a href="./ErroresComunes.html"><h3>Erroes Comunes al usar CSS</h3></a></li>
                 </ul>
-            </section>
-            <section>
-                <h2>Medidas Relativas</h2>
-                <p>Se tratan de aquellas medidas que estan sujetas a las caracteriticas del contendor en el que se encuentran, son empleadas principalmente para los diseños responsive, ya que se ajustan en base a los cambios que ocurran en el contenedor en cuestión.</p>
-                <p>Constan de barios tipos de medidas diferentes:</p>
-                <ul>
-                    <li>
-                        <h3>Em</h3>
-                        <p> Por defecto esta unidad medida esta compuesta por 16 pixeles, es posible el definir el de cuantas unidades se desea el tamaño de la fuente de la siguite forma:</p>
-                        <img src="./img/Em1.PNG" alt="">
-                        <p>En estos casos se le puede dar el valor que se desee, si embargo hay que tener presente que el numero de unidades utlizadas es igual a multiplicar a este valor por el numero de px que posea  "em" en ese momento, ya que esto puede ser modificadopor las dimenciones de la caja contenedora.</p>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Teoria de las Medidas de Texto</h1>
+                    <section>
+                        <p>Primero que nada existen dos tipos de meidas para las fuentes en CSS:
+                            <ul>
+                                <li><p><b>Medidas Fijas</b>: Como los centimetros, milimetros, punto, pixeles etc</p></li>
+                                <li><p><b>Medidas Relativas</b>: Son aquellas medidas que dependen de un "algo" como por ejemplo el contenedor del elemento</p></li>
+                            </ul>
+                    </section>
+                    <section>
+                        <h2>Medidas Fijas</h2>
 
-                        <p>El valor de "em" es definido por la herencia en base a las dimenciones del contenedor del elemento actual, por ejemplo si definimos un valor de letra de 20px en el coontendedor,  en el elemento hijo el valor de cada "em" se ajustara a esos 20px. Por lo tanto el tamaño de letra aplicado en el contendor define el valor de cada unidad "em" utilizado en el elemento hijo </p>
-                        <p>Pero esto no queda así, realmete el valor de "em" es defibnido por el valor de cualquier propiedad que trabaje con unidades de medida, por lo tanto verdaderamente las diemciones, el padding, el margin etc todos estos valores aplicados en el contenedor afectaran el valor de cada unidad "em" del elemento hijo. </p>
-                    </li>
-                    <li>
-                        <h3>Rem</h3>
-                        <p>Este valor tiene como referencia  al tamaño de la fuente definido en el elemento root.</p>
-                    </li>
-                    <li>
-                        <h3>viewport:</h3>
-                        <p> Se trata de un valor que hace referencia a las dimenciones de la pantalla del dispositivo, en la cual <b>100v</b> eqivalen al total de la deimención de la panatalla, esta medida se dibide en dos, el <b>"viewport width (vw)"</b> y el <b>"viewport height (vh) " </b> es decir uno aplica para el ancho de la pantalla y el otro para el alto de esta.</p>
-                        <img src="./img/viewport1.PNG" alt="">
-                        <p>En este ejmplo se esta definiendo que las dimenciones del formulario sean iguales a la mitad de las diemciones de la pantalla.</p>
-                    </li>
-                </ul>
-            </section>
-        </article>
-    </main>
+                        <p>Las medidas fijas son aquellas expresadas valores fijas y estandarizados que no depende de ningun factor externo, sin importar la sircunstancia siempre se expresaran en la misma dimención, por su pate esta medida puede ser expresada en multiples formatos, los cuales son </p>
+                        <ul>
+                            <li><p><b>PX: </b> pixeles</p></li>
+                            <li><p><b>Cm:</b> Centimetros</p></li>
+                            <li><p><b>mm: </b> Milimetros</p></li>
+                            <li><p><b>Pt: </b> Puntos</p></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Medidas Relativas</h2>
+                        <p>Se tratan de aquellas medidas que estan sujetas a las caracteriticas del contendor en el que se encuentran, son empleadas principalmente para los diseños responsive, ya que se ajustan en base a los cambios que ocurran en el contenedor en cuestión.</p>
+                        <p>Constan de barios tipos de medidas diferentes:</p>
+                        <ul>
+                            <li>
+                                <h3>Em</h3>
+                                <p> Por defecto esta unidad medida esta compuesta por 16 pixeles, es posible el definir el de cuantas unidades se desea el tamaño de la fuente de la siguite forma:</p>
+                                <img src="./img/Em1.PNG" alt=""  class="img">
+                                <p>En estos casos se le puede dar el valor que se desee, si embargo hay que tener presente que el numero de unidades utlizadas es igual a multiplicar a este valor por el numero de px que posea  "em" en ese momento, ya que esto puede ser modificadopor las dimenciones de la caja contenedora.</p>
+
+                                <p>El valor de "em" es definido por la herencia en base a las dimenciones del contenedor del elemento actual, por ejemplo si definimos un valor de letra de 20px en el coontendedor,  en el elemento hijo el valor de cada "em" se ajustara a esos 20px. Por lo tanto el tamaño de letra aplicado en el contendor define el valor de cada unidad "em" utilizado en el elemento hijo </p>
+                                <p>Pero esto no queda así, realmete el valor de "em" es defibnido por el valor de cualquier propiedad que trabaje con unidades de medida, por lo tanto verdaderamente las diemciones, el padding, el margin etc todos estos valores aplicados en el contenedor afectaran el valor de cada unidad "em" del elemento hijo. </p>
+                            </li>
+                            <li>
+                                <h3>Rem</h3>
+                                <p>Este valor tiene como referencia  al tamaño de la fuente definido en el elemento root.</p>
+                            </li>
+                            <li>
+                                <h3>viewport:</h3>
+                                <p> Se trata de un valor que hace referencia a las dimenciones de la pantalla del dispositivo, en la cual <b>100v</b> eqivalen al total de la deimención de la panatalla, esta medida se dibide en dos, el <b>"viewport width (vw)"</b> y el <b>"viewport height (vh) " </b> es decir uno aplica para el ancho de la pantalla y el otro para el alto de esta.</p>
+                                <img src="./img/viewport1.PNG" alt="" class="img">
+                                <p>En este ejmplo se esta definiendo que las dimenciones del formulario sean iguales a la mitad de las diemciones de la pantalla.</p>
+                            </li>
+                        </ul>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
 </body>
 </html>

@@ -1,0 +1,20 @@
+.contenedor_diseño-26 {
+    display: flex;
+    justify-content: center;
+}
+
+.input-26 {
+    appearance: none; /*Esta propiedad literalmete permite la realización de este estilo */
+    padding: 9px 25px;
+    color: rgb(236, 236, 245);
+    background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+.input-26::before {
+    content: "Open";
+}
+
+.input-26:checked::before {
+    content: "Close";
+}

@@ -1,0 +1,110 @@
+.contenedor_diseño-16 {
+    background-color: #292929;
+    overflow: hidden;
+    margin: 3% 10%;
+    width: 80%;
+    height: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+
+.nav-16 {
+    position: absolute;
+    width: 24.057315233785822vw;
+    display: table;
+}
+
+
+.nav-16 a {
+    position: relative;
+    width: 33.333%;
+    display: table-cell;
+    text-align: center;
+    color: #949494;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.2s ease color;
+  }
+
+  .nav-16 a:before,
+  .nav-16 a:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.2s ease transform;
+  }
+.nav-16 a:before {
+    top: 0;
+    left: 10px;
+    width: 6px;
+    height: 6px;
+  }
+.nav-16 a:after {
+    top: 5px;
+    left: 18px;
+    width: 4px;
+    height: 4px;
+  }
+  
+  .nav-16 a:nth-child(1):before {
+    background-color: yellow;
+  }
+  
+  .nav-16 a:nth-child(1):after {
+    background-color: red;
+  }
+  
+  .nav-16 a:nth-child(2):before {
+    background-color: #00e2ff;
+  }
+  
+  .nav-16 a:nth-child(2):after {
+    background-color: #89ff00;
+  }
+  
+  .nav-16 a:nth-child(3):before {
+    background-color: purple;
+  }
+  
+  .nav-16 a:nth-child(3):after {
+    background-color: palevioletred;
+  }
+
+  #indicator {
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: 0.2s ease left;
+  }
+
+  .nav-16 a:hover {
+    color: #fff;
+  }
+  
+  .nav-16 a:hover:before,
+.nav-16 a:hover:after {
+  transform: scale(1);
+}
+
+.nav-16 a:nth-child(1):hover ~ #indicator {
+  background: linear-gradient(130deg, yellow, red);
+}
+
+.nav-16 a:nth-child(2):hover ~ #indicator {
+  left: 34%;
+  background: linear-gradient(130deg, #00e2ff, #89ff00);
+}
+
+.nav-16 a:nth-child(3):hover ~ #indicator {
+  left: 70%;
+  background: linear-gradient(130deg, purple, palevioletred);
+}

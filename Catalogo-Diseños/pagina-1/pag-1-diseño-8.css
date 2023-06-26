@@ -1,0 +1,22 @@
+.contenedor_diseño-8{/*porpiedades del contendor de los estilos*/
+    display: flex;
+    width: 1050px;
+    height: 200px;
+    margin: 10px auto;
+    /*Tambien se pueden incluir estas propiedades en el contenedor para bariar el diseño*/
+   /* padding: 10px; 
+    background: #6a73f0;*/
+}
+
+.contenedor_diseño-8 img{
+    min-width: 0;
+    flex: 1 1 10px;
+    object-fit: cover;
+    opacity: 0.5;
+    transition: 0.8s;
+}
+
+.contenedor_diseño-8 img:hover {
+    flex: 1 1 480px;
+    opacity: 1;
+}
