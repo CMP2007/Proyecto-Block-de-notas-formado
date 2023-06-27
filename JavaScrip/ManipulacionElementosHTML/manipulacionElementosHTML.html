@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Variables</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../Index.html" class="logo"><img src="../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../JavaScrip/Indice__JS.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <h2>JavaScrip</h2>
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Manipulación de elementos HTML</h1>
+                    <h2>Modificación y obtenciónde elementos HTML</h2>
+                    <section>
+                        <p>Se tratan de todos aquellos metodos utilizados para obtener elementos HTML y el texto de estos.</p>
+                        <p>Para ejemplificar adecuedamente estos metodos los ejmeplos empleados partiran desde este codigo HTML</p>
+                        <img src="./img/textContent-1.PNG" class="img" alt="">
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>TextContent()</h3></dt>
+                            <dd>
+                                <p>debuelve el texto de cualquier nodo, es decir este metodo retorna todo el texto contenido dentro de un elemento, incluyendo el que se enceuntre dentro de elementos hijos, sin tener en cuenta las etiquetas HTML ni tampoco a los estilos CSS de los elementos.</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/textContent-2.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/textContent-3.PNG" class="img" alt="">
+                                <p>En este ejemplo el elemento HTML en cuestion posee definido el atributo "style", con la propiedad "visibility" con un valor "hidden", lo que significa que el elemento tiene definido una propiedad CSS que oculata el elemento de la vista del usurio, sin embargo nada de esto es tomado en cuenta por el metodo "textContent", por lo que todo el texto del elemento es retornado por este, y posteriormente impreso en pantalla. </p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>InnerText</h3></dt>
+                            <dd>
+                                <p>Debuelve el texto visible de un cualquier "node element".</p>
+                                <p>Este metodo esta en des-uso y no se recomienda emplearlo, sin embargo la importancia de conocerlo radica que es posible que se le encuentre en el codigo antiguo.</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/innerText-1.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>OuterText</h3></dt>
+                            <dd>
+                                <p>Debuelve el texto de las etiquetas HTML (incluidas las etiquetas).</p>
+                                <p>Este metodo esta en des-uso y no se recomienda emplearlo, sin embargo la importancia de conocerlo radica que es posible que se le encuentre en el codigo antiguo.</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/outerText-1.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>innerHTML</h3></dt>
+                            <dd>
+                                <p>Este metodo permite retornar todo el contentido HTML, incluyendo las etiquetas de este.</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/innerHTML-2.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/innerHTML-1.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>outerHTML</h3></dt>
+                            <dd>
+                                <p>Este metodo permite retornar todo el elemento HTML, incluyendo las etiquetas y los atributos de estas.</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/outerHTML-2.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/outerHTML-1.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <h2>Creación de elementos HTML</h2>
+                    <section>
+                        <p>En esta sección se definen todos los metodos empleados para generar elementos HTML desde JavaScrip, para ejemplificarlos adecuadamete los ejemeplos se realizaran en base al siguiente codigo HTML:</p>
+                        <img src="./img/creacionEjemplo.PNG" class="img" alt="">
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>CreateElement()</h3></dt>
+                            <dd>
+                                <p>Este metodo permite generar un elemento HTML</p>
+                                <p>Nota: Este metodo es sensible a las mayusculas, de hecho la forma en la que este reconoce a los elementos HTML que se le indiquen es con todos los ccaracteres en mayusculas.</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/createElement-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/createElement-2.PNG" class="img" alt="">
+                                <p>En este ejmeplo se muestra el elemento "li" genrado con la propiedad "createElement" en la consola.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>CreateTextNode()</h3></dt>
+                            <dd>
+                                <p>Este metodo permite generar un Objeto de texto de nodo, es dicir un texto HTML, pero que en cuanto a javaScript concierne este elemento es un objeto, por lo tanto estos elementos pueden axeder a las mismas propiedades que las de un objeto común.</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/createTextNode-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/createTextNode-2.PNG" class="img" alt="">
+                                <p>En este ejemplo se almacena un texto generado con el metodo "createTextNode" en una varible con el nombre "textDelItem", y luego  se muestra el contenido de esta variable en la consola.  </p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Introducir un Elemento Dentro de Otro</h3></dt>
+                            <dd>
+                                <p>Para esto existen do formas las cuales varian segun el si el elemento hijo se trata de un texto u otro elemento HTML.  </p>
+                               <ul>
+                                <li>
+                                    <p>La forma de introducir un texto dentro de un elemento contendor es simple, se trata de utilizar las propiedades de obtencion de elementos para introducir el texto dentro de un elemento padre.</p>
+                                    <h4>Ejmeplo</h4>
+                                    <img src="./img/crearElementoHijo-1.PNG" class="img" alt="">
+                                </li>
+                                <li>
+                                    <p>Para introducir cualquier otro tipo de texto HTML (incluyendo texto si se desea) se usa el  <a href="#appendChild" class="a__JS">metodo appendChild</a>, el cual se espcaializa en definri un elemento como hijo de otro.</p>
+                                </li>
+                               </ul>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Intriducir Muchos Elementos dentro de un Elemento Padre</h3></dt>
+                            <dd>
+                                <p>Generar e introducir elementos hijos con javaScript  aunque no lo paresca es un proceso que consume una cantidad de recursos considerable, y esto se agraba en aquellas ocaciones en las que sea necesario definir muchos de estos, ya que para estos casos la mejor estructura es un siclo "for", sin embargo al definir grandes cantidades de elementos se genera un consumo que puede llegar a ser exesivo de recursos.   </p>
+                                <p>Para estos casos se desarrollo el metodo "createDocumentFragment" el cual soluciona estos problemas de recursos, ya que gestion la forma en la los navegadores imprimen los elementos en pantalla, y lo optimisa para las ocaciones en las que sea necesario imprimir una gran cantidad de elementos.</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/crearElementoHijo-3.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/crearElementoHijo-4.PNG" class="img" alt="">
+                                <p>En este ejmeplo a un elemento padre  llamdo "contenedor" se le desea añadir una lista de 20 elementos hijos, dentro del siclo "for" se define los elementos que seran añadidos, pero estos son almacenados en una varible particular llamada "fragmento" lo que hace distintiva a esta varible es que anteriormente se le aplico el metodo "createDocumentFragment", lo que permite que esta variable este optimizada para imprimir multiples elementos en patalla, de ese modo cada vez que el siclo "for" realise un recorrido la varible permitira manipular estos elemetos sin generar un consumo exesivo de recursos.  </p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <h2>Metodos de Childs</h2>
+                    <section>
+                        <dl id="appendChild">
+                            <dt><h3>appendChild()</h3></dt>
+                            <dd>
+                                <p>Este metodo permite definir que un elemento sera el hijo de otro, por lo tanto se podria decir que este metodo permite introducir un elemento HTML dentro de otro. </p>
+                                <p>Para hecarlo este metodo debe aplicarse a la varible que almacena al elemento "padre", a su vez este metodo recibe un valor, el cual corresponde a la varible que almacena al elemento "hijo".  </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/appendChild.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/appendChild-2.PNG" class="img" alt="">
+                                <p>En este ejemplo El codigo HTML unicamete posee un elemento contendor "div", se usa el metodo "createElement" para generar un contendor de tipo "li", y el metodo "createTextNode" para generar un objeto de texto. Ya con esto se utiliza el metodo "appendChild" dos veces, la primera vez para convertir el elemento de texto en un elemento hijo del contendor "li", y una segunda para convertir el elemento "li" en el elemento hijo del contendor "div", de ese modo se empleo JavaScrip para generar dos elementos hijos y introducirlos en una elemento padre.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>
