@@ -171,6 +171,103 @@
                             </dd>
                         </dl>
                     </section>
+                    <h2>Obtención y Manipulación de Elementos Childs (Hijos)</h2>
+                    <section>
+                        <p>Se tratan de todas las propiedades que se aplican para manipular elementos hijos, para ejemplificarlas adecuadamete los ejemeplos de estas propiedades se basaran en este codigo HTML:</p> 
+                        <img src="./img/creacionEjemploChilds.PNG" class="img" alt="">
+                        <p>Nota: En JavaScript, un nodo se refiere a una entidad dentro del árbol del DOM (Document Object Model), que representa un elemento o parte de la estructura de una página web. </p>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>FirstChild</h3></dt>
+                            <dd>
+                                <p>Esta propiedad permite el retornar el primer valor almacenado dentro de un contenedor, en esta prpiedad es necesario hacer incapie en "valor", ya que lo que esta propiedad retorna no es el pirmer elemento, si no en su lugar retorna el primer nodo que se encuentre dentro del contendor, el cual la mayoria de las veces se trata de un nodo de tipo texto. </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/firstChild-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/firstChild-2.PNG" class="img" alt="">
+                                <p>En este ejemeplo se aplica la propiedad "firstChild" al elemento contendor, lo cual retorna un nodo de tipo texto en consola.</p>
+                                <p>Esto ocurre ya que los espacios y los saltos de linea son cosiderados como caracteres de texto, por ello al aplicarlos en el codigo del documento para mantener la semantica estos son los primeros valores encontrados por la propiedad, he allí la razon de que sean retornados:</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/creacionEjemploChilds.PNG" class="img" alt="">
+                                <p>Para lograr que esta propiedad retorne elementos HTML es necesario definir las etiquetas del primer elemento dentro de las etiquetas del elemento contenedor sin ningun salto de linea o espacio que separe las etiquetas del elemento hijo del elemento padre. </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/firstChild-5.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/firstChild-4.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>LastChild</h3></dt>
+                            <dd>
+                                <p>Esta propiedad es exactamete igual a la anterior con la unica diferencia de que esta retorna el ultimo valor, no el primero, por todo lo demas es igual, incluyendo el hecho de retornar el nodo de texto xorresponiente a los saltos de linea o espacios, ya que son lo ultimos nodos contenidos por el elemento padre, por lo tanto para que esta propiedad retorne elementos HTML es necesario cerrar las etquetas del elemento hijo justo antes de las del elemento padre, de ese modo los ultimos nodos coresponderan al elemento hijo. </p>
+                                <h4>Codigo JavaScrip</h4>
+                                <img src="./img/lastChild-1.PNG" class="img" alt="">
+                                <h4>Ejemplo con Semantica</h4>
+                                <img src="./img/creacionEjemploChilds.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/firstChild-2.PNG" class="img" alt="">
+                                <h4>Ejemplo Etiquetas Pegadas</h4>
+                                <img src="./img/lastChild-2.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/lastChild-3.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>FirstElementChild</h3></dt>
+                            <dd>
+                                <p>Esta propiedad retorna el primer elemento almacenado dentro del elemento padre, por lo tanto diferencia de "firstChild" esta propiedad ignora por completo los nodos de espacios y saltos de linea, por lo tanto unicamte retorna el primer elemento dentro del contendor.</p>
+                                <h4>HTML</h4>
+                                <img src="./img/creacionEjemploChilds.PNG" class="img" alt="">
+                                <h4>JavaScrip</h4>
+                                <img src="./img/firstElementChild-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/firstChild-4.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>LastElementChild</h3></dt>
+                            <dd>
+                                <p>Esta propiedad es exactamete igual a la anterior con la unica diferencia de que esta retorna el ultimo elemento, no el primero.</p>
+                                <h4>HTML</h4>
+                                <img src="./img/creacionEjemploChilds.PNG" class="img" alt="">
+                                <h4>JavaScrip</h4>
+                                <img src="./img/lastElementChild-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/lastChild-3.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>ChildNodes</h3></dt>
+                            <dd>
+                                <p>Esta propiedad retorna todos los nodos almacenados dentro del elemento padre, y lo hace en un elemento de tipo "NodeList" (se recorre como un array con la propiedad "forEach", pero no puede usar las propiedades de estos, ya que e un objeto), por lo tanto esta propiedad permite retornar todos los nodos sin importar si se trata de nodoso de etiquetas o de semantica.</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/childsNodes-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/childsNodes-2.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Childen</h3></dt>
+                            <dd>
+                                <p>Esta propiedad es muy similar a la anterior, sn embargo se diferencia en que esta unicamete retorna los nodos que pertenezcan elementos HTML, por lo tanto esta propiedad retorna un listado de todos los elementos hijos de un elemento padre, y lo hace en formato "HTMLColecction"(se puede recorrer con un bucle "for of" ya que de otra forma no se puede recorrer). </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/children-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/children-2.PNG" width="300px" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
                     <h2>Metodos de Childs</h2>
                     <section>
                         <dl id="appendChild">
@@ -183,6 +280,120 @@
                                 <h4>Resultado</h4>
                                 <img src="./img/appendChild-2.PNG" class="img" alt="">
                                 <p>En este ejemplo El codigo HTML unicamete posee un elemento contendor "div", se usa el metodo "createElement" para generar un contendor de tipo "li", y el metodo "createTextNode" para generar un objeto de texto. Ya con esto se utiliza el metodo "appendChild" dos veces, la primera vez para convertir el elemento de texto en un elemento hijo del contendor "li", y una segunda para convertir el elemento "li" en el elemento hijo del contendor "div", de ese modo se empleo JavaScrip para generar dos elementos hijos y introducirlos en una elemento padre.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>ReplaceChild()</h3></dt>
+                            <dd>
+                                <p>Este metodo permite remplazar un elemento HTML por otro, para hacerlo esta propiedad recibe dos valores separados entre sí por una coma (,), de los cuales el primero corresponde al nombre de la varible que esta vinculada al elemento a remplazar y el segundo dato corresponde al nombre de la varible que esta vinculada al nuevo elemento.</p>
+                                <h4>HTML</h4>
+                                <img src="./img/replaceChild-3.PNG" class="img" alt="">
+                                <h4>JavaScrip</h4>
+                                <img src="./img/replaceChild-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/replaceChild-2.PNG" class="img" alt="">
+                                <p>En este ejemeplo se selecciona el elemento padre atravez de su clase, luego se crean dos elementos usando JavaScrip un parrafo(no se usa) y un h2, a este ultimo se le define el valor "Titulo", luego se selecciona el h2 a remplazar en una varible llamada "h2_antiguo" atravez de su clase llamada "h2", por ultimo se emplea el metodo "replaceChild" para remplazar el "h2" antiguo por el nuevo. </p>
+                                <p>Nota: Recordar que JavaScrip para manipular elementos HTML es necesario vincularlos a una variable.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>RemoveChild()</h3></dt>
+                            <dd>
+                                <p>Este metodo permite remover un elemento HTML, su funcionamiento es muy simple, tansolo hay que aplicar este metodo al alemento padre, indicando la varible vinculada al respectivo elemento a remover dentro de los parentesis del metodo. </p>
+                                <h4>HTML</h4>
+                                <img src="./img/replaceChild-3.PNG" class="img" alt="">
+                                <h4>JavaScrip</h4>
+                                <img src="./img/removeChild-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/removeChild-2.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>HasChildNodes()</h3></dt>
+                            <dd>
+                                <p>Este metodo permite comprobar el si un elemento HTML posee o no elementos hijos, por lo cual este metodo tan solo retorna valores booleanos, "True" en caso de que el elemento padre si los posea y "false" en caso de que no tenga ninguno.</p>
+                                <h4>HTML</h4>
+                                <img src="./img/replaceChild-3.PNG" class="img" alt="">
+                                <h4>JavaScrip</h4>
+                                <img src="./img/hasChildNodes-1.PNG" class="img" alt="">
+                                <p>En este ejemplo se selecciona un elemento "h2" atravez de su clase, y luego se le aplica el metodo para comprobar si posee o no elementos hijos a la vez que se guarda el retorno del metodo en una varible llamada "respuesta", en este caso pese a lo que puede aparentar el resultado retorna en "true", ya que el texto que esta contenido dentro del elemento "h2" se trata de elementos de texto, por lo tanto el texto dentro del "h2" se trata de elementos hijos. </p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <h2>Propiedades de los Elementos Padres</h2>
+                    <section>
+                        <dl>
+                            <dt><h3>ParentElement y el ParentNode</h3></dt>
+                            <dd>
+                                <p>Se tratan de dos propiedades casi completamente aguales con la unica diferencia de que "parentElement" retorna el elemento HTML padre, mientras que "parentNode" retorna el nodo padre del elemento actual, es decir la difrencia entre los dos es que una retorna el elemento y otro el nodo. </p>
+                                <p>En la gran mayora de los casos el efecto de ambos es el mismo, solo en ocaciones muy particulaes en las que el elemento hijo este contenido por un nodo que no pertenezca a un elemento HTML el resultado puede variar, de resto ambas propiedades suelen arrojar el mismo resultado.</p>
+                                <h4>ParentElement</h4>
+                                <img src="./img/parentElement-2.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/parentElement-1.PNG" class="img" alt="">
+                                <h4>ParentNode</h4>
+                                <img src="./img/parentNode-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/parentNode-2.PNG" class="img" alt="">
+                                <p>Como se puede ver en el ejemeplo efectivamente el resultad de ambas propiedades es el mismo, solo en ocaciones muy espesificas estas propiedades retornaran resultados difernetes.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <h2>Elementos Hermanos</h2>
+                    <section>
+                        <p>Los elementos hermanos se tratan de todos aquellos elementos que esten en el mismo nivel de estructura, por ejemplo en el caso de dos alementos "p" contenidos dentro de un elemento "article" los dos  elementos "p" se consideran elementos hermanos.</p>
+                        <p>Acontinuación se definen las diferentes propiedades deseñadas para manipularlos, para ejemplificar adecuadamete estas propiedades todos los ejemplos de estas partiran del siguiente codigo HTML:</p>
+                        <img src="./img/replaceChild-3.PNG" class="img" alt="">
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>NextSibling y PreviousSibling</h3></dt>
+                            <dd>
+                                <p>Estas dos propiedades retornan el nodo hermano más sercano al elemento, "nextSibling" retorna el siguiente nodo al elemento, por su parte "previousSibling" retorna el nodo anterior al elemento, por lo tanto estas propiedades retornan el nodo anterior y siguiente del elemento.</p>
+                                <p>En la mayoria de los casos ambos retornos seran una lista de nodos de tipo texto, ya que en la mayoria de los casos el codigo al estar indentado, los nodos que se enceuntran antes y despues de los elementos son nodos de texto, ya que estos pertenecen a los espacios y saltos de linea usados para identar el codigo. </p>
+                                <p>Para que estas propiedades retornen otro elemento HTML es necesario que las etiquetas de estos no esten separadas por ningun espacio o salto de linea, es decir se encuentren completamete pegadas a las del elemento hermano.</p>
+                                <h4>NextSibling</h4>
+                                <img src="./img/nextSibling.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/nextSibling-2.PNG" class="img" alt="" width="200px">
+                                <h4>PreviousSibling</h4>
+                                <img src="./img/previousSibling.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/previousSibling-2.PNG" class="img" alt="" width="200px">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>NextElementSibling y PreviousElementSibling</h3></dt>
+                            <dd>
+                            <p>Estas propiedades permiten retornar los elementos HTML hermanos más cercanos del elemento actual,"NextElementSibling" retorna el elemento siguiente del actual, mientras que "PreviousElementSibling" retorna el elemento anterior al actual, por lo tanto estas propiedades permiten retornar el elemento anterior y el siguiente al elemento actual.</p>
+                            <h4>NextElementSibling</h4>
+                            <img src="./img/nextElementSibling-1.PNG" class="img" alt="">
+                            <h4>Resultado</h4>
+                            <img src="./img/nextElementSibling-2.PNG" width="200px" class="img" alt="">
+                            <h4>PreviousElementSibling</h4>
+                            <img src="./img/previousElementSibling-1.PNG" class="img" alt="">
+                            <h4>Resultado</h4>
+                            <img src="./img/previousElementSibling-2.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Closest</h3></dt>
+                            <dd>
+                                <p>La propiedad se utiliza para encontrar el ancestro más cercano de un elemento en el árbol del DOM que coincida con un selector CSS específico. Si no se encuentra ningún elemento que coincida con el selector, closest devuelve null, es decir esta propiedad permite retornar el elemento contenedor más cercano en base a una clase definida.</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/closes-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/closes-2.PNG" class="img" alt="">
                             </dd>
                         </dl>
                     </section>
