@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>P.O.O</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../../../Index.html" class="logo"><img src="../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../Indice__JS.html"><h2>Nivel 1 JS</h2></a>
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>programación Orientada a Objetos (P.O.O)</h1>
+                    <section>
+                        <p>La programación orientada a objetos se trata de un planteamiento de la programación, consisten en estructurar el codigo de forma que este describa un objeto real, incluyendo sus caracterirticas y usos, en otras palabras se busca que al imitar las caracteriticas y propiedades de un objeto real sea más facil estrucutrar el codigo de una forma más efciente. </p>
+                        <p>La programación orientada a objetos esta compuesta por seis (6) secciones conseptuales del codigo, las cuales son: </p>
+                    </section>
+                    <h2>Estructura de Programación Orientada a Objetos</h2>
+                    <section>
+                        <dl>
+                            <dt><h3>Clases</h3></dt>
+                            <dd>
+                                <p>Se trata del bloque de codigo encargado de generar objetos, basicamente se trata del contenedor que albergara todo el codigo responsable de estrucutrar y generar los atributos (caracteriticas) y metodos(usos) del metodo.  </p>
+                                <p>Nota: No se puede definir un objeto con el mismo nombre que la clase. </p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Construcutor</h3></dt>
+                            <dd>
+                                <p>Se trata de una sección del codigo interno de una clase, en si se trata del bloque de codigo responsable de la generación del objeto y de sus atributos (caracteriticas) para los cual cuanta con una estructura especial.</p>
+                                <img src="./img/clases-1.PNG" class="img" alt="">
+                                <p>"Constructor" se trata de una palabra clave para indicar este tipo de bloque de codigo a javaScript, seguido de esta palabra clave se indican dentro de parentesis los valores de los atributos (en este caso: especie, edad, color) seguido de comillas ( { } )las cuales contienen el bloque de codigo,en el cual se indica los nombres de los atributos, esto se realiza con la palabra clave "this", la cual es la forma de hacer referencia al abjeto en cuestión seguido de un punto (.) y del nombre del atributo, a los que se les asigna su rspectivo valor.  </p>
+                                <p>Esta es la estructura de un constructor en la cual se gefinen los atributos que va a poseer el objeto, de este modo todo objeto que sea generado con esta clase poseera los atributos "especie" "edad" "color" </p>
+                                <p>Nota: La palabra clave "this" no se puede utilizar fuera de la estructuradel "constructor", para hacer referencia a al objeto que se esta definiendo es necesario hacerlo atravez de su nombre, esto ya sea en el interior o exterior de la clase.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Metodos</h3></dt>
+                            <dd>
+                                <p>Se tratan en pocas palabras de aquellas funciones que un objeto puede ejecutar, estas al igual que el "constructor" estan albergadas dentro de una clase y ese es el motivo de su nombre, en si, los metodos no se diferencian de una función, sin embargo se les llama así para hacer referencia a que pertenecen a un objeto. </p>
+                                <img src="./img/clases-3.PNG" class="img" alt="">
+                                <p>En este ejemplo se puede apreciar las diferentes partes de la clase, el cosntructor y un metodo, en este caso el metodo posee el nombre de "verInfo()", la cual imprime en pantalla los datos albergados en el atributo "this.info", en si eso es un metodo simpletme una función que se encuentra dentro de un objeto.</p>
+                                <p>Nota: Los metodos de un objeto no pueden ser funciones de tipo flecha, deben de poseer la estructura tradicional. </p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Generar un objeto</h3></dt>
+                            <dd>
+                                <p>Emplear la clase y generar un objeto es realmente un proceso muy simple una vez la clase ya se enuentra definida, simplemete es necesario definir la varible (constante) que albergara el objeto, se utiliza la palabra clave "new" y se llama a la clase a emplear, seguido de parentesis () ya que en estos se indican los atributos del objeto, cada uno de los atributos debe estar separado por una coma. </p>
+                                <img src="./img/clases-2.PNG" alt="" class="img">
+                                <p>En este ejemplo se definen tres objetos diferentes, cada uno con un nombre y datos propios pero empleando la misma clase para elaborarlos por lo tanto todos son objetos con los mismos atributos y metodos.</p>
+                                <p>En si el llamado de la clase para generar un objeto es muy simple, se asemeja a declarar una varible y llamar a una función a la vez, sin embargo existen algunos detalles a tener en cuenta como que los atributos que no sean definidos (no se ingrese el dato) permaneseran como undefined.</p>
+                                <p>Nota: al trabajar con Objetos lo más recomendable es emplear cosntantes (const) ya que de ese modo el objeto no sera volatil, lo que puede llegar a ocacionar problemás más adelante.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Extrar Atributos o Metodos de un Objeto</h3></dt>
+                            <dd>
+                                <p>EL llamado ya sea de los atributos (datos o "caracteristicas") o metodos (funciones) de un objeto es realmente simple, se trata de realizar el llamado de del objeto y definir el elemento que se desea extraer de este, esto se hace utilizando el nombre del objeto seguido de un punto (.) que hace de separador seguido del nombre del elemento a utilizar, de la siguiente forma:</p>
+                                <img src="./img/clases-4.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/clases-5.PNG" class="img" alt="">
+                                <p>En este ejmplo se llama al metodo "verInfo" del objeto, el cual imprime en pantalla una cadena de texto que concatena los atributos del objeto en cuestión, de este modo se puede ejecutar los metodos de un objeto o se puede extraer los valores de los atributos de estos. </p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <h2>Conceptos de la Programación Orientada a Objetos</h2>
+                    <section>
+                        <dl>
+                            <dt><h3>Abstracción</h3></dt>
+                            <dd>
+                                <p>Se trata de la practica de simplificar lo más posible el planteamiento del objeto, en otras palabras, cuando tratamos de hacer referencia a un objeto real con la programación no se busca el plasmar cada una de sus caracterirticas o acciones, si no que en su lugar se sinplifica tanto como sea posible, conservando unicamete las caracteriticas y acciones esenciales del objeto. </p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Modularidad</h3></dt>
+                            <dd>
+                                <p>Consiste en la practica de seccionar una gran problematica en pequeñas porciones de este y enfocarse en solucionarlas una por una, de ese modo se simplifica la eficiencia y carga de trabajo, este concepto se pasa a la programación como bloques de codigo en el cual cada uno soluciona una pequeña solución a cada porción de la probletacica y en conjunto solucionana la totalidad del esta. </p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Encapsulamiento</h3></dt>
+                            <dd>
+                                <p>Se trata de la practica de aislar la data del programa tanto como sea posible, para que de este modo no este al alcanse del usuario ni tampoco sea facil acceder a esta, buscado tanto como sea posblie que los datos sean pribados.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Polimorfismo</h3></dt>
+                            <dd>
+                                <p>Conosiste en el como dos objetos se comportan de manera distinta ante el mismo metodo debido a sus propiedades (atributos) particulares, por ejemplo en el mundo real si se define la acción "caminar" como un metodo, y se define a una "vaca" y un "perro" como objetos ambos objetos se comportanran de forma diferente, y que cada una desarrollara este metodo en base a sus caracteriticas propias.  </p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <h2>Conceptos con Inpacto en el Codigo</h2>
+                    <section>
+                        <p>Se tratan de algunos conceptos que aparte del lo teorico poseen palabras reservadas para su incormporación en la programación orientada a objetos.</p>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Herencia</h3></dt>
+                            <dd>
+                                <p>La "herencia" se basa en generar una clase "hija" que sea capaz de utilizar todos los metodos y atributos de su predecesora  a la vez que añade atributos y metodos propieos, por su puesto que se puede definir cuales de los atributos heredara, ya que si alguno de estos no es necesario simplemente puede ser ignorado y de ese modo la clase hija no poseera este atributo, sin embargo podra hacer uso de todos los metodos de la clase horiginal.   </p>
+                                <p>La herecia es un concepto unilateral, lo que significa que unicamete la clase hija puede hacer uso de los atributos y metodos de la clase padre y no alrevez.</p>
+                                <p>La Estructura de la declaración de una clase hija es similar a la de una clase normal, ya que tambien se inicia empleando la palabra reservada "class" seguido del nombre de la clase y de las llavez ( { } ) que almacenan el bloque de codigo, tambien es necesario indicar un cosntructor para lo cual se sigue empleando la palabra resevada "constructor" el cual a su vez sigue manteniendo su estructura, sin embargo se diferencia en:  </p>
+                                <ul>
+                                    <li>
+                                        <p>Entre el nombre de la clase y las llavez del bloque de ingresa la palabra clave "extends" seguido del nombre de la clase padre, de este modo se indica que se trata de una clase hija y se indica de cual clase heradara sus atributos y metodos. </p>
+                                    </li>
+                                    <li>
+                                        <p>EL cosntructor vuelve a definir las datos que utilizara dentro de parentesis, sin embargo no es necesario que se vuelba a definir los atributos ya establecidos en la clase padre, para heredar estos atributos se emplea la palabra clave "super" segida de parentesis "()" los cuales albergaran los nombres de los atributos a heredar, a su vez dentro de este cosntructor se puede definir nuevos atributos propios de la clase hija, para hacerlo se sigue el msimo procedimeitno que el de la clase padre: se incluye dentro de los datos que empleara el constructor y se define utilizando la palabra clave "this.".    </p>
+                                    </li>
+                                </ul>`
+                                <p>De este modo la clase hija heredara los atributos seleccionadosa la vez que todas los metodos de la clase padre, a la par que sera capaz de generar sus propios metodos y atributos. </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/herencia-1.PNG" class="img" alt="">
+                                <p>En este ejemplo se puede apreciar la estructura de la declaración de una clase hija llamada "Perro", la cual herada los atributos y metodos de la clase "animal" (su nombre se cambio a Animal), la cual a sido empleada en los ejemplos anteriores, a la vez que añade un nuevo atributo llamado "raza" y un nuevo metodo llamado "ladrar.</p>
+                                <p>El uso y llamado de una clase hija es exactamete igual de el de una clase normal, no se diferencia en nada. </p>
+                                <img src="./img/herencia-2.PNG" class="img" alt="">
+                                <p>En este segundo ejemplo se genera un objeto "perro" con la clase "Perro" junto con los objetos "gato" y "pajaro" utilizando la clase "Animal".</p>
+                                <p>Nota: No se puede definir un objeto con el mismo nombre que la clase. </p>
+                                <p>Nota: a su vez la clase padre no puede usar ni los atributos ni metodos de las clases hijas.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Metodos Staticos</h3></dt>
+                            <dd>
+                                <p>Se tratan de metodos que no requieren de ningunatributo para su ejecución por lo tanto son metodos que pueden ser utilizados sin la generación de un objeto, para indicar que se trata de un metodo estatico se emplea la palabra clave "static".</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/static-1.PNG" class="img" alt="">
+                                <h4>Llamado</h4>
+                                <img src="./img/static-2.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/static-3.PNG" class="img" alt="">
+                                <p>En este ejemplo se puede apreciar un metodo estatico, el cual al no necesitar ningun tipo de atributo puede ser utilizado sin la existencia de un metodo que le provea estos atributos, como se puede ver en la segunda imagen para llamar al metodo se utiliza el nombre de la clase ("Perro") seguio de un punto (.) que hace de divisor seguido del nombre del metodo (ladrar).  </p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Metodo Set y Metodo Get </h3></dt>
+                            <dd>
+                                <p>Se tratan de dos metodos con dos funciones pre-definidas, el metodo "set" permite modificar el valor de un atributo del objeto, mientras que el metodo "get" permite extrar el valor del atributo.</p>
+                                <p>Estos metodos se utilizan princiapalmente en las ocaciones que se desee acceder a datos encapsulados, por lo tanto se tratan de la forma correcta de modificar y extraer el valor de este tipo de metodos y atributos.</p>
+                                <p>Su estructura es muy simple, consiste en incorporar la palabra clave "set" o "get" dependiendo de cual metodo se este definiendo seguido del nombre del metodo, seguido de los parentesis los cuales permanecen bacios en el metodo "get" mientras que en el metodo "set" contienen el dato que se modificara y por ultimo siguien las llaves ( { } ) contenedoras del metodo.</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/get-set-1.PNG"  class="img" alt="">
+                                <h4>Llamado</h4>
+                                <img src="./img/get-set-2.PNG" class="img"  alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/get-set-3.PNG" class="img"  alt="">
+                                <p>El metodo "set" tiene una particularidad a la hora de ser llamado, la cual es que la forma en la que se indica el nuevo valor en este es igual a la manera en la que se indica el valor de los atributos dentro del constructor, con la diferencia de que en vez de usar la palabra clave "this" se usa el nombre del objeto al que se le esta modificando su atributo. </p>
+                                <p>Por su lado en el metodo "set" se utiliza la palabra clave "return" ya que al final de cuantas los metodos son iguales que las funciones, por lo que con esta palabra clave se envian datos al exterior de estas</p>
+                                
+                            </dd>
+                        </dl>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>

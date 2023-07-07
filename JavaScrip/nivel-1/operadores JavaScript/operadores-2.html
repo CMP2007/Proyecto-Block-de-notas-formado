@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Operadores</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../../../Index.html" class="logo"><img src="../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../Indice__JS.html"><h2>Nivel 1 JS</h2></a>
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Operadores Intermedios</h1>  
+                    <section class="pagination">
+                        <a href="./Operadores.html" class="desplazar">
+                            <div>
+                                <span class="pagina paginaJS">
+                                    <span class="pagArrowLeft"> &larr; </span>PREVIO
+                                </span>
+                            </div>
+                        </a>
+                        <div class="numbers">
+                            <a href="./Operadores.html" class="pagina paginaJS">
+                                <div>
+                                    1
+                                </div>
+                            </a>
+                            <a href="#" class="off">
+                                <div>
+                                    2
+                                </div>
+                            </a>
+                        </div>
+                         <a href="#" class="desplazar off">
+                           <div>
+                                <span class="off">Next <span> &rarr;</span></span>
+                            </div>
+                        </a>
+                    </section>
+                    <h2>Operadores de Comparación</h2>
+                    <section>
+                        <p>Estos operadores comparan dos expresiones  y devuelven un valor boolean (true o false) que representa la relación de sus valores, en otras palabras estos operadores comparan la relación de dos expresiones y analisan si se cumple o no la relación indicada, existen diversos tipos de operadores de comparación los cuales son: </p>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Igualdad</h3></dt>
+                            <dd>
+                                <p>Este operador analisa el si las dos expresiones comparten el mismo valor.</p>
+                                <img src="./img/operadoresComparación-1.PNG" class="img" alt="">
+                                <p>El resultado de este ejemplo es "True", ya que el valor de ambas variables es el mismo.</p>
+                                <p>Este operador se caracteriza por no tener el cuanta el tipo de dato de la variable, unicamete el valor de esta.</p>
+                                <img src="./img/operadoresComparación-3.PNG"  class="img" alt="">
+                                <p>Por lo tanto el resultado de este segundo ejemplo es "True", ya que pese a que la variable texto y numero almacenan un String y un number respectibamente, el valor de ambos datos es el mismo.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Inegualdad</h3></dt>
+                            <dd>
+                                <p>Este operador analisa el si las dos expresiones son difernetes una de la otra.</p>
+                                <img src="./img/operadoresComparación-2.PNG" class="img" alt="">
+                                <p>El resultado de este ejemplo es "False", ya que los caracteres de ambas cadenas de texto pese a ser similar en realidad es diferente.</p>
+                                <p><b>Nota: Este operador es el opuesto a "Igualdad", por lo tanto tampoco tiene en cuenta el tipo de dato de las expresiones, unicamete tiene en cuenta su valor.</b></p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Estrictamente Igual</h3></dt>
+                            <dd>
+                                <p>Este operador se asemeja a la igualdad, sin embargo se diferencia de esta ya que este no solo tiene en cuata el valor del dato, si no tambien tiene en cuanta el tipo de deste, por lo tanto este operador juzga si las expresiones son exactamte iguales.  </p>
+                                <img src="./img/operadoresComparación-4.PNG" class="img" alt="">
+                                <p>Por lo tanto el resulta de este ejemplo es "False", ya que pese a que el valor de ambas variables es el mismo su tipo de dato no lo es.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>No Estrictamente Igual</h3></dt>
+                            <dd>
+                                <p>Se trata de la negación del operador "Estrictamente Igual", por lo tanto su función es la de determinar si los elemetos son diferentes, teniendo en cuanta tanto su valor como su dato.</p>
+                                <img src="./img/operadoresComparación-5.PNG" class="img" alt="">
+                                <p>Por lo tanto el resulado de este ejemplo es "True", ya que ambas variables comparten valor pero no tipo de dato. </p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Mayor Que</h3></dt>
+                            <dd>
+                                <p>Este operador analiza si el elemento de la izquierda es mayor que el de la derecha, y retorna True o False.</p>
+                                <img src="./img/operadoresComparación-6.PNG" class="img" alt="">
+                                <p>Por lo tanto el resultado de este ejemplo es "True", ya que 23 efectivamente es mayor a 13.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Menor Que</h3></dt>
+                            <dd>
+                                <p>Este operador analiza si el elemento de la izquierda es menor que el de la derecha, y retorna True o False.</p>
+                                <img src="./img/operadoresComparación-7.PNG" class="img" alt="">
+                                <p>Por lo tanto el resultado de este ejemplo es "False", ya que 23 no es menor a 13.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Mayor o Igual Que</h3></dt>
+                            <dd>
+                                <p>Este operador analiza si el elemento de la izquierda es mayor o igual que el de la derecha, por lo tanto mantiene la igualdad como una posivilidad para cumplir la relación.</p>
+                                <img src="./img/operadoresComparación-8.PNG" class="img" alt="">
+                                <p>Por lo tanto el resultado de este ejemplo es "True", ya que 23 pese a no ser igual a 13 ciertamete es mayor.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Menor o Igual Que</h3></dt>
+                            <dd>
+                                <p>Este operador analiza si el elemento de la izquierda es menor o igual que el de la derecha, por lo tanto mantiene la igualdad como una posivilidad para cumplir la relación.</p>
+                                <img src="./img/operadoresComparación-9.PNG" class="img" alt="">
+                                <p>Por lo tanto el resultado de este ejemplo es "False", ya que 23 no es ni menor ni igual a 13.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <h2>peradores Logicos</h2>
+                    <section>
+                        <p>Los operadores logiacos devuelven un resultado boolean (True o Flase) a partir de si se cumple o no una condición,  </p>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>AND</h3></dt>
+                            <dd>
+                                <p>Este operador es representado por "&&" y determina el si se cumplen ambas condiciones, tanto la de la derecha como la de la izquierda, en cuyo caso retornara un True, pero si se da que una de estas dos se incumple entonces retornara en False.</p>
+                                <img src="./img/operadoresComparación-10.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>  
+                    <section>
+                        <dl>
+                            <dt><h3>OR</h3></dt>
+                            <dd>
+                                <p>Este operador es representado por "||" y determina el si se cumple una de las condiciones, ya sea la de la derecha o la de la izquierda, en cuyo caso retornara un True, pero si se da el caso de que se incumplen ambas condiciones entonces retornara un False.</p>
+                                <img src="./img/operadoresComparación-11.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>NOT</h3></dt>
+                            <dd>
+                                <p>Este operador en si se trata de una negación, simplemente retornara lo contrario a lo que reciba, es decir si recibe una condición que se cumpla (True) retornara un Fase, por el contrariocuando se incumpla la condición (False) retornara un True.</p>
+                                <img src="./img/operadoresComparación-12.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+
+
+                    <section class="pagination">
+                        <a href="./Operadores.html" class="desplazar">
+                            <div>
+                                <span class="pagina paginaJS">
+                                    <span class="pagArrowLeft"> &larr; </span>PREVIO
+                                </span>
+                            </div>
+                        </a>
+                        <div class="numbers">
+                            <a href="./Operadores.html" class="pagina paginaJS">
+                                <div>
+                                    1
+                                </div>
+                            </a>
+                            <a href="#" class="off">
+                                <div>
+                                    2
+                                </div>
+                            </a>
+                        </div>
+                         <a href="#" class="desplazar off">
+                           <div>
+                                <span class="off">Next <span> &rarr;</span></span>
+                            </div>
+                        </a>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>

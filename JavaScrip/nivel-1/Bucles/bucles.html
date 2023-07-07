@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Bucles</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../../../Index.html" class="logo"><img src="../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../Indice__JS.html"><h2>Nivel 1 JS</h2></a>  
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Bucles</h1>
+                    <section>
+                        <p>Los bucles son declaraciones similares en cierta manera a la de los condicionales, ya que tambien dependen de si se cumple una condicón o no para ejecutarse, sin embargo los bucles poseen una caracteristica que los diferencia, y esta es la particularidad de que un bucle en al cual se cumple su condición se ejecutara una y otra vez siemple que esta condicón siga cumpliendose, existene dos tipos debucles:  y los determinados:  </p>
+                        <ul>
+                            <li>
+                                <h4>Indeterminados:</h4>
+                                <p>Son aquellos bucles a los que no se les indica su duración por lo que podrian ejecutarse infinitamete.</p>
+                            </li>
+                            <li>
+                                <h4>Determinados:</h4>
+                                <p>Son aquellos bucles a los que seles indica cuantas veces deben ejecutarse, por lo que tienen un numero de ejecuciones controlado. </p>
+                            </li>
+                        </ul>
+                    </section>
+                    <h2>Bucles Indeterminados</h2>
+                    <section>
+                        <dl>
+                            <dt><h3>While</h3></dt>
+                            <dd>
+                                <p>El while se trata del bucle con el funcionamiento más basico, este consiste en una condición la cual se declara luego del la palabra clave "while" utilizada para llamar a la función, si esta condicón se cumple el bloque de codigo delimitado por llaves ( { } ) se ejecutara, y al terminar se analizara si la condición sigue cumpliendose, de ser así el codigo se ejecutara nuevamente, y así continuara hasta que la condición deje de cumplirse. </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/while-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/while-2.PNG" class="img" alt="">
+                                <p>En este ejemplo la condición de bucle se cumple por lo tanto el codigo en su interior se ejecuta, en el que se le suma uno a la varible "numero" y luego se imprime en pantalla, esto se repite multiples veces hasta llegado el mometo de que la varible "numero" igualo el valor de 6, por lo que en ese mometo la condición dejo de cumplirse, por lo que el bluque se detiene.</p>
+                                <p><b>nNota: en un bucle "while" si la condición no se cumple este sera ignarado sin ejecutarse ni una sola vez.</b></p>
+                            </dd>
+                        </dl>                     
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Do While</h3></dt>
+                            <dd>
+                                <p>Se trata de un un bucle alternativo a "while" con la diferencia de que en este caso la condición se ubica despues del codigo a ejecutar, el cual es contenido por la palabra clave "Do", por lo tanto en este tipo de bucle primero se ejecuta el codigo de este y de ultimo se valida si se cumple o no la condicón, la cual de completarse el bucle se repetira las veces que sean necesarias hasta que la condicón deje de cumplirse.</p>
+                                <p>Por lo tano este tipo de bucle garantiza que el codigo en su interior sea ejecutado almenos una vez, ya primero se procesa el codigo y luego su condición.  </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/doWhile-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/doWhile-2.PNG" class="img" alt="">
+                                <p>En este ejemplo se puede apreciar como pese a que la condición no se cumple el bucle se ejecuta una vez, esto ya que primero se porcesa el codigo y de ultimo la condición. </p>
+                                <p>Se podra decir que en el bucle "do while" la condición no define el si el bucle se ejecutara, en su lugar define el si el bucle se repetira o no.</p>
+                            </dd>
+                        </dl>                    
+                    </section>
+                    <h2>Bucles Determinados</h2>
+                    <section>
+                        <dl>
+                            <dt><h3>For</h3></dt>
+                            <dd>
+                                <p>La estructura que compone este tipo de bucle tiene la particularidad de que  estar dibidida en tres partes, dibididas por punto y coma (;) de las cuales cada una define un aspecto de la funcionalidad de este, las tres partes que lo componene son:</p>
+                                <ul>
+                                    <li>
+                                        <h4>Declaración e inicialización:</h4>
+                                        <p>El bucle "For" al ser un bucle determinado es necesario definir el numero de veces que se ejecutara, para lo cual en este primera porción de su estructura se define una varible que actuara como contador de las repeticiones realizadas (Por lo general se nombra como "i" de "increment"). </p>
+                                        <img src="./img/for-3.PNG" class="img" alt="">
+                                    </li>
+                                    <li>
+                                        <h4>condición</h4>
+                                        <p>En  esta seguna porción de su estructura se define la condicón con la cual de cumplirse se ejecutara el bucle.</p>
+                                        <img src="./img/for-4.PNG" class="img" alt="">
+                                    </li>
+                                    <li>
+                                        <h4>Aumeto o Decremeto:</h4>
+                                        <p>Por ultimo se encuetra la ejecución del conteo de las repeticiones, en la cual se aumeta o reduce el valor del contador (Varible "i")</p>
+                                        <img src="./img/for-5.PNG" class="img" alt="">
+                                    </li>
+                                </ul>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/for-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/for-2.PNG" class="img" alt="">
+                                <p>Existe una segunda forma de trabajar con los bucles "for", la cual consiste en definir la varibles contador "i" en el exterior del bucle, de este modo de ser necesario la varible pudiese seguir estando disponible fuera de este bloque de codigo.</p>
+                                <img src="./img/for-6.PNG" class="img" alt="">
+                                <p>Para esto en vez de inicializar la varibles dentro del "for", basta con simplemte llamarla dentro de este.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>For In y For Of</h3></dt>
+                            <dd>
+                                <p>Se tratan de dos bucles determiandos con la caracteristica de que su aplicación es la de recorrer un array, basicamete se tratan de bucles para encontrar valores dentro de estos, en si el funcionamiento de ambos es igual, lo primero para emplearlos es definir una varible dentro de estos en la cual se almacenaran los datos que se extraigan del array, luego se realiza el llamado a este utilizando su nombre.  </p>
+                                <h4>Ejemplo For In</h4>
+                                <img src="./img/forIn-1.PNG" class="img" alt="">
+                                <h4>Ejemplo For OF</h4>
+                                <img src="./img/forOf-1.PNG" class="img" alt="">
+                                <p>En estos ejemplos los bucles extraen los datos del array "animales" y los almacenana en su variable interna "animal", por cada dato realiza una repetición y se extrae un dato. </p>
+                                <p>Estos bucles no necesitan de condición y el rol de su contador lo realizaran las datos del array, ya que este bucle se ejecutara una vez por cada dato en este, sin embargo en cuanto a el que datos se extraen del array existe una diferencia entre ambos:</p>
+                                <ul>
+                                    <li>
+                                        <h4>For In</h4>
+                                        <p>Este bucle unicamete extraera la posicio (numeración) de los datos del array</p>
+                                        <img src="./img/forIn-2.PNG" class="img" alt="">
+                                        <p>En este ejemplo se imprime en pantalla los datos almacenados en la variable "animal" en cada una de sus ejecuciones, de los cuales cada uno corresponde a la posición (numeración) de cada dato del array.  </p>
+                                    </li>
+                                    <li>
+                                        <h4>For Of</h4>
+                                        <p>Este bucle se encarga de extraer el valor de los datos dentro del array. </p>
+                                        <img src="./img/forOf-2.PNG" class="img" alt="">
+                                        <p>En este ejemplo se imprime en pantalla los datos almacenados en la variable "animal" en cada una de sus ejecuciones, en los cuales se extrea el valor de los datos del array. </p>
+                                    </li>
+                                </ul>
+                                <p>En resumen el "For In" y el "For Of" son bucles que extraen datos de una array, el "For In" extrae la posición de estos (numeración) mientras que "For Of" extre el valor de los datos del array.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <h2>Sentecias</h2>
+                    <section>
+                        <dl>
+                            <dt><h3>Break</h3></dt>
+                            <dd>
+                                <p>Se trata de una sentencia con la función de forzar la culminación de un bucle, es decir esta palabra clave al ejecutarse obliga al bucle en el que se encuentre a detenerse en ese mometo. </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/break-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/break-2.PNG" class="img" alt="">
+                                <p>En este ejemplo se definio un bucle que se ejecutara hasta que la variable "numero" alcanse un valor de "100", sin embargo dentro de este tambien se incluyo un condicional (if) con la sentencia de que cuando el "numero" alcanse el valor de "10" se aplique la sentecia break forzando la culminación del bucle y continuado con el codigo del dicumento JS.</p>
+                            </dd>
+                        </dl>                   
+                    </section>
+                    <section>
+                    <dl>
+                        <dt><h3>Continue</h3></dt>
+                        <dd>
+                            <p>"Continue" es una sentencia con un funcionamiento similar al de "Break", sin embargo su efecto se diferencia en que este no termina por completo el bucle, unicamente termina la interacción en la que se encuentre, es decir esta sentecia permite saltarse alguna de las repeticiones del bucle permitiendo que este continue ejecutandose.</p>
+                            <h4>Codigo</h4>
+                            <img src="./img/continue-1.PNG" alt="">
+                            <h4>Resultado</h4>
+                            <img src="./img/continue-2.PNG" alt="">
+                            <p>En este ejemplo segenero un bucle for que imprimira en pantalla los numeros de su contador, empezando por el cero hasta que este alcanse un valor de "5", sin embargo dentro de este se encuentra un condicional "if"  aplicando la sentecia "continue" para saltarse la interacción correspondiente a cuando el contador tenga un valor de "3".</p>
+                        </dd>
+                    </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Label</h3></dt>
+                            <dd>
+                                <p>En si esta no se trata de una sentencia, si no de una funcionalidad, consisten en generar un nombre para un bucle, para de esa forma identificarlo entre los demás, este recurso es utilia para los casos en los que se defina un bucle dentro de otro, ya que de es modo es posible indicar a cual de todos los bucles se le desea aplicar un "break" o un "continue" ya que en condiciones normales el "break" o el "continue" afectan unicamete al bucle inmediato en el que se encuentran.</p>
+                                <h4>Ejemplo sin label</h4>
+                                <img src="./img/label-3.PNG" class=" img" alt="">
+                                <h4>Resultado sin label</h4>
+                                <img src="./img/label-4.PNG" class=" img" alt="">
+                                <p>En este ejemplo se genero un sistema de dos bucles uno dentro de otro, en el cual se realiza una doble busqueda utilizando un bucle "For In" para el array externo y un "For Of" para el array interno, (se usaron ambos simpletmete por la explicación del curso) tambien se utiliza un condicional (If) para definir que solo se realise el segundo bucle al tratarse del  elemeto deseado (segundo array), luego de la primera ejecuación del "For Of" se emplea un break para romper la ejecución del bucle, y de ese modo no se muestren todos los datos que este posee.</p>
+                                <p>La sintaxis de un label consiste en incluir "for" delante del nombre del bucle, finalizando con dos puntos(:) todo escrito sin espacios, completamete pegado, y debe estar ubicado justo antes (o encima) del inicio del bucle.</p>
+                                <h4>Ejemplo con label</h4>
+                                <img src="./img/label-1.PNG" class="img" alt="">
+                                <h4>Resultado con label</h4>
+                                <img src="./img/label-2.PNG" class="img" alt="">
+                                <p>En el primer caso de uso la sentencia Break se uso de forma normal para romper el bucle en el que se encontraba, sin embargo en este nuevo caso de uso, al generar el label del bucle atribullendole el nombre "forRancio" y utilizarlo para definir que el break debe forzar la dentención del bucle externo de este modo se culmina con la ejecución de todo el bloque de codigo dese modo se puede definir a cual bucle aplicar un break o un continue impidiendo en este caso que se muestre el ultimo dato del array externo (josefina)</p>
+                            </dd>.
+                        </dl>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>

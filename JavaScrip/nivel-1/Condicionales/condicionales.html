@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Condicionales</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../../../Index.html" class="logo"><img src="../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../Indice__JS.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Condicionales</h1>
+                    <section>
+                        <p>Son sentencias con la función de definir si un bloque de codigo se ejecuta o no, esto en funcnión de si la condicón indicada se cumple o incumple, por lo tanto son una de las principales sentencias responsables del comportamiento de la paguina en base a las circunstancias de uso.</p>
+                    </section>
+                    <h2>If( )</h2>
+                    <section>
+                        <p>Realmente este condicional es bastante simple, significa "si se cumple haz esto" y indica que si la condición expresada dentro de los parentesis se cumple, el bloque de codifgo expresado dentro del condicional se ejecutara, de lo contrario, si no se cumple la condición el If y el bloque de codigo albergado dentro de este seran ignorados por el programa.</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/If-1.PNG" class="img" alt="">
+                        <p>En este Ejemplo el el bloque de codigo dentro del "If", en este caso una alerta, si llega a ejecutarse, ya que la condicón expresada se cumple (103 <= 140), de lo contrario el programa ubiese continuado con su ejecución ignorando este bloque de codigo.</p>
+                        <p><b>Nota: If se trata de la condicón principal, por lo que se le puede considerar un condicional de apertura, por lo tanto solo debe haber uno por cada estructura de condiciones.</b></p>
+                    </section>
+                    <h2>Else If</h2>
+                    <section>
+                        <p>
+                            Este segundo condicional complemeta al anterior, su significado es "si no se cumple haz esto" su función es la de enlazar una segunda condición para los casos en los que la condición principal no se cumpla, y de cumplirse esta segunda condición, entonces el bloque de codigo expresado dentro de "Else If" se ejecutara, de lo contrario al igual que el "If" sera ignorado. 
+                        </p>
+                        <img src="./img/elseIf-1.PNG" class="img" alt="">
+                        <p>En este ejmplo la condición principal no llega a ser cumplida (If), pero en su lugar la segunda condición (Else If) si se cumple por lo que se ejecuta el codigo albergado dentro de este.</p>
+                        <p>Esta expresión puede ser empleada las veces que sean necesarias, es decir si no se cumple la condición principal se pueden presar todas las alternatias que se deseen hasra que agluna se cumpla.</p>
+                    </section>
+                    <h2>Else</h2>
+                    <section>
+                        <p>Este ultimo condicional se le puede considerar la expresión de sierre de la estructura de condiciones, su significado es "entonces" su función es la de contener un bloque de codigo que se ejecute en caso de que ninguna de las anteriores condiciones (presentadas en "If" y en "Else If") llegue a cumplirse, razon por la cual este condicional no posee una condición que lo active, simplemte se ejecuta en caso de que ninguna condicón se cumpla.</p>
+                        <img src="./img/else-1.PNG" class="img" alt="">
+                        <p>En este ejmplo no se cumple la condición del If ni del Else If, por lo que se ejecuta el bloque de codigo expresado dentro de Else </p>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>

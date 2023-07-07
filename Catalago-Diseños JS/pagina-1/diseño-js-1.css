@@ -1,0 +1,47 @@
+.Contenedor1{
+    background-color: black;
+    color: #fff;
+    padding: 3% 40%;
+}
+.input{
+    width: 20vw;
+    position: relative;
+    margin-top: 4vw;
+}
+.input__field{
+    padding: 0.8064516129032258vw;
+    border: none;
+    border-radius: 0.3225806451612903vw;
+    background-color: transparent;
+    outline: 0.16129032258064516vw solid #fff;
+    color: #fff;
+}
+.input__label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0.8064516129032258vw, 0.8064516129032258vw);
+    transform-origin: left;
+    transition: transform 0.25s;
+}
+.input__field:focus-visible ~ .input__label, .input__field:valid ~ .input__label{
+    transform: translate(0, -2.4193548387096775vw) scale(0.8);
+    color: #d1c5fc;
+}
+.input__field:is(:focus-visible, :valid){
+    outline-color: #d1c5fc;
+}
+.input__icon-wrapper{
+    position: absolute;
+    top: 50%;
+    right: 0.967741935483871vw;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.input__icon{
+    color: #999;
+    font-size:  1.935483870967742vw;
+}
+.input__icon:hover {
+    color: #333;
+}
