@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Variables</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../../../Index.html" class="logo"><img src="../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>El Objeto Window</h1>
+                    <section>
+                        <p>Se trata del elemento HTML con mayor gerarquia dentro de la paguina web, ya que este se refiere a la ventana del navegador en si, por lo tanto todos los demás elementos HTML dependen de este, incluyendo al mismisimo DOM, en otras palabras permite manipular el comportamiento de toda la ventana del navegador desde JavaScrip, así como obtener datos de esta, por lo tanto la cantidad de usos que se le puede dar al objeto Window es inmensa.</p>
+                        <p>Debido a esto en este apartado unicamnete se abordara los temas de mayor importancia así como los de mayor utilidad a la hora de programar con JavaScrip.</p>
+                        <p>Nota: El objeto Window ereda las propiedades de EventTarget. </p>
+                    </section>
+                    <h2>Metodos y Propiedades</h2>
+                    <section>
+                        <dl>
+                            <dt><h3>Open( )</h3></dt>
+                            <dd>
+                                <p>Este metodo permite abrir una nueva pestaña, para lo cual es necesario indicar la dirección de la nueva venta, la cual debe ser ingresada como dato dentro del metodo, como se puede apreciar en el ejemplo:</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/open-1.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Close( )</h3></dt>
+                            <dd>
+                                <p>Este metodo permite cerrar una venta que haya sido abierta con el metodo "open( ), tal como se puede apreciar en el siguiente ejemplo:</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/close-1.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Closed</h3></dt>
+                            <dd>
+                                <p>Esta propiedad tiene la función de comprobar si la pestaña referenciada se encuentra abierta o cerrada, para lo cual retorna un valor booleano, el cual sera "true" si la pestaña esta cerrada y "false" si la pestaña se encuetra abierta</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/closed-1.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Stop( )</h3></dt>
+                            <dd>
+                                <p>Este metodo permite detener la carga de la venta referenciada así esta no se haya concluido, en otras palabras permite interrumpir la carga de la pagina que se encuentre en la nueva ventan  en el mometo que se desee. </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/stop-1.PNG" class="img" alt="">
+                                <p>Nota: En este ejemplo se aprecia el metodo siendo utilizado en la consola del navegador para interrumpir la carga de "youtube" antes que esta se complete. </p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Alert()</h3></dt>
+                            <dd>
+                                <p>Este metodo muestra un cuadro de alerta con el contenido espesificado dentro, y un boton de aceptar:</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/alert-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/alert-2.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Print( )</h3></dt>
+                            <dd>
+                                <p>Este Metodo abre un menu de configuración de inpresión con el fin de imprimir la paguina actual, por lo tanto este metodo literalmente permite gestionar una inpresión real de la paguina. </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/print-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/print-2.PNG" width="600px" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Promp()</h3></dt>
+                            <dd>
+                                <p>Este metodo retorna un string ingresado por el usuario, para lo cual este metodo dispara una alerta que contendra un mensaje previamete definido por el programador y un cuadro de texto, el caul se utilizara para lamacenar la respuesta del usuario.</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/prompt-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/prompt-2.PNG" class="img" alt="">
+                                <p>Nota: Independientemente de lo que se ingrese, en este metodo siempre retornara un dato de tipo string. </p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Confirm( )</h3></dt>
+                            <dd>
+                                <p>Este metodo tiene la función de comprobar que el usuario desea realizar una acción en espesifico, para lo cual se dispara una alerta que incluye un mensaje definido, así como botones para cancelar y conformar, en base a la opción seleccionada por el usuario el metodo retornara un valor boolean ya sea "true" o "false".</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/confirm-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/confirm-2.PNG" class="img" alt="">
+                                <h4>Consola</h4>
+                                <img src="./img/confirm-3.PNG" class="img" alt="">
+                                <p>Nota: Actualmete su uso a disminuido ya que existen otras opcipnes a la hora de corroborar las inteciones del usuario, sin embargo se sigue usando para aquellas ocaiones en las que es probable que el usuario alla iniciado una acción por error, por ejemplo el salir accidentalmete de la paguina web. </p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Screen</h3></dt>
+                            <dd>
+                                <p>Esta propiedad se trata de uno de los objetos que posee el objeto window, para trabajar con la pantalla del dispositivo, por lo tanto se puede acceder a las propiedades del Screen</p>
+                                <img src="./img/screen-1.PNG" class="img" alt="">
+                                <p>(Se desarrollara en profundidad más adelante)</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>ScreenLeft y ScreenTop</h3></dt>
+                            <dd>
+                                <p>Estas propiedades permiten conocer la posición en la que se encuentra el navegador dentro de la pantalla del dispositivo, para hacerlo estas propiedades devuelven la distancia entre los bordes del navegador y los bordes de la pantalla.</p>
+                                <ul>
+                                    <li>
+                                        <p>ScreenLeft: retorna la distancia entre el borde izquierdo del navegador y el bode izquierdo de la pantalla, (posición en el eje X)</p>
+                                    </li>
+                                    <li>
+                                        <p>ScreenTop: <p>retorna la distancia entre el borde superior del navegador y el bode superior de la pantalla, (posición en el eje Y)</p>
+                                    </li>
+                                </ul>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/screenLeftTop-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/screenLeftTop-2.PNG" class="img" alt="">
+                                <p>En este ejemplo se puede apreciar el como se imprime en pantalla el valor retornado por estas propiedades, el cual corresponde a la posición ocupada actualmete por el navegador dentro de la pantalla del dispositivo, es decir la distancia entre los bordes de la pantalla y los bordes del navegador.</p>
+                                <p>Nota: Estas propiedades se tratan de solo lectura, no de escritura, por lo tanto no pueden ser modificadas.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>ScrollX y ScrollY</h3></dt>
+                            <dd>
+                                <p>Estas propiedades permiten conocer el que tanto se a despazado el docuemto vertical y orizontalmente, es decir estas propiedades retornan lacantidad de pixeles que se a despazado el usario hasta ese momento por la pagina tanto en el ejeX como en el ejeY, en otras palabras se podira decir que estas permiten conocer la posicioón del usuario dentro del documento.</p>
+                                <ul>
+                                    <li>
+                                        <p>ScrollX: Retorna el desplazamiento en pixeles en el eje X del documento</p>
+                                    </li>
+                                    <li>
+                                        <p>ScrollY: Retorna el desplazamiento en pixeles en el eje Y del documento</p>
+                                    </li>
+                                </ul>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/scrollXY-1.PNG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/scrollXY-2.PNG" class="img" alt="">
+                                <p>En este ejemplo se puede apreciar el como se dispara una lerta con el valor de las propiedades, el cual corresponde a la posición en la que se encuentra el usuario en el docuemto actual (El "ScrollX" vale 0 ya que orizontalmente no se a generado despalazamiento, solo se a producido despalazamiento vertical.)</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Scroll y ScrollTo</h3></dt>
+                            <dd>
+                                <p>Estas propiedades son casi exactamente iguales, ambas permiten desplazar al usario hasta una posición predenterminada del  documento, es decir esta propiedad genera un desplazamiento hasta un lugar predefinido del docuemto. 
+                                    <img src="./img/scroll-1.PNG" class="img" alt="">
+                                    <p>En este ejemplo se puede apreciar el como se usa la propiedad "Scroll" en la consola del navegador para desplazarse por una pagina.</p>
+                                </p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>ResizeBy y ResizeTo</h3></dt>
+                            <dd>
+                                <p>Estas propiedades son muy parecidas entre si, con la unica diferencia de que una es relativa mientras que la otra es absuluta, el efecto de ambas es la de modificar el tamaño de una ventana emergente (propiedad open( )).</p>
+                                <h4>ResizeBy</h4>
+                                <img src="./img/resizeBy-1.PNG" class="img" alt="">
+                                <h4>ResizeTo</h4>
+                                <img src="./img/resizeTo-1.PNG" class="img" alt="">
+                                <p>Nota: existen siertas condiciones y regulaciones para el uso de estas propiedades, especialmente cuando se trabaja con paginas de terceros, sin embargo no se profundiza en estos debido al poco uso se les da a estas propiedades.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>MoveBy y MoveTo</h3></dt>
+                            <dd>
+                                <p>Estas propiedades son muy parecidas entre si, con la unica diferencia de que una es relativa mientras que la otra es absuluta, el efecto de ambas es la de mover la ventana emergente (propiedad open( )) a una posición pre-definida.</p>
+                                <h4>ResizeBy</h4>
+                                <img src="./img/moveBy-1.PNG" class="img" alt="">
+                                <h4>ResizeTo</h4>
+                                <img src="./img/moveTo-1.PNG" class="img" alt="">
+                                <p>Nota: existen siertas condiciones y regulaciones para el uso de estas propiedades, especialmente cuando se trabaja con paginas de terceros, sin embargo no se profundiza en estos debido al poco uso se les da a estas propiedades.</p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <h2>Location</h2>
+                    <section>
+                        <p>El objeto Location pertence al igual que otros tantos al objeto window, este objeto se enfoca en los aspectos realiconados con los dominios y direcciones web del docuemto, por lo tanto posee varios metodos con el fin de obtener todos estos datos.</p>
+                        <p>A su vez la siguite imagen referencia de forma simple la estructura de la URL de una paguina web.</p>
+                        <img src="./img/location-1.PNG" class="img" width="600px" alt="">
+                        <p>Nota: HostName y dominio web son dos cosas diferentes, ya que un HostName podria llegar a ser una IP o cualqier codigo funcional, mientras que un domio se trata de traducir direcciones IP a terminos memorisables para las personas.</p>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Href</h3></dt>
+                            <dd>
+                                <p>Esta porpiedad retorna la ubicación completa del archivo, es decir esta propiedad retorna la ruta completa del archivo que se esta ejecutando.</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/href-1.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dt><h3>HostName</h3></dt>
+                        <dd>
+                            <p>Esta propiedad retorna el nombre del dominio del servidor web en el que se encuentra alojado el archivo.</p>
+                            <h4>Ejemplo</h4>
+                            <img src="./img/HostName-1.PNG" class="img" alt="">
+                        </dd>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>pathName</h3></dt>
+                            <dd>
+                                <p>Este metodo retorna la ruta al archivo desde el dominio de origen, es decir retorna en que parte del dominio se encuentra el archivo actual.</p>
+                                <h4>Ejemplo</h4>
+                            <img src="./img/pathName-1.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Protocol</h3></dt>
+                            <dd>
+                                <p>Este metodo retorna el protocolo con el que trabaja el servidor web.</p>
+                                <h4>Ejemplo</h4>
+                            <img src="./img/protocol-1.PNG" class="img" alt="">
+                            </dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl>
+                            <dt><h3>Assing()</h3></dt>
+                            <p>Este Metodo permite cargar un nuevo documento, el cual debe ser definido dentro de los parentesis de este metodo.</p>
+                            <h4>Ejemplo</h4>
+                            <img src="./img/assing-1.PNG" class="img" alt="">
+                        </dl>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>
