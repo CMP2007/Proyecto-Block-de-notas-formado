@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Variables</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../../../Index.html" class="logo"><img src="../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Google Developer Tools</h1>
+                    <section>
+                        <p>Se tratan de todas aquellas herramientas que ofrece Gooogle Chrome para debugiar (encontrar errores) en JavaScrip, las cuales permiten conocer todo el uso de los recursos, el manejo de la memoria, encontrar errores más facil entre otras utilidades. </p>
+                        <p>Para esto las herramientas de desarrollador de google nos permiten acceder a una serie de pestañas, cada una de estas pestañas contiene una o más herramientas con dibersas funcionalidades, al hacer un crrecto uso de cada una de estas se puede optimizar el trabaja y prncipalmete se puede optimizar las labores de de debugging del codigo de la paguina web, así como trabajar en sus recursos o rendimiento. </p>
+                    </section>
+                    <h2>Pestañas de las Herramientas de Desarrollador</h2>
+                    <section>
+                        <dl>
+                            <dt><h3>Elements</h3></dt>
+                            <dd>
+                                <p>Se trata de la pestaña por defecto al abrir las herramientas de desarrollador, permite visualizar el codigo HTML, así com tambien seleccionar y interactuar con cada uno de los elementos HTML de la paguina.</p>
+                                <img src="./img/elements-1.PNG" class="img" alt="">
+                                <h3>Ineractuar con un Doble Click</h3>
+                                <p>Para selecionar una interacción con los elementos HTML se puede hacer de barias formas, la primera es hacer "click derecho" el elemento deseado, de ese modo se desplegara un menu con las siguientes interacciones:</p>
+                                <ol>
+                                    <li><p>Editar el texto del elemento</p></li>
+                                    <li><p>Editar la etiqueta del elemento seleccionado</p></li>
+                                    <li><p>Duplicar el elemento</p></li>
+                                    <li><p>Borrar el elemento</p></li>
+                                    <li>
+                                        <p>Ofrese diferentes formas de copiar el elemento:</p>
+                                        <ul>
+                                            <li><p>Copiar con normalidad (duplicar el elemento)</p> </li>
+                                            <li><p>Copiar "outerHTML" (copia todo el codigo HTML listo para ser pegado en otro ducmento.)</p></li>
+                                            <li><p>Copiar el selector CSS (genera la estructura de selectores adecuada para modificar el elemento, listo para pegarla en un documento CSS)</p></li>
+                                            <li><p>Copiar la ruta de JavaScrip (Genera la estructura "querySelector adecuada para seleccionar el elemento, listo para pegarlos en el documento JavaScrip")</p></li>
+                                            <li><p>Copiar los estilos del elemento (literalmete copia cada una de las propiedades CSS y sus valores listos para pegarlos en un documento CSS)</p></li>
+                                            <li><p>Copiar el Xpath del elemento (se trata de la ruta de elementos que alojan el elemento actual, ejemplo:  "/html/body/aside")</p></li>
+                                            <li><p>Copiar el xpath completo, (se trata de basicamete lo mismo qu el xpath comun, solo que en ciertos casos da más información)</p></li>
+                                        </ul>
+                                    </li>
+                                    <li><p>Cortar y pegar el elemento</p></li>
+                                    <li><p>Ocultar el elemento</p></li>
+                                    <li><p>Forzar el esta del elemento (:active :hover :focus :visited :focus-visible docus-within)</p></li>
+                                    <li><p>Fecha de Interrupción, (tambien llamado "Break on")</p></li>
+                                    <li><p>Expandir de forma recrsiva</p></li>
+                                    <li><p>Contraer elementos secundarios (elementos hijos)</p></li>
+                                    <li><p>Tomar una captura de pantalla del nodo</p></li>
+                                    <li><p>Desplazar la documeto hasta que el elemento sea visible (permite encontrarlo en la visualización)</p></li>
+                                    <li><p>Enfocar el elemento</p></li>
+                                </ol>
+                                <h3>Interactuar con los menus secundarios</h3>
+                                <p>Otra forma de interacutar con los elementos es usando los menus secundarios de la herramienta, estos se encuentran debajo de la representación del codigo HTML de la paguina, y permiten tener un acceso más directo a las diferentes opciones que presentan estas herramientas.</p>
+                                <img src="./img/elements-2.PNG" class="img" alt="">
+                                <ul>
+                                    <li>
+                                        <p>Menu Estilos</p>
+                                        <p>Este menu surge al selecionar un elemento, se despliega con todos los estilos CSS que posea este, y permite modificarlos libremente, e incluso permite forzar el estado (boton ":hov"), añadir clases (boton ".cls") entre muchas más opciones.</p>
+                                        p>Nota: al clickear sobre el recuadro de color de una propiedad de color se despliaga el menu de selección de colores, el boton con simbolo de gotero permite selecionar el colo de un pixel en espesifico de la paguina, retornando el codigo exadecimal de este, de ese modo se puede obtener el color de por ejemplo imagenes para usarla en la paguina.</p>
+                                     </li>
+                                     <li>
+                                        <p>Menu Computed (Calculados)</p>
+                                        <p>Permite ver el valor de las propiedades de dimenciones del elemento, "padding", "margin" y "Border", así como tambien modificar el valor de estos, para probar con diferentes dimenciones de una forma más visual. </p>
+                                     </li>
+                                     <li>
+                                        <p>Menu de Objetos de Escucha de Eventos (Event Listeners)</p>
+                                        <p>Este menu se utiliza para trabajar con los eventos JavaScrip, se profundizara en esto en su respectivo apartado.</p>
+                                     </li>
+                                     <li>
+                                        <p>Menu Interrupciones del DOM</p>
+                                        <p>Este menu se utiliza para trabajar con recursos JavaScrip más avanzados, se profundizara en esto en su respectivo apartado.</p>
+                                     </li>
+                                     <li>
+                                        <p>Menu Propedades</p>
+                                        <p>Enlista todas las propiedades poseaidas por el elemento seleccionado, tambien se puede lograr exactamente lo mismo escribiendo "$0" desde la pestaña de consola </p>
+                                     </li>
+                                     <li>
+                                        <p>Menu Accesibilidad</p>
+                                        <p>Este menu no es usado en la gran mayoria de los casos, por tanto no es plantedo dentro del curso.</p>
+                                     </li>
+                                </ul>
+                                <p>Nota: Los cambios realizados en la paguina desde la pestaña "Elements" pueden ser desechos con las taclas "Ctrl + Z", a su vez los cambios puede volver a ser realizados con las teclas "Ctrl + Y"</p>
+                            </dd>
+                        </dl>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>
