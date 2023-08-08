@@ -43,7 +43,9 @@
                 <article class="content">
                     <section>
                         <a href="./nivel-1/Indice__JS.html">Nivel 1</a>
-                    <a href="./nivel-2/indiceJavaScriptNivel2.html">Nivel 2</a>
+                        <a href="./nivel-2/indiceJavaScriptNivel2.html">Nivel 2</a>
+                        <p>Nota: el donde se ubica el llamado al archivo JS dentro del documento HTML es importantec ya que en el caso de colocarlo en el header si se da el caso de que se necesite llamar a un elemento que aun no a cargado se puden originar errores.</p>
+                        <p>Esto se puede solucionar incluyendo la propiedad "defer" en la etiqueta "script" ya que esta indica que se debe esperar que se cargue el DOM antes de realizar la llamada al archivo JS, de ese modo no importa donde se ubique esta.</p>
                     </section>
                 </article>
                 <footer class="content">

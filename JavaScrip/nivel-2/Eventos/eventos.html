@@ -45,6 +45,7 @@
                     <section>
                         <p>Los eventos se pueden definir como cualquier cambio o suceso que ocaurra en la paguina desde el momento en que esta carga, en si, un evento puede ser desde el scroll del usuario por la paguina hasta presionar un boton, en sierto modo casi cualquier interacción con los elementos HTML se puede considerara un evento.</p>
                         <p>La utilidad de los eventos consiste en que se puede asignar un codigo mediante JavaScrip a un elemento, el cual se ejecutara en caso de que el elemento experimente un un evento definido.</p>
+                        <p>IMPORTANTE: Todo lo relacionado a los eventos y el objeto "event" esta en <a href="https://www.w3schools.com/jsref/obj_events.asp" class="a__JS">El apartado de w3schools</a> sobre los eventos.</p>
                     </section>
                     <h2>Handlers</h2>
                     <section>
@@ -77,6 +78,11 @@
                         <img src="./img/objetoEvent-2.PNG" class="img" alt="">
                         <p>En este ejemplo se pude apreciar el como se utiliza una función flecha para ingresar el parametro a la función, de ese modo en un "console.log" se utiliza el metodo ".target", el cual es un metod del objeto "event" que retorna el elemento al que se le aplico el evento, por lo tanto lo que hace el evento del ejemplo es imprimer el elemento HTML en la consola. </p>
                         <p>Nota: en este ejemplo se nombro al parametro como "e" (de event), sin embargo se puede nombrar como se plazca ya que el objeto retorna por defecto, del mimo modo se puede usar cualquiera de los otros metodos o propiedades del objeto.</p>
+                        <p>En si el objeto event posee multitud de metodos y propiedades, las cules permite conocer el status y todas las caracteriticas del evento o del elementos que lo desencadeno, realmete es inmensa la cantidad de opciones que posee este objeto, para analizarlo en profundidad se puede indicar que se imprimia el objeto event en consola y de ese modo todos los recursos de este podran ser explorados  </p>
+                        <h4>ejemplo</h4>
+                        <img src="./img/objetoEvent-4.PNG.jpg" class="img" alt="">
+                        <h4>Resultado</h4>
+                        <img src="./img/objetoEvent-3.PNG" class="img" alt="">
                     </section>
                     <h2>Event Flow (Flujo de Eventos)</h2>
                     <section>
@@ -147,6 +153,73 @@
                             </li>
                         </ul>
                     </section>
+                    <h2>Eventos del Teclado</h2>
+                    <section>
+                        <p>Se trata de todo tipo de suceso que involucre alguna de las teclas del teclado. </p>
+                        <ul>
+                            <li>
+                                <p>Keydown: Ocurre cuando una tecla se deja de precionar</p>
+                                <img src="./img/eventosTeclado-1.PNG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>Keypress: Ocuarre cuando una tecla se presiona y suelta en un elemento</p>
+                                <img src="./img/eventosTeclado-2.PNG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>keyup: Ocurre despues de que los dos eventos anteriores hayan ocurrido consecutibamete</p>
+                                <img src="./img/eventosTeclado-3.PNG" class="img" alt="">
+                            </li>
+                        </ul>
+                    </section>
+                    <h2>Eventos de la Interfaz</h2>
+                    <section>
+                        <ul>
+                            <li>
+                                <p>Error: Ocurre cuando sucede un error durante la carga de un archivo multimedia</p>
+                                <img src="./img/eventError-1.png" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>Loas: Ocurre cuando un objeto se a cargado</p>
+                                <img src="./img/eventLoad-1.png" class="img" alt="">
+                                <p>Nota: Para acceder al body del documento no es necesario declarar una variable que lo vincule, para esto existe el objeto window, el cual a su vez no es obligatorio indicarlo, ya que por defecto si solo se define addEventListener este objeto sera seleccionado </p>
+                            </li>
+                            <li>
+                                <p>Beforeunload: Ocuarre antes de que el documento este apunto de descargarse, es decir antes de que se inicie la carga de la nueva dirección a la que se dirigira el usuario al abandonar la paguina. </p>
+                                <img src="./img/EventBeforeUnload-1.png" class="img" alt="">
+                                <p>Nota: Es decir este evento se dispara antes de avandonar el sitio </p>
+                            </li>
+                            <li>
+                                <p>Unload: Ocurre una vez se a descargado una paguina, es decir una vez se la carga de la nueva dirección a la que se dirigira el usuario al abandonar la paguina</p>
+                                <img src="./img/EventUnload-1.png" class="img" alt="">
+                                <p>Nota: Es decir este evento se dispara al avandonar el sitio </p>
+                            </li>
+                            <li>
+                                <p>Resize: Ocurre cuando se cambia el tamaño de la vista del documento</p>
+                                <img src="./img/eventResize-1.png" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>Scroll: Ocurre cuado se desplaza la barra de desplazamiento de un objeto</p>
+                                <img src="./img/eventScroll-1.png" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>Select: Ocurre cuando el usuario selecciona un texto de un input o un text area</p>
+                                <h4>Codigo</h4>
+                                <img src="./img/eventSelect-1.png" class="img" alt="">
+                                <h4>Ejemplo evento</h4>
+                                <img src="./img/eventSelect-2.png" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/eventSelect-3.png" class="img" alt="">
+                                <p>Este tipo de eventos al igual que cualquier otro puede ser usado en conjunto con el objeto "event" para generar nuevas funcionalidades, por ejemplo:</p>
+                                <img src="./img/eventSelect-4.png" class="img" alt="">
+                                <p>En este ejemplo se vincula los elementos HTML, luego se activa el escuchador de eventos,al cual se le indica que reciba el objeto event, para usar su propiedad ".target", la cual permite vincular al objeto que desencadeno el evento, la cual a su vez se usa la propiedad de selectionEnd y selectionStart, para definir la posicion de inicio y final de las zona en la que se desencadeno el evento. </p>
+                                <p>De este modo al tener viculado no solo el elemento que desencadeno el evento, si no tambien el inicio y final de la sona de este, se usar la propiedad "subString", la cual permite extrar una zona de una texto para lo cual se le indica que reciba el inicio y final del evento, de ese modo se obtiene la seccion del texto que a desencadenado el evento, el cual en este caso se trata de ser selecionado por el usuario. </p>
+                                <p>Se ese modo el texto seleccionado por el usuario se captura y se imprime en el interior del segundo input.</p>
+                                <h4>Resultado</h4>
+                                <img src="./img/eventSelect-5.png" class="img" alt="">
+                                <p>Nota: para este ejemplo ubiese sido mejor usar el "textcontent" en vez de "innerHTML"</p>
+                            </li>
+                        </ul>
+                    </section>  
                 </article>
                 <footer class="content">
                     <h2>Contacto</h2>
