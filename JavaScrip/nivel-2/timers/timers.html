@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
-    <title>Condicionales</title>
+    <title>Variables</title>
 </head>
 <header>
     <nav >
@@ -34,39 +34,42 @@
             </label>
             <div class="nav-aside_JS">
                 <ul>
-                    <a href="../Indice__JS.html"><h2>Nivel 1 JS</h2></a> 
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
                     <div class="aside-divisor"></div>
                     <h2>Propiedades</h2>    
                 </ul>
             </div>
             <div class="desplazamiento">
                 <article class="content">
-                    <h1>Condicionales</h1>
+                    <h1>Timers JS</h1>
                     <section>
-                        <p>Son sentencias con la función de definir si un bloque de codigo se ejecuta o no, esto en funcnión de si la condicón indicada se cumple o incumple, por lo tanto son una de las principales sentencias responsables del comportamiento de la paguina en base a las circunstancias de uso.</p>
+                        <p>Se tratan de cuatro funciones incorporadas en JavaScrip las cuales realizan la misma función de un "temporizador", cada una de ellas posee sus propias caracteriticas y funcionamiento, los diferentes "timers" son:   </p>
+                        <p>Nota: Los temporizadores consumen una elebada contidad de recursos, por lo que no se recomienda hacer un uso excesivo de estos.</p>
                     </section>
-                    <h2 id="if">If( )</h2>
+                    <h2>SetTimeout()</h2>
                     <section>
-                        <p>Realmente este condicional es bastante simple, significa "si se cumple haz esto" y indica que si la condición expresada dentro de los parentesis se cumple, el bloque de codifgo expresado dentro del condicional se ejecutara, de lo contrario, si no se cumple la condición el If y el bloque de codigo albergado dentro de este seran ignorados por el programa.</p>
-                        <h4>Ejemplo</h4>
-                        <img src="./img/If-1.PNG" class="img" alt="">
-                        <p>En este Ejemplo el el bloque de codigo dentro del "If", en este caso una alerta, si llega a ejecutarse, ya que la condicón expresada se cumple (103 <= 140), de lo contrario el programa ubiese continuado con su ejecución ignorando este bloque de codigo.</p>
-                        <p><b>Nota: If se trata de la condicón principal, por lo que se le puede considerar un condicional de apertura, por lo tanto solo debe haber uno por cada estructura de condiciones.</b></p>
+                        <p>Esta funcion se utiliza para definir cuanto timpo esperar para ejecutar una función, es decir "SetTimeOut" realiza un tiempo de espera para la ejecución de la función definida, </p>
+                        <p>Para lo cual esta recibe como primer valor una función (ya sea el llamado a una función o una función flecha dentro de susparentesis), y como segundo valor recibe el timpo de espera que se aplicara expresado en milesimas de segundo (1seg = 1000) </p>
+                        <img src="./img/setTimeOut-1.PNG" class="img" alt="">
+                        <p>De este modo en este ejemplo la función flecha tardara dos segundos en imprimir en la pantalla</p>
                     </section>
-                    <h2 id="elseif">Else If</h2>
+                    <h2>ClearTimeout()</h2>
                     <section>
-                        <p>
-                            Este segundo condicional complemeta al anterior, su significado es "si no se cumple haz esto" su función es la de enlazar una segunda condición para los casos en los que la condición principal no se cumpla, y de cumplirse esta segunda condición, entonces el bloque de codigo expresado dentro de "Else If" se ejecutara, de lo contrario al igual que el "If" sera ignorado. 
-                        </p>
-                        <img src="./img/elseIf-1.PNG" class="img" alt="">
-                        <p>En este ejmplo la condición principal no llega a ser cumplida (If), pero en su lugar la segunda condición (Else If) si se cumple por lo que se ejecuta el codigo albergado dentro de este.</p>
-                        <p>Esta expresión puede ser empleada las veces que sean necesarias, es decir si no se cumple la condición principal se pueden presar todas las alternatias que se deseen hasra que agluna se cumpla.</p>
+                        <p>El proposito de esta función espesificamete es el de remover "setTimeOut", por lo tanto esta función permite eliminar el tiempo de espera para la ejecución de una función.</p>
+                        <img src="./img/clarTimeout-1.PNG" class="img" alt="">
+                        <p>Al almacenar "setTimeout" en una varible y aplicarle "ClearTimeout" el temporizador nunca se ejecuta.</p>
                     </section>
-                    <h2 id="else">Else</h2>
+                    <h2>SetInterval()</h2>
                     <section>
-                        <p>Este ultimo condicional se le puede considerar la expresión de sierre de la estructura de condiciones, su significado es "entonces" su función es la de contener un bloque de codigo que se ejecute en caso de que ninguna de las anteriores condiciones (presentadas en "If" y en "Else If") llegue a cumplirse, razon por la cual este condicional no posee una condición que lo active, simplemte se ejecuta en caso de que ninguna condicón se cumpla.</p>
-                        <img src="./img/else-1.PNG" class="img" alt="">
-                        <p>En este ejmplo no se cumple la condición del If ni del Else If, por lo que se ejecuta el bloque de codigo expresado dentro de Else </p>
+                        <p>Esta función permite ejecutar una función indefinida cantidad de veces cun un cierto timpo de intervalo entre cada ejecuación, por lo tanto se podria decir que lo que "setInterval" permite es ejecutar una función cada X cantidad de tiempo.</p>
+                        <p>El tiempo de intervalo de esta función tambien debe expresarse en milisegundos </p>
+                        <img src="./img/setInterval-1.PNG" class="img" alt="">
+                    </section>
+                    <h2>ClearIterval</h2>
+                    <section>
+                        <p>Esta función permite detener la infinita ejecución de "setInterval" </p>
+                        <img src="./img/clearInterval-1.PNG" class="img" alt="">
+                        <p>Para esto se guarda "setInterval" en una varible y se le aplica la función "clearInterval"</p>
                     </section>
                 </article>
                 <footer class="content">

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Variables</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../../../Index.html" class="logo"><img src="../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Contro de Flujo y Manejo de Errores</h1>
+                    <section>
+                        <p>Se tratan de todos aquellos recursos o herramientas con los que cuentas JavaScrip para manipular el jlujo de ejecución del codigo así como de control de errores, para lo cual se crean secciones del codigo estipuladas para ejecutarse en el caso de que ocuarra un error inprevisto. </p>
+                    </section>
+                    <h2>Control de Flujo </h2>
+                    <section>
+                        <p>Se trata de las sentencias de control de flujo, las cuales son todos aquellos elementos que permitan manupular o controlar el flujo de ejecución del codigo, algunos ejemplos de esto son: </p>
+                        <ul>
+                            <li><p><a href="../../nivel-1/Condicionales/condicionales.html#else" class="a__JS"><h3>Else</h3></a></p></li>
+                            <li><p><a href="../../nivel-1/Condicionales/condicionales.html#elseif" class="a__JS"><h3>Else if</h3></a></p></li>
+                            <li><p><a href="../../nivel-1/Condicionales/condicionales.html#if" class="a__JS"><h3>If</h3></a></p></li>
+                        </ul>
+                        <p> En todos estos casos nos permiten controlar el flujo del codigo atravez de condicionales, sin embargo existen otros tipos de sentecias del flujo las cuales cuentan con otro tipo de caracteriticas, las cuales son:</p>
+                        <dl>
+                            <dt><h3>Los Bloques</h3></dt>
+                            <dd>
+                                <p>Se tratan de secciones de codigo en las que se crean ambitos de varibles independientes del resto del codigo, es decir, al utilizar las llavez en una sección del codigo, todos las varibles que se encuetren dentro de estas perteneseran a un alcanse local, por lo tanto solo podran ser utilizadas dentro de este bloque. </p>
+                                <p>Por lo tanto este concepto es igual al del alcanse global o local de las varibles al usarse en otras estructuras de bloques como funciones, condicionales, objetos etc, para lo cual se mantiene la funcionalidad de los diferentes tipos de variable: const, var y let.</p>
+                                <img src="./img/bloques-1.PNG" alt="" class="img">
+                                <p>En otras palabras los bloques nos permiten crear apartados de varibles locales sinque se geneere un conflicto con las variables o datos externos.</p>
+                            </dd>
+                            <dt><h3>Sentencia Switch</h3></dt>
+                            <dd>
+                                <p>Se trata de un ultimo tipo de sentencia de control de flujo, su función es semejante a la de "if" "else if" y "else", ya que esta tambien define el que codigo ejecutar segun las condiciones que se cumplan o incumplan. </p>
+                                
+                                <p>Sin embargo la estructura de "Switch" es bastante diferente, ya que esta a diferencia de los otros condicionales los cuales por cada uno de sus usos definen un bloque de codigo a ejecutar, y el conjunto de estos genera una estructura de condiciones para diversos casos que se puedan presentar, "Switch" por cada uno de sus inplementaciones permite definir multiples bloques de codigos para los diversos casos. </p>
+                                <p>Para esto la sintaxis de "Switch" esta compuesta por la declaracion de su palabra clave, (nombre) la cual recibe un dato el cual definira los casos de ejecución, tambien posee la palabra clave "case", la cual define cada uno de los casos de ejecución, para lo cual luego de este se define el valor del dato que desencadenara el bloque de codigo (condición), seguido de dos puntos (:), segudo del codigo a ejecutar.  </p>
+                                <p>Para cerrar cada uno de los casos se utiliza la palabra clave "break", la cual al igual que en las funciones detene la ejecución del "Switch" y evita que se ejecuten los otros casos, por ultimo se usa la palabra clave "default", la cual permite definir un caso que se ejecutara si ninguna de las otras condiciones es cumplida. </p>
+                                <img src="./img/switch-1.jpg" class="img" alt="">
+                                <p>En este ejemplo el resultado en consola es "no es ninguna", ya que el valor de la varible "pito" no cumple con ninguna de las condiciones definidas.</p>
+                                <p>Nota: Una caracteritica de "Switch" es que posee un rendimiento bastante inferior a una estructura condicional compuesta por "if", "else if" y "else", por lo que por lo general solo es usada para aplicar las condiciones de codigos complejos ya que este permite un codigo más legible, o al inplementar sentencias complejas bastante espesificas, para la gran mayoria de los casos casi simpre es más optimo usar los otros condicionales. </p>
+                            </dd>
+                        </dl>
+                    </section>
+                    <h2>Control De Errores</h2>
+                    <section>
+                        <p>En JavaScrip así como en cualquier otro lenguaje se pueden ocacionar multitud de errores al ejecutar un codigo, por lo tanto es un aspecto que el lenguaje esta preparado para enfrentar, razon por lo cual existen lo que son " sentecias de manejo de excepciones", las cuales permiten notificar, documentar o definir errores de forma que estos sean de ayuda para el dasarrollador, otros programadores e incluso los usuarios . </p>
+                        <dl>
+                            <dt><h3>Excepciones</h3></dt>
+                            <dd>
+                                <p>Estas Consisten en el manejo de flujo de los errores, razon por la cual existen varios tipos de errores dentro del lenguaje, estos tipos son:  </p>
+                                <ul>
+                                    <li>
+                                        <p>ECMAScript: Se trata de aquellas excepciones que ocurren en la capas internas del lenguaje (tecnologuia interna de este).</p>
+                                    </li>
+                                    <li>
+                                        <p>DOMException y DOMError: Son todas aquellas excepciones relacionadas al DOM</p>
+                                    </li>
+                                </ul>
+                                <p>Todo lo referenta a las excepciones ECMAScript se encuetra aquí: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects#objetos_fundamentales" class="a__JS">Objetos Fundamentales JS</a></p>
+                                <p>A su vez todo lo referente a las excepciones DOMException se encuentra en: <a href="https://developer.mozilla.org/es/docs/Web/API/DOMException" class="a__JS">DOMExeption</a></p>
+                                <p>Y por ultimo todo lo referente a las excepciones DOMError esta en: <a href="https://developer.mozilla.org/es/docs/Web/API/DOMError" class="a__JS">DOMError</a></p>
+                            </dd>
+                            <dt><h3>Try...Catch</h3></dt>
+                            <dd>
+                                <p>Se trata de un mecanismo para capturar los errores, y enfunción de esto definir los mensajes de estos así como ejecutar un bloque de codigo en consecuencia, es decir permite que se defina el que hacer y como nootificar sobre el error.</p>
+                                <p>Para esto el mecanismo consta de dos partes, las cuales son "try" la cual contiene el codigo que se ejecutara, la cual retorna cualquier error que se origine en este, y "catch", la cual recibe el error originado en "try" y en respuesta ejecuta el codigo definido dentro de este.</p>
+                                <p>Debido a esta dependencia para manejar el error es que ninguno de los elementos funcionara si no se encuetran los dos juntos,</p>
+                                <img src="./img/tryCatch-1.jpg" class="img" alt="">
+                                <p>De este modo se pueden genrar mensajes o acciones de error personaliables las cuales permiten el definir el manejo de errores de un proyecto.</p>
+                                <p>Es necesario tener en cuenta que "try catch" no funciona con errores de sintaxis, unicamete funciona para definir errores "esperados" que pudiesen suceder con alguno de los datos del codigo, del mismo modo al usar "try catch salvo por los de sintaxis, el manejo de errores por defecto de JavaScrip se desactiva al usar este recurso, esto para permitir que las implemetaciones del desarrollador se lleven a cabo."</p>
+                                <p>Por ultimo es necesario tener en cuenta que existen dos tipos de "try catch", los cuales son el "catch" condicional y incondicional.</p>
+                                <ul>
+                                    <li>
+                                        <p>Condicional: Se trata de aquel "catch" que dentro de si contiene condicionales para ejecutarse segun sea el caso del error, es decir es un "catch" on estructuras "if", "else" o "else if" dentro de si.</p>
+                                        <img src="./img/catchCondicional-1.jpg" class="img" alt="">
+                                    </li>
+                                    <li>
+                                        <p>Incondicional: Simplemete se trata de aquel "catch" que unicamete posee una estructura de codigo dentro de si, es decir es aquel "catch" que no posee ningun condicional dentro de este, como es el caso del primer ejemplo de "try catch".</p>
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>
