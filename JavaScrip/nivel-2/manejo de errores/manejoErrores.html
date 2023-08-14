@@ -98,6 +98,7 @@
                             <dd>
                                 <p>Se trata de un mecanismo para capturar los errores, y enfunción de esto definir los mensajes de estos así como ejecutar un bloque de codigo en consecuencia, es decir permite que se defina el que hacer y como nootificar sobre el error.</p>
                                 <p>Para esto el mecanismo consta de dos partes, las cuales son "try" la cual contiene el codigo que se ejecutara, la cual retorna cualquier error que se origine en este, y "catch", la cual recibe el error originado en "try" y en respuesta ejecuta el codigo definido dentro de este.</p>
+                                <p>Nota: En el "catch" se suele definir el valor dato receptor del error con nombres como "e" o "error" por temas de legibilidad. </p>
                                 <p>Debido a esta dependencia para manejar el error es que ninguno de los elementos funcionara si no se encuetran los dos juntos,</p>
                                 <img src="./img/tryCatch-1.jpg" class="img" alt="">
                                 <p>De este modo se pueden genrar mensajes o acciones de error personaliables las cuales permiten el definir el manejo de errores de un proyecto.</p>
@@ -112,6 +113,37 @@
                                         <p>Incondicional: Simplemete se trata de aquel "catch" que unicamete posee una estructura de codigo dentro de si, es decir es aquel "catch" que no posee ningun condicional dentro de este, como es el caso del primer ejemplo de "try catch".</p>
                                     </li>
                                 </ul>
+                            </dd>
+                            <dt><h3>Finaly</h3></dt>
+                            <dd>
+                                <p>Se trata de otra sección del "try catch", la cual se utiliza para incorporar un bloque de codigo que se ejecutara sin importar si se cumple el bloque "try" o el bloque "catch", en otras palabras sin importar si ocurre un error o no, este secmento del codigo se ejecutara de igual forma.</p>
+                                <p>Por lo tanto el bloque "finaly" tiene la gerarquia suficiente para ignorar elmentos como el "return", los cuales detienen la ejecución del metodo, por ello aun despues de un "return" el bloque de "finaly" se ejecutara, sin importar el como se constituya el codigo de los bloques "try catch". </p>
+                                <img src="./img/tryCatchFinaly-1.jpg" class="img" alt="">
+                                <p>En el caso del ejemplo,  el bloque "finaly" sobre escribe el valor de la propiedad "return", por lo tanto la constante "prueba" retorna "3".</p>
+                            </dd>
+                            <dt><h3>Sentecia Throw</h3></dt>
+                            <dd>
+                                <p>Esta sentecia permite disparar un error de forma intencionada, literalmente al emplearlo se generará un error con el valor que se le espesifique</p>
+                                <h4>Codigo</h4>
+                                <img src="./img/tryCatchThrow-1.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/tryCatchThrow-2.jpg" class="img" alt="">
+                                <p>Esta sentencia funciona dentro o fuera de un "try catch" de igual forma, la diferencia radica en que al usarse dentro de un "try catch" este error  puede ser manipulado.</p>
+                                <p>A su vez el "throw" puede disparar otro tipos de elementos como por ejemplo objetos: </p>
+                                <h4>Codigo</h4>
+                                <img src="./img/tryCatchThrow-3.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/tryCatchThrow-4.jpg" class="img" alt="">
+                                <p>De ese modo se puede dispara cualquier tipo de dato con "throw" incluyndo arrays y objetos como se pudo apreciar, para lo cual se puede accedar a los valores o propiedades de la misma forma que se aria con normalidad:</p>
+                                <h4>Codigo</h4>
+                                <img src="./img/tryCatchThrow-5.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/tryCatchThrow-6.jpg" class="img" alt="">
+                            </dd>
+                            <dt><h3>Casos de uso del  Try Catch</h3></dt>
+                            <dd>
+                                <p>Este elemento realmente no es demaciado usado, esto se debe a que se recomienda que su implementación se recerve para las situcaciones en las que realmanete se este obligado a trabajar con exepciones, las cuales en la mayoria de las ocaciones ocuerre cuando surgen problemas que estan fuera del control del desarrollador, por ejemplo los llamados a la base de datos, los cuales por motivos externos como la conexión del usuario pueden fallar. </p>
+                                <p>No se recomienda el uso de "try catch" para tratar errores quesean generados por el codigo, al menos que se usen para alertar o notificar a otro programador o al usuario de una aspecto del error o de un suceso. </p>
                             </dd>
                         </dl>
                     </section>
