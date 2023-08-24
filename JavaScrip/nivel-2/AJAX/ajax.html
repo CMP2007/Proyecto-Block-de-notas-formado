@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Variables</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../../../Index.html" class="logo"><img src="../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>AJAX  (Asynchronous JavaScript and XML) </h1>
+                    <section>
+                        <p> Se trata de un conjunto de técnicas de desarrollo web que permiten que las aplicaciones web funcionen de forma asíncrona, procesando cualquier solicitud al servidor en segundo plano, por lo tanto "ajax" no es una tecnología en sí misma, sino más bien un concepto de programación, la cual permite que los sitios web carguen contenido en la pantalla sin tener que actualizar la página.</p>
+                    </section>
+                    <h2>Objeto XMLHttpRequest</h2>
+                    <section>
+                        <p>Se trata de un objeto nativo JavaScrip, especializado en realizar peticiones web, en otras palabras este objeto posee todos los metodos y propiedades para trabajar con las peticiones a un servidor o una base de datos.</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/XMLHttpRequest-1.JPG" class="img" alt="">
+                        <p>En si este objeto posee multitud de metodos y propiedades, sin embargo limitandolo a un uso basico los principales metodos son: </p>
+                        <ul>
+                            <li>
+                                <p>.Open: Este metodo permite crear la petición, para lo cual necesita de dos datos, el primero corresponde al metodo de envio de esta (puede ser "GET" o "POST"), mientras que el segundo dato corresponde a la dirección en la que se encuetra los datos requeridos. </p>
+                            </li>
+                            <li>
+                                <p>.Send: Este metodo realiza el envio de la petición previamente elaborada con el metodo ".open" y retorna el resultado.</p>
+                            </li>
+                            <li>
+                                <p>.Response: Se trata del metodo reservado para obtener el retorno de la peticón.</p>
+                            </li>
+                            <img src="./img/XMLHttpRequest-2.JPG" class="img" alt="">
+                        </ul>
+                        <h3>ReadyState</h3>
+                        <p>Se trata de un metodo que se utilizaba anteriormente para trbajar las peticiones, el cual se modifica segun cual sea el estado de la petición, su valor se dibide entre cinco posivilidades, entre las cuales cada uno representa una etapa de la petición:</p>
+                        <ul>
+                            <li>
+                                <p>0: Este se trata del valor por defecto antes del envio de la solicitud </p>
+                            </li>
+                            <li>
+                                <p>1: Este valor representa la primera etapa de la solicitud, en la cual la solicitud fue creada correctamente (metodo .open)</p>
+                            </li>
+                            <li>
+                                <p>2: Este segundo valor y por lo tanto segunda etapa indica que la solicitud se envio correctamente. </p>
+                            </li>
+                            <li>
+                                <p>3: Este tercer valor representa la tercera solicitud en la cual la solicitud se esta procesando por el servidor o la base de datos</p>
+                            </li>
+                            <li>
+                                <p>4: Este ultimo valor representa que todo el proceso de la petición concluyo, que todo a sido finalizado y ya se posee un resultado, esto sin importar si se retorna un error o el dato deseado, simplemente indica que se obtuvo un resultado sea cual sea este.</p>
+                            </li>
+                        </ul>
+                        <p>Para aprovechar este metodo el cual puede brindar información sobre la ejecución de la consulta, se utilizaba el evento "readystatechange", al cual se le puede inicializar un observador de eventos para evaluar la ejecución de cada una de las etapas, tal y como en el siguite ejemplo: </p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/XMLHttpRequest-3.JPG" class="img" alt="">
+                        <h4>Resultado</h4>
+                        <img src="./img/XMLHttpRequest-4.JPG" class="img" alt="">
+                        <p>En este ejemplo cada vez que el valor de la propiedad "ReadyState" cambie se detona el evento y se registra el cambio en panalla.</p>
+                        <p>Un aspecto a tener en cueta de los estados de "ReadyState" es que en sus dos ultimos valores (3 y 4) la data que esta siendo solicitada se retorna como resultado, debido a esto se recomienda realizar validaciones para comprobar el estado de la solicitud, así como su correcta ejecución. </p>
+                        <p>Nota: Actualmente este metodo no es utilizado para trabajar las consultas, debido a que ha quedado en des uso debido al surgimiento de obciones más simples y eficientes.</p>
+                        <h3>Load</h3>
+                        <p>Se trata del evento que remplazo a "readystatechange" para detectar la ejecución de las peticiones JavaScrip, esto ya que este evento posee mejores mecanismos para trabajar con los errores que pueden llegar a ocurrir en las peticiones.</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/XMLHttpRequest-5.JPG" class="img" alt="">
+                        <p>En este ejemplo se utiliza el evento "load" para hacer seguimiento de la petición, se utiliza el metodo ".status" para comprobar el si la petición se realizo correctamente o surgio algun error, el evento "load" permite definir la respuesta que se disparara en caso de que surga un error en la petición, tal como en este ejemplo.     </p>
+                    </section>
+                    <h2>ActveXObject("Microsoft.XMLHTTP")</h2>
+                    <section>
+                        <p>Se trata del objeto dedicado para las peticiones de internet explorer en sus verciones antiguas, su funcionamiento, metodos y propiedades son iguales, simplemente su nombre es diferente, por ello se recomienda que se realise una comprobación segun cual sea el objeto existente en el navegador antes de realizar cualquier otra acción:</p>
+                        <img src="./img/XMLHttpRequest-6.JPG" class="img" alt="">
+                        <p>En este ejemplo se mantiene la estructura de ejemplos anteriores añadiendo una validación inicial para comprobar cual es el objeto existenete en el navegador: "XMLHttpRequest"(otros navegadores) o "ActveXObject" (para internet explorer), seguido a eso se realiza la petición, se valida el si se realizo correctamente o surgio un error y de ultimo se deserealiza para poder obtener el objeto JSON con los datos.  </p>
+                    </section>
+                    <h2>Metodos GET y POST</h2>
+                    <section>
+                        <p>Se tratan de dos de los principales metodos para el envio de datos en la web, pese a que ambos desempeñan la misma función poseen diversas diferencias entre ambos metodos, algunas de estas son: </p>
+                        <img src="./img/GetPost.JPG" class="img" height="220px" alt="">
+                        <img src="./img/GetPost-1.JPG" class="img" height="220px" alt="">
+                        <p>Estas se tratan de algunas diferencias en general entre los metodos,sin embargo tambien posee ciertas diferencias practicas entre ambos:</p>
+                        <ul>
+                            <li>
+                                <h3>Envio de Datos GET</h3>
+                                <p>A continuación se muestra un ejemplo de petición utilizando el metodo "GET", en si no se diferencia de los ejemplos anteriores, ya que este es el metodo más simples de los dos:</p>
+                                <img src="./img/get-1.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <h3>Envio de Datos POST</h3>
+                                <p>Por su parte el metodo "POST" siertamente es un poco más complejo, por lo que para su funcionamiento es necesario realizar ciertos cambios:  </p>
+                                <ol>
+                                    <li>
+                                        <p>Se remplaza el metodo de "GET" a "POST" en el metodo ".open"</p>
+                                    </li>
+                                    <li>
+                                        <p>Se añade el metodo "setRequestHeader()", el cual recibe dos datos, los cuales son un conjunto de datos de tipo "nombre" valor, y corresponden al "encabezado", en este caso se usa "Content-type" y el valor de este (tipo de contenido), en este caso usado el "application/json;charset=UFT8". </p>
+                                        <p>En otras palabras en este caso el metodo "setRequestHeader" requiere que dentro de este se defina el tipo de contenido de la solicitud. </p>
+                                        <p>Nota: Realmente este metodo puede aceptar muchos otros tipos de encabezados y valores para muchos otros usos, sin embargo estos son los correspondientes para el ejemplo.</p>
+                                    </li>
+                                    <li>
+                                        <p>Se añade el dato que sera enviado dentro del metodo ".send" usando el metodo "JSON.stringify()" para serializar el objeto y adecuaarlo para su envio.</p>
+                                    </li>
+                                    <img src="./img/post-1.JPG" class="img" alt="">
+                                    <p>En este ejemplo se observa el como se realiza un envio de datos realizando el metodo "POST", a la vez que se imprime en consola el objeto enviado.  </p>
+                                </ol>
+                            </li>
+                        </ul>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>
+
