@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Fetch</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../../../Index.html" class="logo"><img src="../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Fetch</h1>
+                    <section>
+                        <p>Se trata de la forma actual de trabajar con el objeto "XMLHttpRequest", de hecho se trata del remplazo de AJAX como metodo para trabajar con las consultas,  debido a lo reciente que es y el tiempo que paso "AJAX" como el metodo estandarizado para trabajar con las peticiones, el metodo "fetch" aun no se puede considerar el más utilizado, sin embargo si el metodo recomendado actualmeten.</p>
+                        <p>Este metodo se basa en promesas para realizar las peticiones, por lo tanto la respuesta de estas se recibe en forma de una promesa encapsulada, una promesa encapsulada es aquella cuyos datos se encuetran encapsulados, razon por la cual el objeto "fetch" posee dibersos metodos para combertir el tipo de datos a uno que sea valido para su uso. </p>
+                        <p>Lo que hace superior a fetch sobre AJAX es lo sorprendenetemente reducida y simple que es la sintaxis de las peticiones, ya que este metodo requiere que se definan muchos menos aspectos que los metodos anteriores, tanto es así  que incluso tiene el metodo GET definido como el metodo por defecto, razon por la cual nisiquiera es necesario declararlo salvo que se desee usar otro. </p>
+                        <p>A continuación se muestra un ejemplo sobre como inicializar la petición con "fetch", en la cual en una sola linea de codigo se hace el equivalente a declarar el objeto "XMLHttpRequest" (incluyendo la version de internet explorer), definir el metodo (Get por defecto) y se indica la dirección a la que se realizara la consulta.  </p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/fetch-1.JPG" class="img" alt="">
+                        <p>De estas forma el metodo "fech" reduce significatibamente las lineas de codigo y los datos necesarios para operarlo, por su parte debido a que la promesa se encuetra encapsulada se necesita de utilizar el metodo ".then" para definir que acción aplicarle:</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/fetch-2.JPG" class="img" alt="">
+                        <p>En este ejemplo se busca obtener la promesa para imprimirla en pantalla, debido a que se encuesta encapsulada se utiliza el metodo ".then" el cual permite ejecutar una acción después de que la promesa se resuelva y encadenar acciones que deben ser realizadas en secuencia, en este caso se usa para aplicar una función flecha, la cual se le pasa la promesa como dato en la variable "res" y luego se imprime en consola.</p>
+                    
+                        <p>Por otro lado para obtener los datos retornados dentro la promesa primero es necesario desencapsularla, para esto se utilizal el metodo ".text()", el cual retorna los datos desencapsulados:</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/fetch-4.JPG" class="img" alt="">
+                        <p>En este ejmeplo se utiliza dos veces la propiedad ".then", en la primera ocación se usa para emplear la propiedad ",text" la cual retorna la promesa des-encapsulada en formato de texto, y una vez ya la se puede acceder a la promesa se usa una segunda vez para imprimirla en pantalla.</p>
+                        <p>"fetch" es tan versatil que incluso se puede resumir el codigo aun más, ya que no es necesario que se declaren variables para su uso.</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/fetch-5.JPG" class="img" alt="">
+                        <p>De esta forma en un conjunto muy reducido de lineas se puede declarar una petición, obtener una promesa como resultado y acceder a los datos encapsulados en esta, sin embargo el metodo ".text" unicamete retorna los datos en tipo cadena de texto, debido a esto existen otros metodos que permiten retornar los datos de otras formas: </p>
+                        <ul>
+                            <li>
+                                <p>.JSON( ): Se trata del metodo que permite retornar los datos en formato JSON para su uso, este metodo por si mismo permite deserializar el objeto a la vez que lo des-encapsula.</p>
+                                <img src="./img/fetch-6.JPG" class="img" alt="">
+                                <p>Nota: Este segundo codigo arrojaria el mismo resultado pero no utilizaria el metodo ".JSON" el cual es recomendado</p>
+                                <img src="./img/fetch-7.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>.Blob( ): Se trata de un metodo que permite crear objeto "blob" los cuales son objetos que permiten manipular objetos vinarios inmutables como por ejmeplo fotos, videos, audio entre otros, en otras palabras este metodo permite crear un onjeto especial para manipular elementos multimedia, por lo tanto el metodo ".blob" permite enviar elementos multimedia con "fetch"  </p>
+                                <img src="./img/fetch-11.JPG" class="img" alt="">
+                                <p>En este ejemplo se selecciona un div HTML con la variable "imagen", luego se usa "fetch" para obtener la imagen(simula una dirección), se usa ".then" con ".blob( )" para crear el objeto "blob" y poder manipular la imagen, y por ultimo se toma la variable "imagen" (div), se usa el metodo "src" para vincular una dirección url y por ultimo se iguala al url generado por el metodo ".createObjectURL" del objeto "url", el cual crea una url temporal para alojar el objeto "blob" y poder visualizar la imagen.   </p>
+                                <p>En otras palabras en este ejemplo se accede a la imagen que podra estar ubicada en x dirección, se crea el objeto "blob" correspondiente para su manipulación y luego se inserta en el contenedor HTML. </p>
+                            </li>
+                        </ul>
+                        <h3>Hacer un Envio POST con Fetch</h3>
+                        <p>Para generar un envio de datos del metodo POST se añaden varios datos en relaciones nombre/valor a la declaración del "fetch":  </p>
+                        <ol>
+                            <li>
+                                <p>El primer dato siempre debe ser la dirección a la que se realizara el envio, este dato no posee un identificador, solo se define su valor</p>
+                            </li>
+                            <li>
+                                <p>Como segundo dato se añade el metodo del envio, el cual se identifica con la palabra "method", seguido del nombre metodo a utilizar, en este caso "POST" </p>
+                            </li>
+                            <li>
+                                <p>EL tercer dato corresponde al cuerpo del envio, es decir a los datos que estan siendo envaidos, en este caso un objeto JSON, esta parte del envio se identifica con el nombre "body" (JSON.stringify() permite seriealizar el objeto JSON para su envio)</p>
+                            </li>
+                            <li>
+                                <p>Como ultimo dato se añade los "headers" del envio, los cuales le indican al servidor el tipo de contenido que se esta enviando, por lo cual estos dependen del tipo de información que se este enviando</p>
+                            </li>
+                            <img src="./img/fetch-8.JPG" class="img" alt="">
+                            <p>De esta forma se realiza un envio de datos "POST" con "fetch".</p>
+                            <p>Nota: Si el JSON del "body" es bastante reducido se puede ovia el "JSON.stringify()" y se puede remplazar con bactips (``) de la siguite forma:  </p>
+                            <img src="./img/fetch-9.JPG" class="img" alt="">
+                            <p>Nota: Una alternativa de estructura más recomendable es almacenar todos los datos del envio (a excepción de la dirección) en una variable y llamarla al definir "fetch", ya que esto permite mejorar la legibilidad del codigo:</p>
+                            <img src="./img/fetch-10.JPG" class="img" alt="">
+                        </ol>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>
+
