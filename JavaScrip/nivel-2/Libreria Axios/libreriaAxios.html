@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Librería Axios</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../../../Index.html" class="logo"><img src="../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Librería Axios</h1>
+                    <section>
+                        <p>Esta sección se trata del unico elemento no nativo que se vera en el curso, se trata de la forma más moderna de trabajar con las peticiones de una paguina web, de hecho la implementación de esta biblioteca se recomienda para aquellas ocaciones en las que el proyecto va a realizar un gran numero de peticiones al servidor o necesia de cargar elementos de un gran peso, ya que en teminos de codigo esta se encuentra extremadamente optimizada y mejora el desempeño de "fetch", mientras en teminos funcionales no hace una gran diferencia en latencia o tiempos de carga pero al estar mejor adecuada para muchas peticiones si puede llegar a hacer una diferencia, por su lado el uso de "fetch" se recomienda en el caso de que se requiera usar las peticiones de una forma mucho más puntual o ocacional en el proyecto. </p>
+                    </section>
+                    <h2>Instalación</h2>
+                    <section>
+                        <p>Ya que se trata de una biblioteca JavaScrip es necesario realizar una instalación en el proyecto, para esto es necesario acceder directamente a los archivos del <a href="https://github.com/axios/axios" target="_blank" class="a__JS">repositorio de GitHub</a>, ya sea desde el link aqui expresado o buscando en google "GitHub axios axios", de ese modo se puede acceder al repositorio, una vez dentro de este se deciende por el repositorio hasta llegar e la sección de instalación, en la que desenglosa todos los metodos disponibles.</p>
+                        <p>El metodo empleado para este ejemplo es el "Using jsDelivr CDN (ES5 UMD browser module)" el cual brinda el codigo HTML para llamar los archivos directamente desde su servidor, por lo tanto lo unico que hay que hacer es copiar el codigo en cuastión es insertarlo dentro del documento html</p>
+                        <img src="./img/axios-1.JPG" class="img" alt="">
+                        <p>Un aspecto importante es que el llamado a la librería debe de ubicarse entes que el llamado al archivo js del proyecto, esto debido a que el navegador debe aceder a la libreria para poder emplear las funciones de esta y utilizarlas en el docuemto JS del proyecto, si se accede a la librearia despues de ejecutar el documeto JS del proyecto, es decir si se llama primero al documento que a la librearia se generarian errores a tratar de usar las funciones.</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/axios-2.JPG" class="img" alt="">
+                        <p>Nota: Las recomendaciones de google para los llamados de JS indican que, lo absolutamete indispensable como los llamados a "google Analytics" se ubican el el "head" del documeto, por otro lado los llamados comunes se ubiquen al final del documeto HTML y solo si se trata de un codigo inferior a 6 lineas se puede escribir en el head usando la etiqueta "script". </p>
+                    </section>
+                    <h2>Uso</h2>
+                    <section>
+                        <p>El uso de "axios" es muy similar al de "fetch", de hecho la principal diferencia entre ambos radica en que "axios" no retorna los datos encapsulados, por lo tanto no es necesario el realizar algun tipo de comberción en estos.</p>
+                        <h4>Ejemplo de Fetch</h4>
+                        <img src="./img/axios-3.JPG" class="img" alt="">
+                        <h4>Ejemplo de Axios</h4>
+                        <img src="./img/axios-4.JPG" class="img" alt="">
+                        <p>En este ejmplo se puede observar el como el uso de "axios" simplifica aún más el codigo de la petición GET, desto debido a que como los datos no vienen encapsulados no es necesario realizar una comberción, por lo tanto se reduce el codigo a solo dos lineas.  </p>
+                        <p>Por su parte "axios" al igual que "fetch" permite el realizar una petición GET por defecto, es decir sino se espesifica el metodo se usara el metodo get, una de las ventajas de "axios" radica en que por si mismo este configura la petición, inclutendo los header de esta, por lo que no es necesario definir nada de eso, para definir el metodo de la petición es suficicente con utilizar la función acorde: </p>
+                        <h4>Get</h4>
+                        <img src="./img/axios-5.JPG" class="img" alt="">
+                        <h4>POST</h4>
+                        <img src="./img/axios-6.JPG" class="img" alt="">
+                        <p>Por su parte para el envio de los datos por las peticiones POST simplemete hay que añadir los datos a enviar como un segundo parametro en el metodos .post, mientras que alutilizar el metodo GET al añadir los datos como segundo parametro estos no seran tomados como datos, si no como configuraciones de la petición, por lo que estos datos no se enviaran. </p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/axios-7.JPG" class="img" alt="">
+                        <h4>Resultado</h4>
+                        <img src="./img/axios-8.JPG" class="img" alt="">
+                        <p>Nota: Con "axios" no es necesario serializar los datos, esto ya que este se enceutra perparado para trabajar con objetos JSON.</p>
+                        <p>Existe una segunda forma de trabajar con el metodo POST, la cual es no utilizar el metodo ".post" ya establecido por "axios", si no en su lugar establecer el metodo y sus datos como configuraciones de la petición:</p>
+                        <img src="./img/axios-9.JPG" class="img" alt="">
+                        <p>Ambas formas de trabajar las peticiones POST resultan en ek mismo resultado, sin embargo el metodo ".post" posee la ventaja de brindar un codigo más reducido. </p>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>
+
