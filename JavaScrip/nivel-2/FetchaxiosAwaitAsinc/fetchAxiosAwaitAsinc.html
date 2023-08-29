@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Fetch Axios con Await y Asinc</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../../../Index.html" class="logo"><img src="../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Fetch Axios con Await y Asinc</h1>
+                    <section>
+                        <p>Como ya se a establecido en apartados anteriores "fetch" y "axios" son los dos mejores metodos para trabajar con las peticiones actualmente, sin embargo por optimizados que se encuetran estos elementos es necesario añadir una capa asincrona extra para que estas puedan realizar todas las funciones sin generar ningun error o conflicto.    </p>
+                        <p>Esta capa asincrona se realiza con "await" y "async", esto debido a que permite definir las funciones como asincronas así como tambien indicar el flujo de ejecución de los bloques de codigo, es decir que elementos deben esperar por el resultado de la petición.</p>
+                        <p>Para este apartado se parte del siguiete ejemplo de codigo, en el cual se define una petición "fetch" dentro de una función, sin embargo pese a que la función esta bien estructurada ciertas funcionalidades como "console.log" no se pueden ejecutar debido a que al realizarse el llamado de la función, la cual no es una función asincrona esta busca ejecutar los comandos inmediantamente sin esperar el resultado de la petición, por lo cual al imprimir el resultado en consola los datos siempre resultaran "undefined". </p>
+                        <img src="./img/ejemploBase-1.JPG" class="img" alt="">
+                        <p>Nota: Este ejemplo tiene incorporado un ".catch" El cual pertenece a las funcioes asincronas para manejar los errores. </p>
+                        <p>En estos casos se incorpora "await" y "async", para emplear la capa asincrona sobre la petición y de ese modo los bloques de codigo que requeran de los datos de esta esperen a la obtención de estos, de ese modo al llamar a la función esta esperara adecuadamete el resultado de la función antes de ejecutarse, por lo que metodos como "console.log" se podran ejecutar sin problema.</p>
+                        <p>Para incorporar "async" y "await" en una función con la función "fetch", como en el siguite ejemplo:</p>
+                        <img src="./img/ejemplo-1.JPG" class="img" alt="">
+                        <p> Es necesario tener presentes varios aspectos de "await", de "async" y de "fetch". </p>
+                        <ol>
+                            <li>
+                                <p>Se define la función como asincrona, para lo cual se añade la palabra clave "async" delante de esta</p>
+                            </li>
+                            <li>
+                                <p>Se guardan los datos en una variable utilizando el metodo "await" para acceder a los datos resultantes de la promesa, recordar que "await" permite obtener directamente los datos sin recurrir al uso de ".then( ) (tener en cuenta que con ".then" los datos estarian encapsulados, pero esto no pasa con "await")"</p>
+                            </li>
+                            <li>
+                                <p>Debido a que "fetch" retorna una promesa encapsulada se usa "await" para acceder a esta, los datos almacenados en la variable "petición" son la promesa encapsulada. </p>
+                            </li>
+                            <li>
+                                <p>Para acceder a los datos encapsulados dentro de la promesa se utiliza el metodo ".json()" para combertirla a formato JSON y almacenarlos en la variable "resultado"</p>
+                            </li>
+                        </ol>
+                        <p>De ese modo se puede acceder a los datos retornados desde la petición "fetch" usando "await" y "async" para realizar la función asincrona.</p>
+                        <h4>Resultado</h4>
+                        <img src="./img/ejemplo-2.JPG" class="img" alt="">
+                    </section>
+                    <section>
+                        <p>A continuación se muestran dos ejemplos con el mismo resultado, el primero se trata de dos funciones sincronas que utilizan "await" "async" para trabajar con una petición de "fetch", obtener el resultado de esta y luego imprimir en pantalla los datos segun el boton que se presione.</p>
+                        <h4>Ejemplo con Fetch</h4>
+                        <img src="./img/ejemplo-3.JPG" class="img" alt="">
+                        <p>Este segundo ejemplo se trata del mismo codigo, con la misma estructura pero trabajando con ua petición de "axios":</p>
+                        <h4>Ejemplo con Axios</h4>
+                        <img src="./img/ejemplo-4.JPG" class="img" alt="">
+                        <p>Nota: Recordar que axios simplifica aún más el codigo de "fetch", por lo que la variable "peticion" se elimina, ya que tanto la petición como la obtención de los datos se realiza en la linea de la variable "resultado", del mismo modo, se ajusta la seleccion de los datos al usar "InenrHTML" ya que "axios" retorna la petición completa, por lo tanto la ruta hasta los datos deseados cambia (resultado.data.edad / resultado.data.nombre). </p>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>
+
