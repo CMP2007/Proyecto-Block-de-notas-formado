@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Prototipos</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../../../Index.html" class="logo"><img src="../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Prototipos</h1>
+                    <section>
+                        <p>JavaScrip es un lenguaje con paradigma orientado a objetos, lo que implica que todo elemento generado es un objeto, desde los datos "string", "number", variables, todo los elementos en JavaScrip son objetos realmete, a su ves se trata de un lenguaje basado en prototipos, esto quiere decir que a la hora de crear un nuevo objeto este no se crea completamete desde cero, en su lugar JavaScrip utiliza como  guía prototipos que se enceutran estructurados y definidos por defecto en el lenguaje. </p>
+                        <p>Por lo tanto que JavaScrip sea un lenguaje basado en objetos los cuales a su vez se encuentran  basados en prototipos.</p>
+                        <p>Por ejemplo al imprimir un objeto en consola como en el siguite codigo, se pueden observar las propiedades que este posea, sin embargo tabien se puede observar la propiedad "__proto__ : object", el cual se trata del prototipo padre de todos los elemetos en JavaScrip, por lo tanto todos los elemtos sin imprtar su tipo poseen la propiedad "__proto__ : object" </p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/prototipos-1.JPG" class="img" alt="">
+                        <h4>Resultado</h4>
+                        <img src="./img/prototipos-2.JPG" class="img" alt="">
+                        <p>Por ejemplo, ya que este prototipo es poseido por todos los elementos JS, estos tambien pueden acceder a sus propiedades, al aplicar la propiedad "__proto__" en un elementos, este mostrara el tipo de prototipo del que se trata y dara acceso a todas las propiedades de este. </p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/prototipos-3.JPG" class="img" alt="">
+                        <h4>Resultado</h4>
+                        <img src="./img/prototipos-5.JPG" class="img" alt="">
+                        <p>Nota: Asi como tambien a una asegunda propiedad __proto__ en la que se encuetra el prototipo padre como tal:</p>
+                        <img src="./img/prototipos-4.JPG" class="img" alt="">
+                        <p>Se podria decir que todos los elementos heredan dos prototipos, el primero corresponde a el tipo de dato, mientras que el segudo corresponde al prototipo  "object".   </p>
+                        <p> Es aqui donde entre el concepto de cadena de prototipos "prototype chain", en el cual realmete los elementos unicamete heredan un prototipo que corresponde a su tipo, sin embargo este prototipo a su vez hereda un segundo prororipo en el que este esta basado, y asi sucesivamente hasta llegar al "prototipo object" el cual es el padre de todos los otros prototipos existentes.</p>
+                        <p>Nota: los tipo de datos "undefined" y "null" no poseen el prototipo object, ya que se tratan de valores nulos y si definir.</p>
+                        <h3>Crear un prototipo</h3>
+                        <p>Como ya se a indicado la gran mayoria de los elementos poseen prototipos para su creación, salvo algunos datos vacios que no los poseen, sin embargo tambien existen elemtos que pueden crear un prototipo completamete neuvo, estas son las funciones, la cuales no poseen un prototipo definido, si no que en su lugar lo generan dierectamete desde el prototipo "object". </p>
+                        <p>Debido a que se trata de un nuevo tipo de prototipo que se esta generando la forma de acceder a esta es diferente, no se utiliza la propiedad "__proto__", en su lugar se utiliza la propiedad ".prototype", de la siguite forma:</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/prototipos-6.JPG" class="img" alt="">
+                        <h4>Resultado</h4>
+                        <img src="./img/prototipos-7.JPG" class="img" alt="">
+                        <p>De este modo si se desea acceder al prototipo "object" de las funciones se realiza de la siguite forma: "</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/prototipos-8.JPG" class="img" alt="">
+                        <h4>Resultado</h4>
+                        <img src="./img/prototipos-9.JPG" class="img" alt="">
+                    </section>
+                    <h2>Caracteriticas</h2>
+                    <section>
+                        <ul>
+                            <li>
+                                <p>Un prototipo creado atravez de funciones se denomina como mutable</p>
+                            </li>
+                            <li>
+                                <p>Los prototipos en si tambien son objetos, pueden poseer propiedades y funciones</p>
+                            </li>
+                            <li>
+                                <p>Tiene una insidencia fisica real en la memoria, es decir esta incorporado a nivel de hardware en la memoria</p>
+                            </li>
+                            <li>
+                                <p>Puede ser llamado y modificado</p>
+                            </li>
+                            <li>
+                                <p>Puede ser visto modelo ejemplar decendiente del modelo "objeto"</p>
+                            </li>
+                            <li>
+                                <p>Un objeto hereda propiedades (valores y metodos) de su prototipo</p>
+                            </li>
+                        </ul>
+                    </section>
+                    <h2>Sobrescribir __Proto__ vs Sobrescribir método </h2>
+                    <section>
+                        <p>Los objetos tambien tienen prototipo, de hecho este prototipo se puede modificar en función de los metodos o funciones que se definana al objeto, por lo tanto tambien hace posible el controlar como se modifica el prototipo.</p>
+                        <p>De hecho existe una diferencia entre modificar alguno de los metodos definidos para el objeto que ha sido creado y Sobrescribir los prototipos sobre lo que esta basado el objeto</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/prototipos-10.JPG" class="img" alt="">
+                        <p>Por ejemplo en este caso se genera una clase para crear un objeto llamado "Objeto", el cual tiene un metodo llamado "hablar", luego de haber sido definida la clase se genera el objeto y luego se modifica el valor de la clase "hablar", realmente en este caso no se esta modificado el valor del metodo hablar, si no que en su lugar se esta añadiendo una segundo metodo al objeto igualmete llamado "hablar". </p>
+                        <p>Esto acurre ya que los metodods definidos dentro de la clase que genera el objeto se guardan dentro del prototipo, mientras que la segunda clase "hablar", la cual esta siendo generada fuera de este se guarda como un metodo del nuevo objeto recien creado.</p>
+                        <p>Por otro lado si lo que se desea es modificar el metodo original llamado "hablar", el cual se encuetra guardado dentro del prototipo lo que se debe hacer es llamar al metodo directamete desde el prototipo y de ese modo aplicarle los cambios en cuestión como en el siguiente ejemplo.</p>
+                        <img src="./img/prototipos-11.JPG" class="img" alt="">
+                        <p>De este modo los cambios en ves de generar un nuevo metodo lo que hacen es sobre escribir el genero directamete desde el prototipo.</p>
+                        <h3>Heredar un metodo del prototipo</h3>
+                        <p>Es posible utilizar los prototipos para que un elemento herede un metodo que originalemte no deberia podes usar, esto se logra acediendo al prototipo del metodo que se desea que reciba la herencia y se iguala al prototipo del metodo que se desea aplicar, tal y como se realiza en el siguite ejemplo </p>
+                        <img src="./img/prototipos-12.JPG" class="img" alt="">
+                        <p>Ejemplo en el que se genera el objeto "Objeto", pero se desea que sus metodos puedan ser utilizados por el array "arr", en este caso para lograr esto se accede tanto al prototipo del objeto como del array, se igualan ambos protptipos y de ese modo el array podra hacer uso del metodo del objeto, esto ya que el prototipo del array esta heredando el prototipo del objeto  </p>
+                        <p>De ese modo se ignora el segundo metodo "hablar" que se ha generado fuera del prototipo, y en su lugar el array hereda el metodo "hablar " que se define dentro de la clase, por lo tanto esta guardado dentro del prototipo, razon por la cual el resultado del codigo anterior es:  </p>
+                        <img src="./img/prototipos-13.JPG" class="img" alt="">
+                        <p>Nota: Si se da el caso de necesitar aceder al prototipo de un objeto se realizara desde el metodo "__proto__"</p>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>
