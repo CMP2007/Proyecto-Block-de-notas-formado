@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Funciones Flecha en Profundidad</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../../../Index.html" class="logo"><img src="../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                   <h1>Funciones Flecha en Profundidad</h1> 
+                   <section>
+                    <p>Se trata de una variación de las funciones normales, con la ventaja de tener una sintaxis mucho más reducida, sin embargo el motivo de su existencia radica en la inplementeación del "This" en las funciones, debido a que el uso de este en las funciones combencionales generaba multiples errores se planifico el desarrollo de un nuevo tipo de función con nuevas funcionalidades, creandose así las funciones flecha. </p>
+                    <p>Con la inplemetación de las funciones flecha se consiguio generar una alternativa a las funciones normales, sin embargo estas aún hoy continuan posellendo una gran importancia y un rol muy necesario en el lenguaje, ya que existen usos que solo estas pueden realizar, igual que como pasa con las funcines flecha, por lo tanto estas no se tratan de un remplazo a las funciones tradicionales, si no en su lugar una alternativa, ya que cada una posee usos exclusivos así como ventajas y desventajas.  </p>
+                   </section>
+                   <h2>Caracteriticas</h2>
+                   <section>
+                    <ul>
+                        <li>
+                            <h3>Usar las unciones Flecha como Expresiones</h3>
+                            <p>Una caracteritica particular de las funciones flecha es que estas son capases de usarse como expresiones para retornar un dato, como se ha dicho anteriormente una de las ventajas de las funciones flecha es su sintaxis reducida, la cual puede simplificarse aún más para usarse como expresión, esto se logra si función esta compuesta por una unica expresión la cual se defina en la misma linea de codigo que la declaración de la función, en cuyo caso se permite eliminar el cuerpo de la función (delimitado por "{ }") resultando en que la función trabaje como una expresión y retorne un valor por si misma. </p>
+                            <h4>Ejemplo Función Flecha</h4>
+                            <img src="./img/funcionesFlecha-2.JPG" class="img" alt="">
+                            <h4>Ejemplo expresión con la Función Flecha</h4>
+                            <img src="./img/funcionesFlecha-1.JPG" class="img" alt="">
+                            <p>En el primer ejemplo al mostrar en consola la variable "resultado" esta muestra un "undefined", ya que la función flecha común no retorna un valor que pueda ser almacenado en la variable, unicamente se ejecuta el codigo expresado en el cuerpo de la función, por otro lado en el segundo ejemplo la función se trabaja como una expresión, por lo que esta retorna el dato en cuestión, por lo cual esta dato se almacena en la variable "resultado" y se imprime en consola. </p>
+                            <p>Por ejemplo a continuación se muestra la comparación del como se realizaria el mismo retorno con una función clasica y con una función flecha, como se puede apreciar la función flecha permite simplificar bastante el codigo:</p>
+                            <h4>Ejemplo</h4>
+                            <img src="./img/funcionesFlecha-3.JPG" class="img" alt="">
+                        </li>
+                        <li>
+                            <h3>Los Parentesis de los Parametros no son Obligatorios</h3>
+                            <p>En caso de que la función reciba parametros para operar y estos solo estan conformado po un solo parametro se puede eliminar los parantesis para simplificar la sintaxis, en caso de que la función reciba dos o más parametros los parentesis seran necesarios</p>
+                            <h4>Ejemplo</h4>
+                            <img src="./img/funcionesFlecha-4.JPG" class="img" alt="">
+                            <p>Por otro lado si la función no recibe ningun parametro los parentesis tambien serán necesarios, ya que al definirse vacios indican que no se requiere ningun parametro:</p>
+                            <h4>Ejemplo</h4>
+                            <img src="./img/funcionesFlecha-5.JPG" class="img" alt="">
+                        </li>
+                        <li>
+                            <h3>No Son Adecuadas Para Ser Usadas Como Metodos, El "This" no Existen En Ellas Y No Pueden Ser Usadas Como Constructores</h3>
+                            <p>Para definir los metodos de un objeto se utilizan funciones, este es un caso de uso para el que no se recomiendan las funciones flecha, debido a que el metodo "This" se comporta de forma diferente en estas. </p>
+                            <p>En las funciones normales el "this" hace referencia al elemento que esta llamando al dato dentro de esta, mientras que en las funciones flecha se dice que el "this" no existe ya que este hace referencia al objeto "window", o en el caso de estar en una nivel varias veces inferior al bloque principal del documento "this" hara referencia al objeto un peldaño por arriva, por lo tanto en ambos casos "this" ignora los elementos definidos dentro del objeto que lo ejecuta, lo que resulta a que el "This" tome como valor elementos externos al objeto.</p>
+                            <h4>Ejemplos</h4>
+                            <img src="./img/funcionesFlecha-6.JPG" class="img" alt="">
+                            <p>En esta imagen se puede apreciar dos funciones, la primera "Objeto" la cual usa como metodo un función tradicional, por lo tanto el "this" hace referencia a los elementos  definidos dentro del objeto, por lo tanto su resultado es "Hola Lucas".</p>
+                            <p>Por otro lado el segundo objeto "objeto2" usa un metodo definido con una función flecha, por lo que este al usar "this" esta hace referencia a un objeto externo (Window), por lo que este toma como valor este dato externo, dando como resultado "Hola Dalto". </p>
+                            <p>Debido a este comportamento anormal del "this" en las fuciones flecha es que estas no pueden ser utilizadas como constructores de un objeto, en el caso de tener activo el modo estricto se dispara un error en caso de intentar usarla como tal, si por lo contrario el modo estricto no esta activo no se dispara el error en consola, pero de igual forma la función flecha no funcionara como constructor.  </p>
+                        </li>
+                        <li>
+                            <h3>This Contextual</h3>
+                            <p>El "this" contextual hace referencia a al entorno en el que se ejecuta el "this", es to ya que como se menciono antes su comportamiento varia segun el como o donde se emplee.</p>
+                            <p>Siempre que se utilise fuera de algun objeto o alguna función, es decir se utilise en el cuerpo principal del documento el metodo "this" va a hacer referencia al objeto "Window"(al menos que el modo estricto este activo, entonces no lo referencia), no obstante al usarse dentro de una función tradicional o un objeto este "this" tendra un alcanse local, en el que hará referencia a los elemtos o propiedades de estos.</p>
+                            <p>Debido a esto es que no se recomienda el uso de "this" en las funciones flecha ya que en estas ignora el nivel de alcanse local y siempre mantendra el alcanse un peldaño por arriba, lo tanto siempre hará referencia al objeto que llama a la función que ejecuta a la función en la que se usa el "this". </p>
+                        </li>
+                        <li>
+                            <h3>Recursividad</h3>
+                            <p>Se trata de la practica de desarrollar una función que se llama a si misma, es una practica muy util en algunos casos, sin embargo es un recurso que es necesario saber emplear, ya que de estructurarse mal la función recursiva se puede entrar en un bucle infinito que sature el dispositivo.</p>
+                            <p>El punto de la recursividad es reutilizar el codigo ya creado para cubrir siertos casos o repetir acciones de forma controlada</p>
+                            <h4>Ejemplo</h4>
+                            <img src="./img/funcionesFlecha-8.JPG" class="img" alt="">
+                            <p>En este ejemplo se puede apreciar una función recursiva debido a que se llama a si misma para el manejo de los errores. </p>
+                        </li>
+                    </ul>
+                   </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>
