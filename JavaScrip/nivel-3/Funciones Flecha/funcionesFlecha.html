@@ -94,6 +94,49 @@
                             <img src="./img/funcionesFlecha-8.JPG" class="img" alt="">
                             <p>En este ejemplo se puede apreciar una función recursiva debido a que se llama a si misma para el manejo de los errores. </p>
                         </li>
+                        <li>
+                            <h3>Clausulas (o Cierres)</h3>
+                            <p>Se tratan de Funciones que retoran otras funciones, de ese modo la función hijo puede acceder a el ambito de la función padre, un ejemplo de esto es:</p>
+                            <h4>Ejemplo</h4>
+                            <img src="./img/funcionesFlecha-9.JPG" class="img" alt="">
+                            <h4>resultado</h4>
+                            <img src="./img/funcionesFlecha-10.JPG" class="img" alt="">
+                            <p>Nota: En este ejemplo la función hija solo funciona si el llamado se guarda en una variable, si solo se llama a la función y se define el dato sin guardar esto dentro de una variable esta función no funciona. </p>
+                            <p>Un ejemplo practico del como se integran las clausulas en el codigo es el siguiente, se muestra un codigo que selecciona el "div" que contiene un texto, añade la propedad CSS "fontSize" a este, luego selecciona tres botones, inicializa escuchadores de eventos para estos y segun cual sea el boton en el que se haga click modifica el valor de la propiedad "fontSize" que se esta añadiendo al "div":  </p>
+                            <h4>Sin Utilizar Clausulas</h4>
+                            <img src="./img/funcionesFlecha-11.JPG" class="img" alt="">
+                            <h4>Empleando Clausulas</h4>
+                            <img src="./img/funcionesFlecha-12.JPG" class="img" alt="">
+                        </li>
+                        <li>
+                            <h3>Parametros por defecto</h3>
+                            <p>Definir parametros por defecto consiste en asignar un valor alternativo para los parametros de una función, los cuales se aplicaran en caso de que por cualquier motivo no se obtengan todos los parametros completos.   </p>
+                            <p>Esto es necesario ya que javaScript es un lenguaje con ciertas flexibilidad en cuanto a los parametros de las funciones se refiere, por ejmeplo si se suministra más datos de los necesario los que sobren simplemente seran ignorados, a su vez si se suministran menos la función igualmte se ejecutara aún si no puede realizar adecuadamete los procesos en esta. </p>
+                            <p>A continuación se muestran dos formas en las que se definian anteriormente valores por defecto a los parametros de una función, así como una tercera forma la cual es la recomendada actualmete:</p>
+                            <h4>Primer metodo:</h4>
+                            <img src="./img/funcionesFlecha-13.JPG" class="img" alt="">
+                            <p>Nota: Este metodo no se recomienda en absoluto</p>
+                            <h4>Segundo metodo:</h4>
+                            <img src="./img/funcionesFlecha-14.JPG" class="img" alt="">
+                            <h4>Metodo Actual:</h4>
+                            <img src="./img/funcionesFlecha-15.JPG" class="img" alt="">
+                            <p>En todos estos ejmeplos el ejecto es el mismo, en caso de que solo se suministre un arametro el otro se gualara a cero para realizar la operación.</p>
+                        </li>
+                        <li>
+                            <h3>Parametro Rest</h3>
+                            <p>El parametro "rest", el cual consiste en un array que alberga todos los parametros que se pasen a la función, permitiendo que una función reciba una cantidad indefinida de parametros.  </p>
+                            <p>La forma de declarar el parametro "rest" es con tres punto sucesivos (...) seguidos del nombre que se le asignara.</p>
+                            <h4>Ejemplo</h4>
+                            <img src="./img/funcionesFlecha-16.JPG" class="img" alt="">
+                            <h4>resultado</h4>
+                            <img src="./img/funcionesFlecha-17.JPG" class="img" alt="">
+                            <p>Una caracteritica del parametro rest es que se pueden definir otros prametros jutno con este, pero estos deben de definirse antes de "rest", por lo tanto para funcionar adecuadamete el parametro "rest" debe definirse al ultimo en la función, por otro lado para acceder a los datos almacenados en este se utiliza el numerador de la posición del dato como en cualquier otro array.</p>
+                            <h4>Ejemplo</h4>
+                            <img src="./img/funcionesFlecha-18.JPG" class="img" alt="">
+                            <h4>resultado</h4>
+                            <img src="./img/funcionesFlecha-19.JPG" class="img" alt="">
+                            <p> En este ejemplo se utiliza el parametro "rest" para definir x cantidad de datos numericos, luego se usa un ciclo "for" para recorrer el "rest" y operar dos de sus datos, luego mostrar los datos seleccionados en consola.</p>
+                        </li>
                     </ul>
                    </section>
                 </article>

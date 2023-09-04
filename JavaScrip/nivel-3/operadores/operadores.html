@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Ternario y Spread</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../../../Index.html" class="logo"><img src="../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Operador Condicional (Ternario) y Operador Spread</h1>
+                    <h2>Operador Condicional (Ternario)</h2>
+                    <section>
+                        <p>Se trata de un tipo especial de operador, su función consiste en ser una alternativa a al condicional "if", literalmente cumple la misma función que este con la diferencia requerir con una menor cantidad recursos del navegador, por lo tanto en la mayoria de los casos se puede considerar más optimo el operador "ternario" que un condicional "if".</p>
+                        <p>La estructura de este operador se asemeja a la del "if", sin embargo a su ves posee grandes diferencias, la cuales radican en que:</p>
+                        <ul>
+                            <li>
+                                <p>El operador ternario "?" se ubica despues de la condición impuesta (esta de igual forma se encierra en parentesis ( ) ) y no antes como en el caso del "if"</p>
+                            </li>
+                            <li>
+                                <p>Los bloques de codigo del "if" y el "else" son separados por bloques limitados por parentesis, indicados por el operador ternario "?" para el bloque a ejecutar en caso de que se cumpla la condición y " : " indicando el bloque que se ejecutara en caso de que la condición no se cumpla  </p>
+                                <p>La estructura se puede simplificar en caso de que cada bloque posea una unica expresión, esto se hace definiendo cada expresión directamente despues de los operadores sin el uso de los parentesis para delimitar el bloque (de igual modo el ":" se define en una linea diferente del "?")</p>
+                                <h4>Ejemplo de If</h4>
+                                <img src="./img/operadorTernario-1.JPG" class="img" alt="">
+                                <h4>Ejemplo de operador ternario con sintaxis reducida</h4>
+                                <img src="./img/operadorTernario-2.JPG" class="img" alt="">
+                                <h4>Ejemplo de If Extenso</h4>
+                                <img src="./img/operadorTernario-3.JPG" class="img" alt="">
+                                <h4>Ejemplo de operador ternario con bloques definidos</h4>
+                                <img src="./img/operadorTernario-4.JPG" class="img" alt="">
+                            </li>
+                        </ul>
+                    </section>
+                    <h2>Operador Spread</h2>
+                    <section>
+                        <p>Se trata de un operador particular para los arrays, su sintaxis es muy simple consiste en tres punyos consecutivos antes del nombre array en cuestión, este operador permite acceder a todos los datos almacenados en el array a la ves, los cual se puede emplear de varias maneras: </p>
+                        <ul>
+                            <li>
+                                <p>Permite destructurar el array sin necesidad de trabajar con la destructuración:</p>
+                                <p>A continuación se muestra un ejemplo en el que se usa el operador "spread" para para obtener los datos de un array </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/OperadorSpread-1.JPG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/OperadorSpread-2.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>Permite añadir los datos de un array dentro de otro sin necedad de utilizar los indices de cada datos, es decir con usar este operador se puede acceder a todos los datos a la vez y ingresarlos en otro array de la siguite forma</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/OperadorSpread-3.JPG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/OperadorSpread-4.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>Permite concatenar arrays, es decir permite obtener los datos de uno o más arrays para guardarlo en una nueva variable:</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/OperadorSpread-5.JPG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/OperadorSpread-6.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>Permite pasar los datos de un array como argumentos a una función sin necesidad de de recurrir al indice de los datos</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/OperadorSpread-7.JPG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/OperadorSpread-8.JPG" class="img" alt="">
+                            </li>
+                        </ul>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>
