@@ -213,6 +213,139 @@
                         <h4>Ejemplo</h4>
                         <img src="./img/dragDrop-13.JPG" class="img" alt="">
                     </section>
+                    <h2>Geolocalization</h2>
+                    <section>
+                        <p>Se trata de la "api" especializada en trabajar con la ubicacióndel dispositivo, para esto se accede al objeto "navigator" el cual es un objeto qie hace referencia al navegador y se desenglosara más adelenate, por ahora lo relevante consiste en la aplicación de esta "api".</p>
+                        <p>Para hacer uso de esta en el objeto "navigator" se utiliza el objeto ".geolocation", este posee varios metodos creados espesificamente para gestiona los datos de la ubicación del dispositivo, estos metodos son:</p>
+                        <ul>
+                            <li>
+                                <p>GetCurrentPosition(): Este metodo requiere que se le ingrese al menos un parametro para funcionar, pero en si este puede recibir hasta tres de estos.</p>
+                                <p>Una caracteristica curiosa de los parametros de este objeto es que estos requieren estar igualados a funciones para funcionar, esto debido a que desde estas funciones es donde se indica que acciones tomar al objeto, para esto los parametros se igualan a funciones flecha</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/ubication-1.JPG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/ubication-2.JPG" class="img" alt="">
+                                <ul>
+                                    <li>
+                                        <p>El primero de estos parametros hace referencia a la ubicación del dispositivo, debido a que este parametro de por si no retorna ningun valor se iguala este parametro a una función, y si a su ves se le envia el parametro "pos" a esta función interna se puede obtener la ubicación actual del dispositivo:  </p>
+                                        <img src="./img/ubication-3.JPG" class="img" alt="">
+                                        <h4>Resultado</h4>
+                                        <img src="./img/ubication-4.JPG" class="img" alt="">
+                                        <p>Por lo tanto es densde la función interna del parametro del objeto que se puede acceder a la ubicación, de hecho desde allì tambien se puede obtener la latitud y la longitud:</p>
+                                        <h4>Latitud</h4>
+                                        <img src="./img/ubication-5.JPG" class="img" alt="">
+                                        <h4>Longitud</h4>
+                                        <img src="./img/ubication-6.JPG" class="img" alt="">
+                                    </li>
+                                    <li>
+                                        <p>EL segundo parametro que recibe "GetCurrentPosition()" se refiere al error, esto debido a que existe la posibilidad de que ocurra algun error al tratar de obtener la ubicación del dispositivo, por lo tanto este parametro de igual forma se debe igualar a una función flecha la cual se encargara del manejo de los errores </p>
+                                        <h4>Ejemplo</h4>
+                                        <img src="./img/ubication-7.JPG" class="img" alt="">
+                                    </li>
+                                    <li>
+                                        <p>EL tercer y ultimo parametro se trata de "options" el cual se encarga de trabajar con las opciones, en este caso este parametro consistenen un objeto que almacena todas las opciones que se deseen incluir en la ubicación, entre estas opciones esta:</p>
+                                        <ul>
+                                            <li>
+                                                <p>MaximunAge: Espesifica el numero de registro de la ubicación a obtener, en esta opción el valor "0" inica la ultima ubicación del disposotivo, es decir obtener la ubicación actual</p>
+                                            </li>
+                                            <li>
+                                                <p>Timeout: Esta opción define cuantos seguntos deben demorar en devolverse los datos, el valor de esta opción debe expresarse en milisegundos </p>
+                                            </li>
+                                            <li>
+                                                <p>EnableHightAccuracy: esta opción indica el si se deben utilizar todos los recursos de ubicación disponibles para obtener la mayor presición sobre la ubicación, esto se realiza aplicando el valor "true" en esta propiedad</p>
+                                            </li>
+                                        </ul>
+                                        <h4>Ejemplo</h4>
+                                        <img src="./img/ubication-10.JPG" class="img" alt="">
+                                        <img src="./img/ubication-9.JPG" class="img" alt="">
+                                        <h4>Resultado</h4>
+                                        <img src="./img/ubication-8.JPG" class="img" alt="">
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>WatchPosition(): Este metodo se encarga de hacer seguimiento de todos los cambios de ubicación, por lo tanto se encarga de seguir el dispositivo mientras este se enceutra en movimiento, tambien se podria decir que este metodo permite obtener la ubicación en tiempo real.</p>
+                            </li>
+                            <li>
+                                <p>ClearWatch(): Este metodo permite borrar el historial de "watchPosition()"</p>
+                            </li>
+                        </ul>
+                    </section>
+                    <h2>historial</h2>
+                    <section>
+                        <p>Esta "api" se basa en la utilización del objeto "history" el cual permite interactuar con los datos almacenados en este, para lo cual este cuanta con multiples metodos, los cuales son:</p>
+                        <ul>
+                            <li>
+                                <p>.Length: Este metodo retorna el tamaño del historia, en otras palabras, retorna el numero de registros que han sido almacenados en este, por ende esta propiedad revela el numero de paguinas almacenadas reciente a las que se puede acceder.</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/history-1.JPG" class="img" alt="">
+                                <p>Nota: el valor de este metodo se puede apreciar imprimiendo el objeto desde consola no esnecesario aplicarlo para esto.</p>
+                            </li>
+                            <li>
+                                <p>.Back( ): Este metodo retorna al usiario a la url anterior, en otras palabras su efecto es el mismo al de la flecha de "Regresar" del navegador</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/history-2.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>.Forward( ): Este metodo envia al usuario a la siguiete dirección url del historial, esto al menos que este se encuetre en la ultima dirección registrada, en otras palabras su efecto es el mismo que el de la flecha de "Adelante" del navegador </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/history-3.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>.Go ( ): Este metodo permite definir algún registro del historial para el cual se desplazara al usuario, en función de cual sea el registro al que se desee redirigir al usuario este metodo puede recibir barios valores:</p>
+                                <ul>
+                                    <li>
+                                        <p>1: Este valor redirecciona al usuario hasta la dirección más reciente del historial, en el caso de que esta retorne un valor "undefined" se debe a que la dirección actual ya es la más reciente.</p>
+                                        <h4>Ejemplo</h4>
+                                        <img src="./img/history-4.JPG" class="img" alt=""> </li>
+                                    <li>
+                                        <p>-1: Este valor redirige al usuario un url hacia atras en el historial, en otras palabras este valor hace la misma función que la prpiedad ".back( )"</p>
+                                        h4>Ejemplo</h4>
+                                    <img src="./img/history-5.JPG" class="img" alt="">
+                                    </li>
+                                    <li>
+                                        <p>0: Este valor al igual que dejar los parentesis bacios realizan el efecto de recargar la paguina actual </p>
+                                        <h4>Ejemplo</h4>
+                                        <img src="./img/history-6.JPG" class="img" alt="">
+                                    </li>
+                                </ul>
+                            </li>  
+                            <li>
+                                <p>.pushState( ): Este metodo permite modificar la url de la paguina actual,</p>
+                                <ul>
+                                    <li>
+                                        <p>Data: Se trata de los datos a enviar, estos pueden ser cualquier cosa en si, incluyendo un objeto o simplemente un nombre</p>
+                                    </li>
+                                    <li>
+                                        <p>Titulo: Se trata del nombre de la pestaña de la nueva dirección, por lo general no funciona, a su vez tampoco es un dato que se use frecuentemente, pero lo más recomendable es ingresar el valor como "vacio" ("")</p>
+                                    </li>
+                                    <li>
+                                        <p>Url: Se trata del tercer y ultimo dato, en el cual se añade la nueva dirección con la caracteristica de que el primer simbolo de esta siempre debe ser un signo de interrogación (?)</p>
+                                        <h4>Ejemplo</h4>
+                                        <img src="./img/history-7.JPG" class="img" alt="">
+                                        <h4>Resultado</h4>
+                                        <img src="./img/history-8.JPG" class="img" alt="">
+                                    </li>
+                                </ul>
+                                <p>Este metodo al modificar la url lo que hace realmente es añadir los cambios como una nueva entrada en el historial, por lo tanto es posible usar los metodos "Go( )", "Forward( )" y "Back( )" para redirigirlo a este o de este</p>
+                            </li>
+                            <li>
+                                <p>State: Esta propiedad permite obtener los datos enviados atravez de la url con el metodo "pushState( )"</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/history-9.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>Evento Popstate: se trata de un evento especial que se dispara en el momento en el que el navegador detecta un dato enviado a travez de la url, para esto se utiliza un escuchador de eventos, pero sin ser vinculado con ningun elemento de la paguina, de ese modo por defecto se vinculara con el objeto "window", permientdole acceder a los archivos de la url: </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/history-10.JPG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/history-11.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>ReplaceState( ): se trata de un metodo muy similar a "pushState( )", tanto que incluso recibe los mismos parametros, con las diferencias de que este metodo  no genera una entrada en el historial al modificar el url de la paguina, a su vez los datos enviados por este metodo tampoco seran detectados por la propiedad "state", de ese modo se podria decir que este metodo realiza el mismo efecto de que "pushState( )" pero sin dejar rastros </p>
+                            </li>
+                        </ul>
+                    </section>
                 </article>
                 <footer class="content">
                     <h2>Contacto</h2>
