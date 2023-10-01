@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../../../style.css">
+    
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+        <title>Variables</title>
+    </head>
+    <header>
+        <nav >
+            <ul class="nav"> 
+                <li><a href="../../../../Index.html" class="logo"><img src="../../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+                <li><a href="../../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+                <li><a href="../../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+                <li><a href="../../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+            </ul>
+        </nav>
+    </header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>historial</h1>
+                    <section>
+                        <p>Esta "api" se basa en la utilización del objeto "history" el cual permite interactuar con los datos almacenados en este, para lo cual este cuanta con multiples metodos, los cuales son:</p>
+                        <ul>
+                            <li>
+                                <p>.Length: Este metodo retorna el tamaño del historia, en otras palabras, retorna el numero de registros que han sido almacenados en este, por ende esta propiedad revela el numero de paguinas almacenadas reciente a las que se puede acceder.</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/history-1.JPG" class="img" alt="">
+                                <p>Nota: el valor de este metodo se puede apreciar imprimiendo el objeto desde consola no esnecesario aplicarlo para esto.</p>
+                            </li>
+                            <li>
+                                <p>.Back( ): Este metodo retorna al usiario a la url anterior, en otras palabras su efecto es el mismo al de la flecha de "Regresar" del navegador</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/history-2.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>.Forward( ): Este metodo envia al usuario a la siguiete dirección url del historial, esto al menos que este se encuetre en la ultima dirección registrada, en otras palabras su efecto es el mismo que el de la flecha de "Adelante" del navegador </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/history-3.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>.Go ( ): Este metodo permite definir algún registro del historial para el cual se desplazara al usuario, en función de cual sea el registro al que se desee redirigir al usuario este metodo puede recibir barios valores:</p>
+                                <ul>
+                                    <li>
+                                        <p>1: Este valor redirecciona al usuario hasta la dirección más reciente del historial, en el caso de que esta retorne un valor "undefined" se debe a que la dirección actual ya es la más reciente.</p>
+                                        <h4>Ejemplo</h4>
+                                        <img src="./img/history-4.JPG" class="img" alt=""> </li>
+                                    <li>
+                                        <p>-1: Este valor redirige al usuario un url hacia atras en el historial, en otras palabras este valor hace la misma función que la prpiedad ".back( )"</p>
+                                        h4>Ejemplo</h4>
+                                    <img src="./img/history-5.JPG" class="img" alt="">
+                                    </li>
+                                    <li>
+                                        <p>0: Este valor al igual que dejar los parentesis bacios realizan el efecto de recargar la paguina actual </p>
+                                        <h4>Ejemplo</h4>
+                                        <img src="./img/history-6.JPG" class="img" alt="">
+                                    </li>
+                                </ul>
+                            </li>  
+                            <li>
+                                <p>.pushState( ): Este metodo permite modificar la url de la paguina actual,</p>
+                                <ul>
+                                    <li>
+                                        <p>Data: Se trata de los datos a enviar, estos pueden ser cualquier cosa en si, incluyendo un objeto o simplemente un nombre</p>
+                                    </li>
+                                    <li>
+                                        <p>Titulo: Se trata del nombre de la pestaña de la nueva dirección, por lo general no funciona, a su vez tampoco es un dato que se use frecuentemente, pero lo más recomendable es ingresar el valor como "vacio" ("")</p>
+                                    </li>
+                                    <li>
+                                        <p>Url: Se trata del tercer y ultimo dato, en el cual se añade la nueva dirección con la caracteristica de que el primer simbolo de esta siempre debe ser un signo de interrogación (?)</p>
+                                        <h4>Ejemplo</h4>
+                                        <img src="./img/history-7.JPG" class="img" alt="">
+                                        <h4>Resultado</h4>
+                                        <img src="./img/history-8.JPG" class="img" alt="">
+                                    </li>
+                                </ul>
+                                <p>Este metodo al modificar la url lo que hace realmente es añadir los cambios como una nueva entrada en el historial, por lo tanto es posible usar los metodos "Go( )", "Forward( )" y "Back( )" para redirigirlo a este o de este</p>
+                            </li>
+                            <li>
+                                <p>State: Esta propiedad permite obtener los datos enviados atravez de la url con el metodo "pushState( )"</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/history-9.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>Evento Popstate: se trata de un evento especial que se dispara en el momento en el que el navegador detecta un dato enviado a travez de la url, para esto se utiliza un escuchador de eventos, pero sin ser vinculado con ningun elemento de la paguina, de ese modo por defecto se vinculara con el objeto "window", permientdole acceder a los archivos de la url: </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/history-10.JPG" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/history-11.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>ReplaceState( ): se trata de un metodo muy similar a "pushState( )", tanto que incluso recibe los mismos parametros, con las diferencias de que este metodo  no genera una entrada en el historial al modificar el url de la paguina, a su vez los datos enviados por este metodo tampoco seran detectados por la propiedad "state", de ese modo se podria decir que este metodo realiza el mismo efecto de que "pushState( )" pero sin dejar rastros </p>
+                            </li>
+                        </ul>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>

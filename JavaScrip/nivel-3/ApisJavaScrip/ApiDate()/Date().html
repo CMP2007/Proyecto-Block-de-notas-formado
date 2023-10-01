@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Variables</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../../../../Index.html" class="logo"><img src="../../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Objeto Date</h1 >
+                    <section>
+                        <p>Se trata de una función nativa de JavaScrip la cual cuenta con multiples metodos para trabajar con la fecha y la sona horaria de la paguina.</p>
+                        <p>Su uso más basico se trata de obtener la fecha actual del dispositivo para esto simplemte es necesario utilizar la palabra clave "Date" expresada como una función</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/Date()-1.JPG" class="img" alt="">
+                        <h4>Resultado</h4>
+                        <img src="./img/Date()-2.JPG" class="img" alt="">
+                        <h3>Date() como Constructor</h3>
+                        <p>Una particularidad de la función "Date" es que esta tambien se trata de un constructor, esto ya que hereda tanto sus metodos particulares como los prototipos de objeto, por lo cual en ocaciones se le llama objeto "Date". </p>
+                        <p>Esto se Comprueba al utilizar "Date" para generar un ojeto:</p>
+                        <img src="./img/Date()-3.JPG" class="img" alt="">
+                        <p>Con este codigo se obtiene un resultado en consola que aparenta ser igual al del ejemplo anterior, pero con la diferencia de que este no es solo el resultado de la función, en su lugar se trata de un objeto con todas sus metodos y propiedades</p>
+                        <p>Para manipular o obtener la fecha de una forma en particular se utilizan los diferentes metodos del objeto "Date", los cuales son:</p>
+                        <ul>
+                            <li>
+                                <p>GetDate( ): Este metodo retorna el día del mes actual, por ejemplo si la fecha es "22/10/23" este metodo retorna "22"</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/Date()-4.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>GetDay( ): Este metodo retorna el día de la semana actual, es importante tener en cuenta que este metodo trabaja con arrays por lo tanto el primer día de la semnana el cual es el domingo tiene el indice "0", el lunes el indice "1" y así sucesibamente</p>
+                                <p>Por ejemplo si la fecha es "jueves" este metodo retornara "4" </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/Date()-5.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>GetMonth( ): Este metodo retorna el mes actual, y trabajaa de la misma forma que el metodo anterior, es decir trabaja con arrays, por lo tanto Enero tiene el indice "0", por lo tanto febrero tiene el indice "1" y así sucesibamente. </p>
+                                <h4>Ejemplo</h4>
+                                 <img src="./img/Date()-6.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>GetYear( ): Este metodo retorna el año actual sin embargo lo hace con una particularidad, y esta es que al año la "api" le resta 1900, por lo tanto si el año actual es "2023" el resultado sera "123", lo ideal para obtener el año actual en sí es sumarle 1900 al metodo, de ese modo se equipara las fechas y se obtiene el año exacto.</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/Date()-7.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>GetHours( ): Este metodo retorna la hora actual del dispositivo:</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/Date()-8.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>GetMinutes( ): Este metodo retorna los minutos actuales del dispositivo:</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/Date()-9.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>GetSeconds( ): Este metodo retorna el segundo en el que se cargo la paguina, por lo tanto para elaborar un relog es necesario elaborar un codigo que actualise la ejecución de este metodo:</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/Date()-10.JPG" class="img" alt="">
+                            </li>
+                        </ul>
+                        <p>Estos son los metodos más basicos del objeto "Date" pero en realidad este posee multitud más de estos así como parametros o otras funcionalidades como el recibir parametros todo esto y mas se enceutra en <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date" class="a__JS">El apartado de Modzilla</a> sobre el objto "Date".</p>
+                        <p>Los parametros más comunes que se le suelen suministrar a este objeto son fechas particulares de ese modo estos datos remplazara el resultado de los metodos ya descritos, de esa manera se puede utilizar el objeto "Date" para plasmar una fecha en espesifico en ves de la actual.</p>
+                    </section> 
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>

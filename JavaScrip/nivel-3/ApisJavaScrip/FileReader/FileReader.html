@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../../../style.css">
+    
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+        <title>Variables</title>
+    </head>
+    <header>
+        <nav >
+            <ul class="nav"> 
+                <li><a href="../../../../Index.html" class="logo"><img src="../../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+                <li><a href="../../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+                <li><a href="../../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+                <li><a href="../../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+            </ul>
+        </nav>
+    </header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>FileReader</h1>
+                    <section>
+                        <p>Se trata de una "api" diseñada en espesifico para trabajar con la leectura de archivos,una caractertica de esta es que por lo general se suele ejecutar en conjunto de promesas o eventos, esta "api" trabaja en base al objeto FileReader, el cual permite trabajar con los datos enviado por el usuario, en otras palabras este objeto permite manipular los archivos que hayan sido enviados por los usuarios.</p>
+                        <p>Para crear el objeto de esta "api" se utiliza el constructor "FileReider()":</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/fileReider-1.jpg" class="img" alt="">
+                        <p>Este objeto al vicularse con un input de tipo "file" recibe el archivo enviado, para obtener dicho archivos se utiliza el evento "change", el cual detecta cuando un input cambia de valor, en este caso es necesario pasarle un dato ("e") a la función del escuchador de eventos, para que de ese modo se pueda almacenar el archivo enviado, si por otra parte se desea observar el archivo en cuestión, esto se puede hacer imprimiendo en consola el metodo ".file" el cual es un array que recibe todos los archivos que sean enviados atravez del input, de la siguiente forma:  </p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/fileReider-2.jpg" class="img" alt="">
+                        <h4>Resultado</h4>
+                        <img src="./img/fileReider-3.jpg" class="img" alt="">
+                        <h3>Obtener el contenido de un archivo</h3>
+                        <p>Por otra parte si lo que se quiere es manipular el archivo o leer su contenido se nesecita emplear la "api" "FileReader", más espesificamente al metodo ".readAsText", el cual permite leer el contenido de un archivo de tipo text.</p>
+                        <p>En el siguite ejemplo se puede observar el como se vincula un input de tipo "file", se inicializa el evento "change" y se aplica la función "leerArchivo()" al archivo enviado por el usuario, esta función se iguala a una función flecha que recibe un dato ("ar") la cual creal el objeto "FileReader()" para finalmente utilizar su función "readAsText()", a la cual se le envia el archivo recibido por la función para de ese modo leer su contenido.  </p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/fileReider-4.jpg" class="img" alt="">
+                        <p>Por ultimo se inicializa un segundo escuchador de eventos con el evento "load" para determinar si la carga del archivo concluyo, si esto sucede se aplica una función flecha la cual convierte a JSON la cadena de texto obtenida del archivo, (esto ya que el archivo es de tipo text).  </p>
+                        <p>Nota: el resultado se encuetra en "e.currentTarget.result" ya que: el que se esta mostrando en pantalla no es directamete la "api" en si, debido a que se usa una función para convertir el dato en JSON, los datos de "reader" se envian a la variable "e", estos datos se almacenana en "currentTarget" (target actual), ya aquí dentro de los datos de la api se utiliza el metodo ".result" el cual contiene el contenido del archivo.</p>
+                        <h4>Resultado</h4>
+                        <img src="./img/fileReider-5.jpg" class="img" alt="">
+                        <p>Nota: El contenido del archivo es un JSON en formato texto, y se utiliza la función flecha dentro de "leerArchivo()" para convertirlo a formato JSON y mmostrarlo en consola.</p>
+                        <p>Otro ejemplo podria ser el como acceder al contenido de multiples archivos a la vez, esto es util debido a que en los input de tipo "file" es posible utilizar el atributo "multiple", el cual configura el input para que reciva X numero de archivos, para estos casos una buena forma de acceder a estos datos es atravez de un ciclo "for" para recorrer los elemtos del array "files", ya que en este se almacenaran todos los elemetos recibidos por el input. </p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/fileReider-6.jpg" class="img" alt="">
+                        <h4>Resultado</h4>
+                        <img src="./img/fileReider-7.jpg" class="img" alt="">
+                        <p>Nota: Tener en cueta en este segundo ejemplo todo erray es eviado a la función, por lo tanto este se almacena en "ar".</p>
+                        <h3>ReadAsDataURL()</h3>
+                        <p>Se trata de un segundi metodo el cual permite obtener direcciones url validas que puedan ser utilizadas por el navegador, es decir este metodo en vez de obtener el texto del archivo, obtiene la dirección url de este, en si la forma de trabajar de este metodo es esactamente la misma que "readAsText" con la diferencia de que este metodo unicamente funciona para aquellos tipos de archivos que pueden ser operados usando url.</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/fileReider-8.jpg" class="img" alt="">
+                        <p>En este ejemplo se tomo como base el codigo anterior, modificandolo para que trabaje en base a "ReadAsDataURL", debido a que este metodo retorna la ruta del elemento esta se almacena dentro de la variable "e" en la función flecha, más espesificamente en "e.currentTarget.result".</p>
+                        <h4>Resultado</h4>
+                        <img src="./img/fileReider-9.jpg" class="img" alt="">
+                        <p>Nota: Este no es verdaderamente un codigo funcional, en su lugar es un codigo explicatibo rapido, por lo que tiene varios aspectos mejorables, por ejmplo el constructor del elemtos HTML estaria fuera del bucle, a la vez que las imagnes se añadirian al interior de los elemetos despues de que el bucle culmine.</p>
+                        <p>Nota: En este ejemplo el elemento "img" no es creado de forma correcta con "createElement" debido a esto no se generará un nodo de este elemento. </p>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>

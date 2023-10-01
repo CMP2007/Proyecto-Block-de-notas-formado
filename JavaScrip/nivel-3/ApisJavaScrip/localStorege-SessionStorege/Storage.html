@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../../../style.css">
+    
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+        <title>Variables</title>
+    </head>
+    <header>
+        <nav >
+            <ul class="nav"> 
+                <li><a href="../../../../Index.html" class="logo"><img src="../../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+                <li><a href="../../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+                <li><a href="../../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+                <li><a href="../../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+            </ul>
+        </nav>
+    </header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>LocalStorage y SessionStorage</h1>
+                    <section>
+                        <p>Ambas se tratan de "APIS" para el almacenamiento de datos en el naveador, la diferencia entre ellas radica en que "localStorage" es un almacenamiento permanenete,sin importar si se actualisa la paguina, o se cierra el navegador esos datos permaneseran guardados en "localStorage", por otra parte "sessionStorage" se trata de un almacenamiento volatil es decir que al actualizar la pestaña  o cerrar el navegador la información se pierde.</p>
+                        <p>Ambas "APIS" funcionana basicamente igual, de hecho poseen los mismos metodos, para minipular los datos: </p>
+                        <ul>
+                            <li>
+                                <p>Para guardar un dato en estas "apis" se usa el metodo ".setItem( )", para ingresar datos se requiere un nombre de "key" y el dato a almacenar, la "key" funciona como un identificador para el dato, en otras palabras el almacenage de en "storage" requiere cadenas nombre/valor:</p>
+                                <h4>LocalStorage</h4>
+                                <img src="./img/storage-1.JPG" class="img" alt="">
+                                <h4>SessionStorage</h4>
+                                <img src="./img/storage-4.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>Para Obtener un dato desde "localStorage" o "sessionStorage" se usa el metodo ".getItem( )", este metodo unicamete requiere que se le espesifique el nombre de la "key" para poder seleccionar el dato indicado:</p>
+                                <h4>LocalStorage</h4>
+                                <img src="./img/storage-2.JPG" class="img" alt="">
+                                <h4>SessionStorage</h4>
+                                <img src="./img/storage-5.JPG" class="img" alt="">
+                            </li>
+                            <li>
+                                <p>Para eliminar un dato de estas "api" se usa la función "removeItem( )", del mismo modo que "getItem( )" esta función solo requiere el nombre de la key que identifica el dato para ubicarlo, con la diferencia de que no lo obtiene si no que lo elimina</p>
+                                <h4>LocalStorage</h4>
+                                <img src="./img/storage-7.JPG" class="img" alt="">
+                                <p>Nota: En el caso de "localStorage" el dato no se eliminara hasta que se le indique.</p>
+                                <h4>SessionStorage</h4>
+                                <img src="./img/storage-6.JPG" class="img" alt="">
+                                <p>Nota: En el caso de "sessionStorage" el dato se eliminara si se recarga la paguina o si se cierra el navegador.</p>
+                            </li>
+                            <li>
+                                <p>Para eliminar todos los datos almacenados en estas "api" se usa el metodo "clear( ), este metodo no requiere de ningun parametro, simplemente elimina todos los datos guardados en "localStorage" y en "sessionStorage"</p>
+                                <h4>LocalStorage</h4>
+                                <img src="./img/storage-8.JPG" class="img" alt="">
+                                <h4>SessionStorage</h4>
+                                <img src="./img/storage-9.JPG" class="img" alt="">
+                            </li>
+                        </ul>
+                        <p>Nota: se puede observar el contenido de cualquiera de estas apis ya sea aplicando un "consol.log" a los objetos "sessionStorage" o "localStorage", así como tambien ingresando a las herramientas de desarrollador de google, a la sección de "Aplicación (Aplication)" y en el secmento llamado "almacenamiento(Storage)"</p>
+                        <img src="./img/storage-3.JPG" class="img" alt="">
+                        <p>Este se trata de un manejo muy basico del "localStorage" y del "sessionStorage", los metodos y propiedades de estas van mucho más allá, para profundizar se puede ingresar en el apartado del <a href="https://developer.mozilla.org/es/docs/Web/API/Window/localStorage" class="a__JS">LocalStorage</a> y del <a href="https://developer.mozilla.org/es/docs/Web/API/Window/sessionStorage" class="a__JS">SessionStorage</a> de "developer mozilla".</p>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>

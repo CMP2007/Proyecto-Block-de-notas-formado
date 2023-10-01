@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../../../style.css">
+    
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+        <title>Variables</title>
+    </head>
+    <header>
+        <nav >
+            <ul class="nav"> 
+                <li><a href="../../../../Index.html" class="logo"><img src="../../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+                <li><a href="../../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+                <li><a href="../../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+                <li><a href="../../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+            </ul>
+        </nav>
+    </header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>MatchMedia( )</h1>
+                    <section>
+                        <p>Esta api permitr trabajar con responsive dising, sin embargo lo más recomendable es limitar su empleación unicamete para aquellos casos en los que se requieran realizar ciartas acciones que no puedan ser cubiertos por CSS, por ejemplo cambiar clases, modificar propiedades, es decir cambios en los estilos de la paguina, es decir esta api permite trabajar con media querys de una forma diferente a la que permite CSS pero no debe ser usado para definir los estilos de la paguina, unicamente se recomeida usar para añadir interactividad a la paguina.</p>
+                        <p>Esta api consiste en el uso del metodo ""matchMedia(), una particularidad de este es que para su funcionamiento se necesita ubicar comillas ("") dentro de los parentesis de este metodo, este es un detalle clave para el funcionamiento del metodo.  </p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/matchMedia-1.jpg" class="img" alt="">
+                        <p>Por otra parte para el uso de este metodo tambien es necesario el ingresar los "media query" entre parentesis, este es otro detalle importante, ya que de lo contrario media no sera reconocido, por lo tanto tanto las comillas como los parentesis dentro de estas son esenciales para el funcionamiento del metodo a la hora de definir los medias dentro de este.</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/matchMedia-2.jpg" class="img" alt="">
+                        <p>La función de "matchMedia" se podira resumir de que esta valida si se cumple la media que se defina en su interior, de hecho al utilizar el metodo ".matches" se retorna un valor boolenao que define si esta se cumple o no, de ese modo una alternativa es utilizar un escucha de eventos para el envento "change", el cual en este caso se dispara cada vez que la propiedad ".matches" cambie su valor.</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/matchMedia-3.jpg" class="img" alt="">
+                        <p>De este modo en el ejemplo cada vez que el valor definido en el metodo ".matches" cambie de valor(true, false) se dispara el mesaje en consola, y de ese modo se puede utilizar el ".matMedia" para realizar una acción en caso de que las dimenciones de la pantalla cumplan con una condición en concreto.</p>
+                        </p>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>
