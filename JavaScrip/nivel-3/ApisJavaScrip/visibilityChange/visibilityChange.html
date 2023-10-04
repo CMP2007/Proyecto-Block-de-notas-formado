@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../../../style.css">
+    
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+        <title>Visibility Change</title>
+    </head>
+    <header>
+        <nav >
+            <ul class="nav"> 
+                <li><a href="../../../../Index.html" class="logo"><img src="../../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+                <li><a href="../../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+                <li><a href="../../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+                <li><a href="../../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+            </ul>
+        </nav>
+    </header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Visibility Change</h1>
+                    <section>
+                        <p>Se trata de una API especializada en detectar el si la pestaña de la paguina se encuetra visible en ese momento o no, en otras palabras, permite detectar el si el usuario actualmete se encuetra visualizando la pestaña de la paguina o si por otra lado se encuentra visualizando otra pestaña diferente.  </p>
+                        <p>Su funcionamineto es muy simple, se basa en el evento "visibilitychange" el cual se dispara cada vez que el usuario cambia de pestaña en el navegador, esta API posee dos valores posibles, los cuales son:  </p>
+                        <ul>
+                            <li>
+                                <p>Hidden: el cual se aplica mientras la pestaña actual de la paguina no este enfocada en pantalla, si no en su lugar lo este otra pestaña</p>
+                            </li>
+                            <li>
+                                <p>Visible: Este valor se aplica mientras la pestaña de la paguina se encuetre seleccionada como la pestaña actual del navegador</p>
+                            </li>
+                        </ul>
+                        <p>De ese modo para aplicar la api se requere de la inicialización del evento "visibilitychange", luego a la función que ejecutara el escucha de eventos se le asigna un dato (e), por ultimo se accede al metodo ".visibilityState", esto se puede lograr de dos formas, ya sea definiendo como "e.target.visibilityState" o como "Document.visibilityState", ambos casos tiene el mismo efecto.</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/visibilityChange.jpg" class="img" alt="">
+                        <p>En este ejemplo se puede obcervar el como se inicializa el escucha de eventos con "visibilitychange", se le pasa el dato "e" a la función flecha y esta segun cual sea el valor del metodo "visibilityState" mostrara un mesaje u otro, de ese modo cuando el usuario abandone la pestaña saltara un mesaje, y luego saltara una alerta cuando este retorna.</p>
+                        <p> De esta manera se pueden realizar una acción en caso de que el usuario abandone o ingrese a la pestaña de la paguina de forma dinamica.</p>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>
