@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Web Workers</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../../../Index.html" class="logo"><img src="../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Web Workers</h1>
+                    <section>
+                        <p>Se trata de un elemento que esta muy estrechamente relacionado con el "event loop", el cual se trata de un servicio interno de los navegadores el cual se encarga de ejecutar los eventos, en otras palabras cada vez que se dispara un evento, en realidad lo que sucede es que se crea una tarea la cual es asignada al "event loop", para que este la ejecute. </p>
+                        <p>El problema esta en que este recurso solo puede realizar una tarea a la vez, por lo cual si se le asigna una tarea pesada o que requiera una buena cantidad de tiempo, como cargar un video no se podran realizar ningun otro evento hasta que la tarea haya sido completada, es decir mientras el video se carga no se podra hacer click sobre un input, escribir, cargar otro elemento. </p>
+                        <p>Para solucionar este tipo de problemas existen los "web workers", los cuales se pueden definir como un nuevo servicio o una asistencia que se puede generar para el "event loop", para que de esa forma se puedan ejecutar tareas en paralelo mejorando de este modo el rendimiento de la paguina. </p>
+                        <p> sin embargo los "web workers" no poseen las mismas capacidades de un documento javaScript normal, en su lugar estos tendra bastantes limitaciones, ya que estos no sera capaz de acceder al objeto global "window", razon por lo cual muchas de la funcionalidades de JavaScrip no seran accesibles, de hecho en la documentación oficial de JavaScrip algunos elemtos indican "disponibles para workers", lo que siginifica que se pueden ejecutar desde estos.</p>
+                        <p>Para la creación de los "web workers" se requiere de la creación de un segundo archivo javaScript, el cual actuara como servicio de asistencia para el "event loop", estos se declaran utilizando la función constructura "new Worker( )", a la cual se le debe pasar la dirección del archivo que sera empleado como worker.</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/webWorkers-1.jpg" class="img" alt="">
+                        <p>De este modo el archivo pasara a emplearse como worker lo que permitira que el "event loop" sea más eficiente.</p>
+                        
+                        <h3>Metodo PostMessage( )</h3>
+                        <p>Este metodo perimte enviar mensajes desde el documento principal al web worker y vicebersa, para esto es necesario definir los datos que se desan anviar como parametros dentro de este metodo, de la siguite forma:</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/webWorkers-2.jpg" class="img" alt="">
+                        <p>Por ultimo resta que el web worker acceda el dato enviado desde el documento principal, para esto se accede al metodo ".data", lugar en el cual se almacena cualquier parametro que sea recibido por el web worker.</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/webWorkers-4.jpg" class="img" alt="">
+                        <h4>Resultado</h4>
+                        <img src="./img/webWorkers-3.jpg" class="img" alt="">
+                        <p>En este ejemplo se envia un parametro desde el documento original hacia el web worker utilizando el metodo "postMessage", lego este es obtenido utilizando un evento "message" y el metodo ".data", para luego imprimir el paramtro en consola. </p>
+                        <p>Una de las limitaciones de los web workers es que no pueden declarar objetos, de hecho para que estos puedan trabajar con ellos es necesario que estos sean enviados como parametros desde el documento original.</p>
+                        <p>Por otra parte en los casos en los que se necesite enviar un dato desde el web worker hacia el documento original nuevamente se utiliza el metodo "postMessage" de la misma forma que se uso anteriormente, respecto al como el documento original accedera al paramtro enviado se realiza de la misma forma ya mostrada, utilizando en escucha para el evento "message" y el metodo ".data":</p>
+                        <h4>Web Worker</h4>
+                        <img src="./img/webWorkers-5.jpg" class="img" alt="">
+                        <h4>Documento Original</h4>
+                        <img src="./img/webWorkers-7.jpg" class="img" alt="">
+                        <h4>Resultado</h4>
+                        <img src="./img/webWorkers-6.jpg" class="img" alt="">
+                        <p>De ese modo se realiza el envio de un parametro al web worker para que sea utilizado en una función, por lo tanto esa actividad se realizara en segundo plano dentro del navegador, de ese modo se podra mantener el "event loop" disponibles para las interacciones del usuario.</p>
+                        <h3>Metodo Teminate( ) </h3>
+                        <p>Este metodo permite cerrar la ejecución del web worker, de ese modo no sera posible que este se ejecute nuevamente una vez este metodo es empleado, este metodo es util ya que los usos más comunes de los web worker no son otros más que realizar la carga de elementos de gran peso o que requieran gran cantidad de recursos, por lo que si se utilizase el "event loop" para ejecutarlos estos pudiesen entorpeser el funcionamiento este.</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/webWorkers-8.jpg" class="img" alt="">
+                        <p>De esta forma se puede evitar una segunda ejecución accidental del web worker eliminado el riesgo de una carga inesesaria de estos elementos.  </p>
+
+                        <h3>Politica de Origen Cruzado (Same-Origin)</h3>
+                        <p>Las dirección de origen de un archivo se trata de la ruta en la que se encuetra en archivo, en el caso de las paguinas web estos suelen estar alojadas en un servidor, una ruta esta constituida por tres elementos indispensables, los cuales son el "protocolo" (ejm: http//), el "host" (servidor ejm: localhost) y el puerto (numero de puerto de conexión ejm:80). </p>
+                        <p>"Same-Origin" se trata de una politica de seguridad aplicada por defecto en los navegadores, la cual se basa en que cietos elementos no pueden ser llamados por otros archivos que posean una dirección de origen diferente a la del archivo llamado, es decir que para que dos archivos se puedan comunicar entre si estos deben poseer el mismo origen, eso implica unmismo "protocolo", "host" y "puerto".</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/webWorkers-9.jpg" class="img" alt="">
+                        <p>De este modo si un web worker es llamado desde un archivo que posea un origen diferente a este la conexión sera bloqueda por seguridad, existen formas de desactivar la politica "same-Origin" sin embargo no es algo recomendable ya que se pueden producir muchos errores de seguridad si esta no se implementa.</p>
+
+                        <p>Nota: esta politica entre en vigencia incluso si el puerto de alguno de los dos archivos es la unica diferencia entre ambos, al menos que el protocolo, el host y el puerto sean exactamete iguales el "same-origin" entrara en acción.</p>
+                        <h4>Ejmeplo del mensaje de error que arroja esta politica</h4> <hr><hr>
+                        <img src="./img/webWorkers-10.jpg" class="im" alt=""><hr><hr>
+                        <p>Nota: Cuando se utiliza la direcciónrelativa de un archivo el navegador implementa esta politica por defecto.</p>
+                        <h3>Parametro Options</h3>
+                        <p>Se trata de un objeto que permite definir una configuración para los web workers, posee tres propiedades posibles:</p>
+                        <ul>
+                            <li>
+                                <p>type: A esta propiedad se le debe pasar un string, este espesifica el tipo de trabajador a crear. El valor puede ser "classic", el cual se trata del valor por derfecto o "module" </p>
+                            </li>
+                            <li>
+                                <p>Credentials: A esta propiedad se le debe pasar un string, Espesifica el tipo de credenciales que se utilizaran para el worker, los valores pueden ser "omit", "same-origin" o "include" si no se espesifica el valor por defecto es (no se requieren credenciales) </p>
+                            </li>
+                            <li>
+                                <p>name: A esta propiedad se le debe pasar un string, Espesifica un nombre de identificación para DedicatedWorkerGlobalScope, esto representa el alcance del woker que es principalmente util para depuración del codigo.</p>
+                            </li>
+                        </ul>
+                        <p>Nota: Se puede acceder a toda la información relevante sobre este tema desde <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker/Worker" class="a__JS">apartado de Mozilla</a> sobre este tema</p>
+                        <p>Hasta los mometos toda la explicación se a basado en el "Dedicate worker", el cuale se trata del tipo de worker más simple, no obstante existen otros tres tipos de workers, los cuales cuantan con caracteriticas y usos propieos, no obstante estos no se abarcaran en el curso.  </p>
+                        <h4>Los cuatro tipos de workers son:</h4>
+                        <ul>
+                            <li>
+                                <p>Dedicate Worker</p>
+                            </li>
+                            <li>
+                                <p>Shared Worker</p>
+                            </li>
+                            <li>
+                                <p>Service Worker</p>
+                            </li>
+                            <li>
+                                <p>Abstrack Worker</p>
+                            </li>
+                        </ul>                        
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>

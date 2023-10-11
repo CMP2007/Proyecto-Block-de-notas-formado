@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Objeto Navigator</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../../../Index.html" class="logo"><img src="../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Objeto Navigator</h1>
+                    <section>
+                        <p>Se trata de un objeto base de JavaScrip, el cual permite acceder a las propiedades del navegador, esto para hacer posible diversas interacciones o funcionalidades, ya que este objeto permite realizar multiples tareas las cules no necesariamente poseen una realación entre ellas este se basa en el retorno de interfaces para operar.</p>
+                        <p>Debido a la multitud de tareas que pueda realizar este objeto tambien posee multitud de propiedades. </p>
+                        
+                    </section>
+                    <h2>Propiedades Estandar del Objeto Navigator.</h2>
+                    <section>
+                        <ul>
+                            <li>
+                                <p><h3>AppCodeName:</h3> Esta propiedad retorna el nombre del navegador (no se trata de una propiedad precisa por lo que puede retornar un valor erroneo)</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/appCodeName-1.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/appCodeName-2.jpg" class="img" alt=""><br>
+                            </li>
+                            <li>
+                                <p><h3>AppName:</h3> Esta propiedad retorna el nombre "oficial" del navegador (no se trata de una propiedad precisa por lo que puede retornar un valor erroneo)</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/appName-1.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/appName-2.jpg" class="img" alt=""><br>
+                            </li>
+                            <li>
+                                <h3>AppVersion</h3>
+                                <p>Esta propiedad permite retornar la versión del navegador (no se trata de una propiedad precisa por lo que puede retornar un valor erroneo)</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/appVersion-1.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/appVersion-2.jpg" class="img" alt=""><br>
+                            </li>
+                            <li>
+                                <h3>Connection:</h3>
+                                <p>Esta propiedad retorna el si el navegador se encuetra conectado a internet o no, esto lo hace mediante el objeto "NetworkInformation" el cual contiene todas la información sobre la conexión actual</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/connection-1.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/connection-2.jpg" class="img" alt=""><br>
+                            </li>
+                            <li>
+                                <h3>Geolocation:</h3>
+                                <p>Esta propiedad retorna el objeto "Geolocation", el cual posee toda la información sobre la ubicación del equipo</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/geolocation-1.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/geolocation-2.jpg" class="img" alt="">
+                                <p>Más sobre el uso de este objeto en el apartado de la <a href="../ApisJavaScrip/Geolocalization/Geolocalization.html" class="a__JS">API de Geolocalización</a></p><br>
+                            </li>
+                            <li>
+                                <h3>HardwareConcurrency:</h3>
+                                <p>Esta propiedad permite retornar el número de nucleos del procesador logico que se encuetran disponibles</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/hardware-1.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/hardware-2.jpg" class="img" alt=""><br>
+                            </li>
+                            <li>
+                                <h3>Language:</h3>
+                                <p>Esta propiedad retorna el lenguaje actual del navegador</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/language-1.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/language-2.jpg" class="img" alt=""><br>
+                            </li>
+                            <li>
+                                <h3>Languages:</h3>
+                                <p>Esta propiedad retorna un array con todos los lenguajes que el usuario pueda entender, es decir el conjunto de todos los lenguajes que sean usados por el usuario en algun momento</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/languages-1.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/languages-2.jpg" class="img" alt=""><br>
+                            </li>
+                            <li>
+                                <h3>MineTypes:</h3>
+                                <p>Esta propiedad retorna todos los "mineTypes" que son aceptados por el navegador, es decir este metodo retorna todos los tipos de metadatos que son aceptados por el navegador</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/mineTimes-1.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/mineTimes-2.jpg" class="img" alt=""><br>
+                            </li>
+                            <li>
+                                <h3>Online:</h3>
+                                <p>Esta propiedad retorna un valor booleano en función de si el equipo esta conectado a internet o no</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/online-1.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/online-2.jpg" class="img" alt=""><br>
+                            </li>
+                            <li>
+                                <h3>UserAgent:</h3>
+                                <p>Esta propiedad retorna toda la información referente al navegador (no se trata de una propiedad precisa por lo que puede retornar un valor erroneo)</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/userAgent-1.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/userAgent-2.jpg" class="img" alt=""><br>
+                            </li>
+                            <li>
+                                <h3>CookieEnabled:</h3>
+                                <p>Esta propiedad retorna un valor booleano en función de si el navegador tiene habilitado trabajar con cookies o no  </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/cookieEnabled-1.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/cookieEnabled-2.jpg" class="img" alt=""><br>
+                            </li>
+                            <li>
+                                <h3>Permissions:</h3>
+                                <p>Esta propiedad retorna el objeto "Permissions", el cual nos permite acceder a cada uno de los permisos del navegador, por ejemplo microfono, camara, vetanas emergentes etc </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/permissions-1.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/permissions-2.jpg" class="img" alt=""><br>
+                            </li>
+                            <li>
+                                <h3>Plataform:</h3>
+                                <p>Esta propiedad retorna el sistema operativo del dispositivo</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/platform-1.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/platform-2.jpg" class="img" alt=""><br>
+                            </li>
+                            <li>
+                                <h3>Plugins:</h3>
+                                <p>Esta propiedad retorna un "pluginArray", el cual contiene todos los plugins instalados en el navegador</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/plugins-1.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/plugins-2.jpg" class="img" alt=""><br>
+                            </li>
+                            <li>
+                                <h3>Product:</h3>
+                                <p>Esta propiedad retorna: "Gecko", esta propiedad actualmente no tiene una aplicación, por lo que no es usada, sin embargo por problemas de compatibilidad exsten paguinas que no pueden eliminar este elemento, por lo que existe la posibilidad de encontrar con esta propiedad en un proyecto</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/product-1.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/product-2.jpg" class="img" alt=""><br>
+                            </li>
+                            <li>
+                                <h3>ServiceWorker:</h3>
+                                <p>Esta propiedad retorna el objeto "serviceWorker", el cual se puede usar para trabajar con el "serviceWorker", sin embargo esto se define más adelante en el curso</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/serviceWorker-1.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/serviceWorker-2.jpg" class="img" alt=""><br>
+                            </li>
+                        </ul>
+                        <p>Realmente existen muchas más propiedades estandar del objeto "navigator", sin embargo estas se tratan de las más utilizadas y comunes.</p>
+                    </section>
+                    <h2>Metodos del Objeto Navigator</h2>
+                    <section>
+                        <ul>
+                            <li>
+                                <h3>GetUserMedia( )</h3>
+                                <p>Se trata de un metodo que solicita permiso y permite acceder al audio y video del dispositivo</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/metodos-2.jpg" class="img" alt="">
+                            </li>
+                            <li>
+                                <h3>RegisterContentHandler( )</h3>
+                                <p>Permite a los web sides registrarse como posibles controladores de un tipo MIME determinado</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/metodos-1.jpg" class="img" alt="">
+                            </li>
+                            <li>
+                                <h3>RegisterProtocolHandler( )</h3>
+                                <p>Permite a los web sides registrarse como posibles controladores de un protocolo determinado</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/metodos-3.jpg" class="img" alt="">
+                            </li>
+                            <li>
+                                <h3>RequestMediaKeySystemAccess( )</h3>
+                                <p>Devuelve un objeto promesa para un objeto "MediaKeySystemAccess",(permite acceder a ciertas aspectos del sistema) </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/metodos-4.jpg" class="img" alt="">
+                            </li>
+                            <li>
+                                <h3>SendBeacon( )</h3>
+                                <p>Usado para transferir, de forma sincrona, conjuntos pequeños de datos HTTP del usuario al servidor</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/metodos-5.jpg" class="img" alt="">
+                            </li>
+                            <li>
+                                <h3>JavaEnabled( )</h3>
+                                <p>Retorna un booleano que determina si el navegador tiene activado el Java o no </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/metodos-6.jpg" class="img" alt="">
+                            </li>
+                            <li>
+                                <h3>Vibrate( )</h3>
+                                <p>Causa una vibración en aquellos dispositivos que la soportan, si el soporte para vibración no esta disponible en algun dispositivo este metodo no hace nada</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/metodos-7.jpg" class="img" alt="">
+                            </li>
+                        </ul>
+                        <p>Del mismo modo que con las propiedades existen muchos otros metodos del objeto navigator, sin embargo estos son los más basicos y más utilizados.</p>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>
+
+<script>        console.log("CookieEnabled",navigator.cookieEnabled)        </script>
