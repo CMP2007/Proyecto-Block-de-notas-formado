@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Cache</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../../../Index.html" class="logo"><img src="../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Cache</h1>
+                    <section>
+                        <p>Se trata de una de las principales formas de guardar información a corto plaso, esto con el fin de que los datos permanezcan accesibles una cierta cantidad de tiempo luego de su generación, para de ese modo evitar tener que generar el dato o realizar un proceso nuevamente en caso de que se requiera utilizar el dato una vez más.</p>
+                        <p>Esto con el fin de reducir los tiempos de carga de la paguina web, y reducir el consumo de recursos de la paguina, esto se utiliza principalmente para aquellos archivos o datos que son requeridos multiples veces durante la ejecución de la paguina web, evitando de este modo un exceso de carga.</p>
+                        <p>Nota: Para visualizar el "cacheStorage" es necesario ingresar a las herramientas de desarrollador en la sección de "aplicación", esta se encuentra debajo de "localStorage" y de "SessionStorage"</p>
+                        <p>Nota: Para visualizar los cambios hechos en el "cacheStorage" se necesita actualizar la herramienta, esto se hace refrescando la paguina, del mismo modo que se hace con "localStorage" y de "SessionStorage  </p>
+                    </section>
+                    <h2>Implementación</h2>
+                    <section>
+                        <p>Lo primera para trabajar con la cache es inicializar un "objeto cache", esto se logra haciendo uso del objeto constructor "caches", el metodo ".open", y el nombre del objeto que esta siendo inicializado:</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/open-1.jpg" class="img" alt="">
+                        <p>Los objetos cache se podrian considerar como un almacen de objetos(tabla), estos estan estructurados por diferentes secciones las cueles son:</p>
+                        <ul>
+                            <li><p>Indice: Identificador numerico del archivo </p></li>
+                            <li><p>Name: Nombre del archivo</p></li>
+                            <li><p>Response-Type: Tipo de respuesta, ejemplo: "Basic"</p></li>
+                            <li><p>Content-Type: Tipo de contenido, ejemplo: "text html"</p></li>
+                            <li><p>Content-Length: Tamaño del archivo</p></li>
+                            <li><p>Time Cached: Hora en la que fue almacenado el dato</p></li>
+                        </ul>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/cache-1.jpg" class="img" alt="">
+                        <p>Al trabajar con la cache se utilizan promesas, razon por la cual para ingresar un dato en el "objeto cache" se utiliza el metodo ".then", al cual se le asigna una función flecha la cual recibe el objeto "cache", e cual se trata de un objeto especial que posee diversos metodos particulares para trabajar con el "cacheStorage".</p>´
+                        <h4>Ejemplo</h4>
+                        <img src="./img/cache-2.jpg" class="img" alt="">
+                        <h3>Los metodos particulares del objeto "cache" son:</h3>
+                        <ul>
+                            <li>
+                                <h3>.add( )</h3>
+                                <p>Este metodo envia una request, es decir toma una URL, la recupera y agrega el objeto de respuesta resultante a la cache dada, en otras palabras si tanto el objeto "cache" como el objeto a guardar existen este sera almacenado en la cache</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/cache-3.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/cache-4.jpg" class="img" alt=""> 
+                                <p>De este modo es como se puede indicar que se debe guardar el archivo "index.html" en la cache del equipo.</p>
+                                <p>Una particularidad de este metodo es que es equivalete a usar "fetch( )", para simplificar la respuesta y lurgo usar "put( )"  para añadir los datos a la cache, es decir este metodo permite simplificar el codigo.</p>
+                            </li>
+                            <li>
+                                <h3>.put(request, response)</h3>
+                                <p>Este metodo permite añadir objetos a la cache, no obstante ya que el metodo "add( )" representa una alternativa más eficiente para esto, lo más normal es que el metodo "put( )" se use unicamete cuando se desea realizar algun cambio en un elemento ya existe. </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/cache-11.jpg" class="img" alt=""> 
+                            </li>
+                            <li>
+                                <h3>.addAll(request)</h3>
+                                <p>Este metodo realiza la misma función que "add( )", con la diferencia de que este metodo se encuetra adaptado para añadir multiples archivos a la cache.</p>
+                                <p>Por lo tanto la diferencia radica en que ".addAll( )" no acepta strings, en su lugar recibe un array el cual debe contener todos los archivos que seran añadidos a la cache </p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/cache-5.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/cache-6.jpg" class="img" alt=""> 
+                            </li>
+                            <li>
+                                <h3>.match(request, options)</h3>
+                                <p>Devuelve una promesa que se resuleve con la respuesta asociada con  la primera solicitud coincidente en el objeto almacenado, es decir este metodo reotorna una promesa, la cual retorna el primer elemento que coincida con la solicitud realizada.</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/cache-7.jpg" class="img" alt="">
+                                <p>No olvidar que se usa el metodo ".then( )" debido a que ".match( )" retorna una promesa, debido a esto el ".then( )" se usa para definir el codigo a ejecutar con el elemento obtenido.</p>
+                                <h4>Resultado</h4>
+                                <img src="./img/cache-8.jpg" class="img" alt=""> 
+                                <p>En este resultado se observa la respuesta de la promesa, la cual en este caso se trata de un archivo HTML, sin embargo, hasta el momento con los elementos impartidos no hay muchas acciones que se puedan realizar con este archivo, esto se desenglosara más adelante.</p>
+                            </li>
+                            <li>
+                                <h3>.matchAll(request, options)</h3>
+                                <p>Devuelve una promesa que se resuleve con una matriz con todas las solicitudes coincidentes en el objeto almacenado, es decir este metodo reotorna una promesa, la cual retorna una matris (tipo de array) con todos aquellos elemetos que councidan con la solicitud realizada.</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/cache-9.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/cache-10.jpg" class="img" alt=""> 
+                                <p>En este resultado se puede observar el indice del dato, lo que indica que este se encuentra en un array.</p>
+                            </li>
+                            <li>
+                                <h3>.delete( request, options)</h3>
+                                <p>Este metodo es exactamente el opuesto a ".add( )", ya que en vez de añadir un elemento a la cache lo elimina, con la caracteritica particular de retornar una promesa la cual retorna un valor booleano para indicar si el elemento se encontro y elimino (true) o no se pudo encontrar (false).</p>
+                            </li>
+                            <li>
+                                <h3>.keys( )</h3>
+                                <p>Este metodo retorna una promesa que a su vez retorna una matriz con los "keys" de los objetos almacenados en la cahce, es decir este metodo retorna una promesa que retorna un array con todos los elemetos almacenados en la cache.</p>
+                                <h4>Ejemplo</h4>
+                                <img src="./img/cache-13.jpg" class="img" alt="">
+                                <h4>Resultado</h4>
+                                <img src="./img/cache-14.jpg" class="img" alt=""> 
+                            </li>
+                        </ul>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>

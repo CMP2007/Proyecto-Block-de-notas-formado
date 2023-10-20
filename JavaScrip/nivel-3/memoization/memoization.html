@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Memoization</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../../../Index.html" class="logo"><img src="../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Memoization</h1>
+                    <section>
+                        <p>Se trata de un concepto de aplicable en JavaScrip que es sorprendentemente desconocida, ya que por lo general solo es utilizado por aquellos con un gran dominio del lenguaje, lo que esta funcionalidad es acortar tiempos de ejecución de una tarea repetitiva, para que de ese modo la experiencia del usuario sea muco más optima.</p>
+                        <p>Esto se logra agregando valores a un array asociativo(comunmente se les llama "cache"), para que en caso de que ese valor este asociado a un elemento almacenado previamente este se pueda mostrar sin tener que realizar el proceso nuevamente.</p>
+                        <p>Nota: un array asociativo es aquel en el que se define un nombre que hara la función de indice para el dato, es decir el nombre que se le defina a cada posición del array estara vinculado a ese respectivo valor. </p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/memoization-1.jpg" class="img" alt="">
+                        <p>En este ejemplo se puede apreciar como se ejecuta el concepto de memoization de una forma bastante simple, una vez se define que el valor de  "n" no es 0 o 1 se porcede a desarrollar una estructura de condicionales, en los cuales si no existe el array (cache) se crea, por otro lado si el valor ya existe se muestra y por ultimo si este valor no existen se asigna el nombre para el indice del dato y se asigna el valor para este. </p>
+                        <p>De ese modo el dato estara disponible dentro del array, lo que permitira obtener este valor solo con buscarlo en el array en vez de realizar un proceso completo, esta tecnica es recomendable para aquellos casos en los que se tenga la certesa de que un dato se repetira numerosas veces, a la vez que si este requiere de un proceso complejo o largo para obtenerlo.</p>
+                        <p>De ese modo al ejecutar el proceso una vez, se almacenara en el array asociativo,pirmitiendo que las futuras ocaciones en las que se requiera el dato este se obtenga casi inmediantamente.</p>
+                        <p>Para este tipo de porcesos tambien es una alternativa el usar "web workers", sin embargo esta tecnica consume muchos menos recursos, de cualquier forma el usar ambos conceptos es completamente posible. </p>
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>

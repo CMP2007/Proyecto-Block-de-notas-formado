@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pathway+Extreme:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <title>Service Workers</title>
+</head>
+<header>
+    <nav >
+        <ul class="nav"> 
+            <li><a href="../../../Index.html" class="logo"><img src="../../../logos/Logo.png" width="90px" height="90px" alt=""></a></li>
+            <li><a href="../../../HTML/indice.html" class="HTML tema"><span class="text__tema">HTML</span></a></li>
+            <li><a href="../../../CSS/indiceCSS.html" class="CSS tema"><span class="text__tema">CSS</span></a></li>
+            <li><a href="../../indiceNivel.html" class="seleccion__JS tema"><span class="text__tema">JS</span></a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <aside class="aside">
+        <div class="outer ">	
+            <input type="checkbox" id="menu" checked="checked" class="input-18"/>
+            <label for="menu" class="menu-aside_JS">
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+                <span class="hl_JS"></span>
+            </label>
+            <div class="nav-aside_JS">
+                <ul>
+                    <a href="../indiceJavaScriptNivel2.html"><h2>Nivel 1 JS</h2></a> 
+                    <div class="aside-divisor"></div>
+                    <h2>Propiedades</h2>    
+                </ul>
+            </div>
+            <div class="desplazamiento">
+                <article class="content">
+                    <h1>Service Workers</h1>
+                    <section>
+                        <p>Se trata de un tipo de web worker particular, en si este tipo de worker se emplea al trabajar con servidores, su función consiste en actuar de receptor de todas las peticiones que se destinen hacia el servidor, para luego procesarlas y posteriormente realizar la consulta al servidor, luego recibir la respuesta y enviarla al cliente que realizo la consulta en primer lugar.  </p>
+                        <p>En ese sentido realiza el papel de intermediario entre los navegadores y el servidor, debido a esto es muy común que el service worker este repleto de "addeventlistener" (escucha de eventos), para poder realizar una u otra acción según sea necesario.</p>
+                    </section>
+                    <h2>interfaz ServiceWorker</h2>
+                    <section>
+                        <p>Se trata del objeto "serviceWorker" el cual es un buena practica el comprobar si este se encuetra compatible en el navegador, ya que algunos navegadores no poseen soporte para estos, los navegadores que no admiten Service Workers son:</p>
+                        <ul>
+                            <li><p>Internet Explorer (todas las versiones)</p></li>
+                            <li><p>Opera Mini (todas las versiones)</p></li>
+                            <li><p> Android Browser (todas las versiones anteriores a la 4.4.4)</p></li>
+                            <li><p>Safari (todas las versiones anteriores a la 11.1 en escritorio y 11.3 en dispositivos móviles)</p></li>
+                        </ul>
+                        <p>cualquiera sea el caso se puede comprobar si el navegador posee el objeto "serviceWorker" de la siguiente forma:</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/serviceWorker-1.jpg" alt="" class="img">
+                        <p>Una vez comprobada la compatibilidad con los service workers se procede a instalarlo, esto es de esta forma ya que los service workers son archivos que se ejecutan en el almacenamiento local del usuario, es decir el archivo es descargado e instalado en el equipo del usuario, lo que permite el realizar acciones o ejecutar codigo aún si la paguina o el navegador se encuentran cerrados.</p>
+                        <p>Esto ya que estos no forman parte del hilo normal de la paguina, en su lugar estos se ejecutan en el background del equipo, la declaración del service weorker se realiza de la siguiente forma:</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/serviceWorker-2.jpg" alt="" class="img">
+                        <p>Se usa el metodo ".register" del objeto "serviceWorker", al cual se le define la dirección del correspondiente archivo</p>
+                        <p>A la hora de trabajar con service worker se utiliza las herramientas de desarrollador, espesificamete la pestaña de "Application", en el apartado de "service workers" de la siguiente forma: </p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/serviceWorker-3.jpg" alt="" class="img">
+                        <p>Llegado el momento de estructurar el codigo del service worker estos cuentan con una pequeña particularidad la cual es que la palabra clave "this" no es la unica alternativa a la hora de hacer referencia al documeto actual, en estos las palabra clave "self" cumple exactamete la misma función, por lo que es muy común que al trabajar dentro de los service worker se utilise "self" en lugar de "this".</p>
+                    </section>
+                    <h2>Eventos y el Ciclo de vida</h2>
+                    <section>
+                        <h3>Install</h3>
+                        <p>Se dice que los service worker poseen un ciclo de vida ya que estos al crearse pasan por dos etapas, la primera de estas es la "instalación", se trata del primer evento que se acciona, esta ocurre al declararse el codigo de los ejemplos anteriores,la instalación sucede al detectase que no existe el service worker en el equipo, por otro lado debido a que estos perduran a lo largo del tiempo este evento solo se dispara una vez, al menos que el service worker sea eliminado del equipo, entoces volvera a ocurrir.</p>
+                        <p>Para detectar si el service worker se instalo en el equipo se usa el evento "install":</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/serviceWorker-4.jpg" alt="" class="img">
+                        <h3>Activate</h3>
+                        <p>La segunda etapa del ciclo de vida del service worker es la "Activacón", en la cual se puede realizar acciones tomando como base el evento "activate" de la siguiente manera:   </p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/serviceWorker-5.jpg" alt="" class="img">
+
+                        <p>De este modo se utilizan los eventos "install" y "activate" para comprobar y o ejecutar codigo en base a las dos etapas del ciclo de vida, sin embargo existe otros eventos más, que son necesarios a la hora de trabajar con los service worker.</p>
+                        <h3>Error</h3>
+                        <p> Un evento muy importante para los service worker es "error", el cual como se puede preveer se utiliza para trabajar con cualquier error que pudiese originarse durante la ejecución.</p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/serviceWorker-6.jpg" alt="" class="img">
+                        <p>Nota: Para esto tambien se se suele utilizar el metodo ".catch"</p>
+                        <h3>Fetch</h3>
+                        <p>Este ultimo evento se utiliza para verificar si se esta realizando una solicitud a este service worker, en otras palabras cada vez que el navegador realise una y esta sea interceptada por el service worker se ejecutara el codigo vinculado a este evneto. </p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/serviceWorker-7.jpg" alt="" class="img">
+
+
+                        
+                        
+                    </section>
+                    <h2>PostMessage( )</h2>
+                    <section>
+                        <p>Este metodo funciona exactamete igual que en los "dedicated worker", es decir este metodo permite realizar el envio de datos entre el "wer worker" y un elemento externo, ya sea este el servidor o el navegador.</p>
+                        <p>Sin embargo la ejecución de este si se debe de realizar de una forma un poco diferente, esto ya que los service workers tienen la particularidad de demorar un poco en su ejecución, para esto existe el metodo "ready" el cual permite esperar y comprobar si el service worker ya a sido cargado antes de ejecutar una acción. </p>
+                        <p>El metodo "ready" retorna una promesa, por lo tanto se obtiene un objeto "serviceWorkerRegistration" el cual contiene el service weorker en el interior del metodo ".active" </p>
+                        <h4>Ejemplo</h4>
+                        <img src="./img/serviceWorker-11.jpg" alt="" class="img">
+                        <h4>Resultado</h4>
+                        <img src="./img/serviceWorker-10.jpg" alt="" class="img">
+                        <p>Nota: el codigo de este ejemplo no se ejecuta en el service worker, si no en el documento principal, ya que es alli donde se esta originando el envio de datos.</p>
+                        <p>De este modo accediendo al metodo ".active" se puede obtener el service worker, lo que a si vez permite utilizar el metodo "PostMessage( )" para eviar la información al service worker.</p>
+                        <h4>Codigo del Documento Principal</h4>
+                        <img src="./img/serviceWorker-12.jpg" alt="" class="img">
+                        <h4>Codigo del Service Worker</h4>
+                        <img src="./img/serviceWorker-13.jpg" alt="" class="img">
+                        <h4>Resultado</h4>
+                        <img src="./img/serviceWorker-14.jpg" alt="" class="img">
+                        <p>Por otro lado si se desea implementar una respuesta o definir un dato que sea enviado desde el service worker se realiza un uso comun de "PostMessage".</p>
+                        <h4>Codigo del Documento Principal</h4>
+                        <img src="./img/serviceWorker-15.jpg" alt="" class="img">
+                        <h4>Codigo del Service Worker</h4>
+                        <img src="./img/serviceWorker-16.jpg" alt="" class="img">
+                        <h4>Resultado</h4>
+                        <img src="./img/serviceWorker-17.jpg" alt="" class="img">
+                    </section>
+                    <h2>Registrar el cache y mostrar el sitio web offline</h2>
+                    <section>
+                        <p>Una aplicación bastante realista sobre los service worker es el almacenarlos en la cache del equipo, para esto se emplean los elementos correspondientes para esto, tal como se espesifica en el apartado de la<a href="../usar Cache/cache.html" class="a__JS">manipulación de la cache</a></p>
+                        <h4>Apertura de la Cache</h4>
+                        <img src="./img/cache-1.jpg" class="img" alt="">
+                        <p>En este ejemplo se utiliza el evento "install" para detectar el mometo en el que se instale el service worker en el equipo, al ocurrir esto se imprime un mensaje en consola, luego se habre la cache, se define el nombre del objeto y el archivo (Index.html) que este almacena, se imprime otro mensaje en consola y por ultimo se define el manejo de errores con ".catch" </p>
+                        <h4>Resultado</h4>
+                        <img src="./img/cache-3.jpg" class="img" alt="">
+                        <p>El cache se puede considerar un recurso limitado, ya que no es lo ideal disponer mucho de este, se recomienda eliminar cualquier elemento inecesario, para esto se suele utilizar el evento "activate" de la siguiente forma: </p>
+                        <h4>Eliminar Cache Obsoleto</h4>
+                        <img src="./img/cache-2.jpg" class="img" alt="">
+                        <p>En este ejemplo se utiliza el evento "activate" para eliminar cualquier vestijio de elementos anteriores, esto se realiza accediendo a todas las keys de la cache mediante la respectiva promesa que es retornada, y utilizando el metododo "key.map", el cual se trata de un metodo para mapear los array, accediendo de ese modo a las keys y eliminado cualquier elemento diferente a la versión actual del objeto.     </p>
+                        <p>Por ultimo para mostrar la paguina offline se utiliza el evento "fetch", en el cual se aplica el metodo ".respondWith( )", el cual se responde con una promesa, en la cual en el siguiente caso se realiza una función la cual realiza la consulta, por ultimo se hace aplica un condicional para determinar si se retorna los datos guardados en la cahce o si en su lugar se retorna la consulta por intenet.  </p>
+                        <h4>Mostrar Offline</h4>
+                        <img src="./img/cache-4.jpg" class="img" alt="">
+
+                    </section>
+                    <h2>Extra</h2>
+                    <section>
+                        <p>Para profundizar más sobre el ciclo de vide de los service workers se puede ingresar a el siguiente <a href="https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle" class="a__JS">Block</a> </p>
+                        <p>Nota: La sección "service worker" de la pestaña "aplicatión" de la "herramienta de desarrollador" puede que necesite ser actualizada de forma manual para representar los cambios efectuados al proyecto, para esto se presiona el vinculo "Update" de la siguiente forma: </p>
+                        <img src="./img/serviceWorker-8.jpg" alt="" class="img">
+                    </section>
+                </article>
+                <footer class="content">
+                    <h2>Contacto</h2>
+                    <div class="footer__top">
+                        <div class="footer__perfil">
+                            <img src="../../../logos/contacto.jpg" class="Perfil_logo" alt="">
+                        </div>
+                        <div class="Presentacion links">
+                            <h3>¿Quién soy?</h3>
+                            <p>Mi nombre es Carlos Miguel Puche Moreno, estoy estudiando programación web de forma autididacta, si quieres saber más visita mo perfil de GitHub haciendo clic en mi fotografía, o visitas mis redes sociales:</p>
+                        </div>
+                        <div class="footer__Redes links">
+                            <h3>Redes</h3>
+                                <a href="" class="footer__Facebook">
+                                    <img  src="../../../../Fuentes/iconmonstr-facebook-6-32.png" alt="">
+                                </a>
+                            <a href="" class="footer__instagram">
+                                <img src="../../../../Fuentes/iconmonstr-instagram-11-32.png" alt="">
+                            </a>
+                            <a class="footer__gmail" href="mailto:puchecarlos@gmail.com">
+                                <img src="../../../../Fuentes/iconmonstr-email-12-32.png" alt="">
+                            </a>
+                        </div>
+                        <div class="footer__Culliculum links">
+                            <h3>Curriculum</h3>
+                            <a href="https://github.com/CMP2007" class="footer__GitHub">
+                                <img src="../../../../Fuentes/iconmonstr-github-1-32.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>	
+        </div>  
+    </aside>
+</body>
+</html>
